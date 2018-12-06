@@ -1,0 +1,317 @@
+.chart-box > a:hover i, .chart-box > a:hover span {
+    color: #62a8e9;
+    cursor: pointer;
+}
+.edit-way{
+    position: absolute;
+    top:20px;
+    right: 30px;
+}
+.edit-way span, .edit-way a {
+    display: inline-block;
+    float: left;
+    padding: 5px 8px;
+    border: solid 1px #5fa7ec;
+    cursor: pointer;
+    color: #5fa7ec;
+}
+.edit-way span:last-child, .edit-way a:last-child {
+    border-left: none;
+}
+.edit-way .active {
+    background-color: #5fa7ec;
+    color: #ffffff;
+}
+.common-search {
+    margin-bottom: 30px;
+    position: relative;
+}
+.common-search input {
+    width: 100%;
+    border: 1px solid #E6E6E6;
+    padding: 8px 12px 8px 42px;
+    background:url(../images/icon/header-search.jpg) no-repeat 15px center !important;
+    background-size: 14px 14px;
+}
+.kb-title {
+    border-bottom: 1px solid #e6e6e6;
+    padding-bottom: 10px;
+}
+.kb-title span {
+    font-size: 18px;
+    color: #666;
+    font-weight: 500;
+}
+/* 评论列表 */
+.border-bottom-lg {
+    border-bottom: 10px solid #f5f5f5;
+    margin-bottom: 30px;
+}
+.nav-comment-content {
+    position: relative;
+    padding-bottom: 30px; 
+}
+.comment-portrait {
+    float: left;
+}
+.comment-portrait>img{
+    width: 36px;
+    height: 36px;
+    border-radius: 100px;
+}
+.comment-name {
+    float: left;
+    margin-left: 10px;
+}
+.comment-name .comment-people {
+    font-size: 16px;
+    color: #5fa7ec;
+}
+.comment-name .comment-time {
+    display: block;
+    font-size: 12px;
+    color: #999999;
+}
+.nav-comment-text {
+    padding-left: 48px;
+    margin-top: 10px;
+}
+.nav-comment-text p {
+    font-size: 14px; 
+    color: #999999;
+}
+.nav-comment-text p:nth-child(1){
+   margin-bottom: 8px;
+}
+.nav-comment-text p:nth-child(2)>span{
+   color:#333333; 
+}
+.nav-comment-content .communicate {
+    margin: 16px 0;
+    text-align: left;
+}
+/* 赢单 */
+.status-win {
+    background-color: #73bb4b !important;
+}
+/* 方案报价 */
+.status-scheme {
+    background-color: #D0668F !important;
+}
+/* 初步洽谈 */
+.status-initial {
+    background-color: #62a8e9 !important;
+}
+/* 流失 */
+.status-failed{
+    background-color: #ff0000 !important;
+}
+/* 已入住 */
+.status-entered{
+    background-color: #0AC862 !important;
+}
+.under-line {
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e6e6e6;
+}
+.nav-comment-content .communicate span:nth-child(1){
+    display: inline-block;
+    min-width: 52px;
+    font-size: 12px;
+    color: #ffffff;
+    padding: 3px 6px;
+    text-align: center;
+}
+.nav-comment-content .communicate .layui-icon-username{
+    font-size: 16px;
+    vertical-align: middle;
+    margin-left: 15px;
+    margin-right: 2px;
+    color: #999999;
+    transform: translateY(0);
+    -o-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -webkit-transform: translateY(0);
+}
+.nav-comment-content .communicate span:nth-of-type(2) {
+    vertical-align: middle;
+    color: #999999;
+    margin-top: 2px;
+}
+.comment-reply-box{
+    padding-left: 50px; 
+}
+.comment-reply-box .layui-input-inline{
+    width: calc(100% - 90px);
+}
+.nav-comment-content .communicate span:nth-of-type(2) a:hover {
+    color: #62a8e9 !important;
+}
+/* 查看下属 */
+.t-over{
+    max-width: 100px;
+    display: inline-block;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    -o-text-overflow: ellipsis !important;
+    text-overflow: ellipsis !important;
+}
+.desk-3-ul a{
+    display: block;
+}
+.desk-3-ul a:hover{
+    background-color: #f4f6f7;
+}
+.receipt-overdue {
+    padding: 3px 6px;
+    font-size: 12px;
+    background-color: #dd5a55 !important;
+    color: #ffffff !important;
+}
+.task-status{
+    margin-top: 5px;
+}
+.task-status span {
+    font-size: 12px;
+    color: #999999;
+    margin-right: 4px;
+    word-break: break-all;
+}
+/* 添加客户 */
+.crm-new-opp-progress-container {
+    width: 100%;
+    height: 4px;
+    position: relative;
+    background-color: #eef5fd;
+}
+.crm-new-opp-progress-container .crm-new-opp-progress-bar {
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #62a8e9;
+    -webkit-transition: width 1s ease-in-out;
+    -o-transition: width 1s ease-in-out;
+    transition: width 1s ease-in-out;
+}
+.kb-form-container .content {
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    background-color: #f9fbfd;
+    margin-top:15px;
+}
+/* 客户状态 */
+.flow-communicate {
+    margin-bottom: 55px;
+    background-color: #f6f8f9;
+    border: 1px solid #DFE4E7;
+    border-radius: 3px;
+    padding: 20px 25px;
+    position: relative;
+    padding-bottom: 60px;
+}
+.flow-communicate .communicate-arrow {
+    position: absolute; 
+    width: 12px;
+    height: 12px;
+    top: -30px;
+}
+.flow-communicate .communicate-arrow * {
+    display: block;
+    border-width: 15px;
+    position: absolute;
+    border-style: solid dashed dashed dashed;
+    font-size: 0;
+    line-height: 0;
+}
+.flow-communicate .communicate-arrow em {
+    border-color: transparent transparent #DFE4E7 transparent;
+}
+.flow-communicate .communicate-arrow span {
+    border-color: transparent transparent #f6f8f9 transparent;
+    top: 2px;
+}
+/* 客户详情 */
+.nav-section-action-bar{
+    position: relative;
+    margin-top: 20px;
+}
+
+.nav-section-action-bar .action-bar-status, .nav-section-action-bar .action-bar-type {
+    display: inline-block;
+    color: #999999;
+}
+.opp-status-container .opp-status .single-status {
+    display: inline-block;
+    width: 135px;
+    height: 70px;
+    background: white;
+    border-radius: 4px;
+    border: 1px solid #DFE4E7;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    color: #BDCBD3;
+    box-sizing: border-box;
+
+}
+.opp-status-container .opp-status .index-2, .opp-status-container .opp-status .index-4, .opp-status-container .opp-status .index-5 {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+.opp-status-container .opp-status .index-1, .opp-status-container .opp-status .index-3, .opp-status-container .opp-status .index-4 {
+    border-right: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+.opp-status-container .opp-status .index-2 {
+    margin-right: 95px;
+}
+.opp-status-container .opp-status .single-status > span{
+    display: block;
+    margin-top: 5px;
+}
+.opp-status-container .opp-status .status-active {
+    color: #fff;
+    background-color: #45d29e;
+    border-color: #45d29e;
+}
+.opp-status-container .opp-status .status-active i{
+  background-position-y:-26px;
+}
+.single-status i{
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+     background: url(../images/icon/process_icon.png) no-repeat;
+}
+.single-status i.icon-crm_status_1{
+    background-position: -6px -6px;
+}
+ .single-status i.icon-crm_status_2{
+    background-position: -27px -6px;
+}
+.single-status i.icon-crm_status_3{
+    background-position: -48px -6px;
+}
+.single-status i.icon-crm_status_4{
+    background-position: -69px -6px;
+}
+.single-status i.icon-crm_status_5{
+    background-position: -92px -6px;
+}
+
+.crm-requirement-square {
+    background: #f6f8f9;
+    padding: 10px 10px 0px;
+    font-size: 13px;
+    margin-bottom: 10px;
+} 
+.crm-requirement-square  .title {
+    font-size: 15px;
+}
+.nav-container-list-else li {
+    padding: 10px 0;
+}

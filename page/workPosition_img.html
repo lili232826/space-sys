@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>工位-平面图</title>
+	<link rel="stylesheet" href="../js/plugin/layui-v2.3.0/layui/css/layui.css">
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/index.css">
+	<link rel="stylesheet" href="../css/workpos.css">
+	<!-- <link rel="stylesheet" href="../css/set.css"> --> 
+	<script src="../js/jquery-2.1.1.min.js"></script>
+	<script src="../js/plugin/layui-v2.3.0/layui/layui.js"></script>
+</head>
+<style>
+ ::-webkit-scrollbar-thumb {
+  background:#a2a2a2; 
+  border-radius: 10px;
+  height:50%;
+}
+::-webkit-scrollbar{width:6px;}
+	body{
+		overflow-y: scroll;
+	}
+.all-chart .chart-box {
+    margin-right: 10px !important;
+} 
+</style>
+<body>
+<div class="kb-out-box">
+	<header class=" position-header mag-bot-20">
+		<span class="f-left " style="font-size: 24px;">工位</span>
+		<div class="edit-way f-right">
+			<a href="javascript:void(0)">平面图</a>
+			<a class=" active" href="javascript:void(0)">列表显示</a>
+			<a href="javascript:void(0)">切面显示</a>
+			<a href="javascript:void(0)">时间轴显示</a>
+		</div>
+	</header>
+	<div class="kb-content " style="background:#fff;padding: 30px;height:auto;">	
+		<div>
+			<div class="flex-between pad-bot-20 mag-bot-20">
+				<div>
+					<div class="pos-show-wrap mag-bot-20 clearfix">
+						<a class="active" href="javascript:void(0)">全部</a>
+						<a href="javascript:void(0)">未分配</a>
+						<a href="javascript:void(0)">已分配</a>
+						<a href="javascript:void(0)">快到期</a>
+					</div>
+					<div class="pos-show-wrap clearfix">
+						<a class="active" href="javascript:void(0)">全部</a>
+						<a href="javascript:void(0)">开放工位</a>
+						<a href="javascript:void(0)">封闭办公室</a>
+					</div>
+				</div>
+				<div class="color-nine clearfix">
+					<div class="all-chart">
+						<div class="chart-box t-left">
+							<div class="statistic-box">
+								<div class="header"><span class="number">6.83</span><span class="unit">%</span></div>
+								<div class="name"><span>工位使用率</span></div></div>
+							</div>
+							<div class="chart-box t-left">
+								<div class="statistic-box"><div class="header"><span class="number">171</span><span class="unit">个</span></div>
+								<div class="name"><span>额定总工位数</span></div>
+							</div>
+						</div>
+						<div class="chart-box t-left">
+							<div class="statistic-box">
+								<div class="header"><span class="number">161</span><span class="unit">个</span></div>
+								<div class="name"><span>实际总工位数</span></div>
+							</div>
+						</div>
+						<div class="chart-box  t-left">
+							<div class="statistic-box">
+								<div class="header"><span class="number">33</span><span class="unit">个</span></div>
+								<div class="name"><span>已出租工位数</span></div>
+							</div>
+						</div>
+						<div class="chart-box  t-left">
+							<div class="statistic-box">
+								<div class="header"><span class="number">11</span><span class="unit">个</span></div>
+								<div class="name"><span>实际入驻工位数</span></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="">
+				<div class="">
+					  <div class="colla-item mag-bot-20">
+					    <h2 class="colla-title flex-between pad-bot-20 border-bottom" >
+					    	<div class="flex-center" style="flex: 1 1 0%;">
+					    		<i class="layui-icon layui-icon-reply-fill" style="font-size:18px;margin-right:10px;"></i>
+					    		<span class="colla-title-text">地铁柳芳站出来看到最高的建筑物就是金泰大厦，直接坐电梯上到5层，漂亮的金泰空间就展现在你的面前，还有咖啡厅、露天平台。</span>
+					    		<i class="layui-icon layui-icon-right a-link"></i>
+					    	</div>
+					    	<div>
+					    		<button class="layui-btn layui-btn-radius layui-btn-normal m-left-sm" id="">编辑平面图</button>
+					    		<button class="layui-btn layui-btn-radius layui-btn-normal" id="">删除平面图</button>
+					    	</div>
+					    </h2>
+					    <div class="colla-content">
+					    	<div style="text-align: center;" id="svg-wrap">
+					    		<!-- <svg class="plan_svg" id="plan_svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="width: 1076px; height: 510.048px;">
+					    			<g>
+					    				<image  xlink:href="../images/plan.png" alt="" id="raster" height="100%" width="100%"></image>
+					    				<rect width="100%" height="100%" style="fill: rgb(240, 240, 240);opacity: 0.5;"></rect>
+					    			</g>
+					    		</svg>  -->
+					    	</div>
+					    </div>
+					  </div>
+					  <!-- <div class="colla-item mag-bot-20">
+					     <h2 class="colla-title flex-between pad-bot-20" >
+					    	<div class="flex-center" style="flex: 1 1 0%;">
+					    		<i class="layui-icon layui-icon-reply-fill" style="font-size:18px;margin-right:10px;"></i>
+					    		<span class="colla-title-text">地铁柳芳站出来看到最高的建筑物就是金泰大厦，直接坐电梯上到5层，漂亮的金泰空间就展现在你的面前，还有咖啡厅、露天平台。</span>
+					    		<i class="layui-icon layui-icon-right"></i>
+					    	</div>
+					    	<div>
+					    		<button class="layui-btn layui-btn-radius layui-btn-normal m-left-sm" id="">编辑平面图</button>
+					    		<button class="layui-btn layui-btn-radius layui-btn-normal" id="">删除平面图</button>
+					    	</div>
+					    </h2>
+					    <div class="colla-content">
+					    	<div style="text-align: center;">
+					    		
+					    	</div>
+					    </div> 
+					  </div> -->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+<script>
+//M10.105675675675675 324.145 L10.105675675675675 370.5899099099099 L119.18396396396398 370.5899099099099 L119.18396396396398 324.145  Z
+var data=[
+	{
+		name:"空闲",
+		dataArea:[
+			{
+				name:"A001",
+				path:'M15.158513513513514 96.94905405405406 L82.80837837837839 96.94905405405406 L82.80837837837839 13.159189189189188 L15.158513513513514 13.159189189189188 Z',
+				fillColor:"#c5d5f8",
+				perpleNum:9
+			},
+			{
+				name:"A002",
+				path:'M11.89900900900901 129.09576576576578 L11.89900900900901 183.62279279279278 L118.9173873873874 183.62279279279278 L118.9173873873874 129.09576576576578  Z',
+				fillColor:"#c5d5f8",
+				perpleNum:2
+			},
+			{
+				name:"A003",
+				path:'M15.158513513513514 96.94905405405406 L82.80837837837839 96.94905405405406 L82.80837837837839 13.159189189189188 L15.158513513513514 13.159189189189188 Z',
+				fillColor:"#c5d5f8",
+				perpleNum:9
+			},
+			{
+				name:"A009",
+				path:"M148.44680180180183 504.883918918919 L148.44680180180183 473.5854054054054 L117.09981981981983 471.56184684684683 L114.07054054054055 460.4625675675676 L45.45130630630631 460.4625675675676 L45.45130630630631 472.57968468468465 L11.09927927927928 474.5911261261261 L21.217072072072074 490.7553603603604 L33.334189189189196 501.85463963963974 L43.42774774774775 504.883918918919 Z",
+				fillColor:"#c5d5f8",
+				perpleNum:6
+			}
+		]
+	},
+	{
+		name:"已出租",
+		dataArea:[
+			{
+				name:"A0088",
+				path:'M10.105675675675675 324.145 L10.105675675675675 370.5899099099099 L119.18396396396398 370.5899099099099 L119.18396396396398 324.145  Z',
+				fillColor:"#F66E73",
+				perpleNum:8
+			},
+			{
+				name:"A0087",
+				path:'M9.099954954954955 370.5899099099099 L9.099954954954955 410.9762612612613 L119.18396396396398 410.9762612612613 L119.18396396396398 370.5899099099099  Z',
+				fillColor:"#F66E73",
+				perpleNum:4
+			},
+			{
+				name:"A0086",
+				path:'M141.33405405405406 397.99882882882883 L141.33405405405406 446.46729729729736 L197.92099099099102 446.46729729729736 L197.92099099099102 397.99882882882883  Z',
+				fillColor:"#F66E73",
+				perpleNum:6
+			}
+		]
+	}
+]
+$(function(){
+	var svgNS="http://www.w3.org/2000/svg";
+
+	//注意：折叠面板 依赖 element 模块，否则无法进行功能性操作
+	layui.use(['element','layer'], function(){
+	  var element = layui.element;
+	  var layer=layui.layer;
+	  //…
+	});
+	//点击列表展开还是收起
+	$(".colla-title").on("click","i",function(){
+		if($(this).hasClass("layui-icon-right")){
+			renderArea(data,$("#svg-wrap")[0],"../images/plan.png");
+			$(this).removeClass('layui-icon-right').addClass('layui-icon-down')
+		}else{
+			$("#svg-wrap").html('');
+			$(this).removeClass('layui-icon-down').addClass('layui-icon-right')
+		}
+		
+	})
+	function renderArea(data,ele,src){	
+		var src=src;//"../images/plan.png";
+		var svg=document.createElementNS(svgNS,"svg");
+			svg.setAttribute("xmlns",svgNS);
+			svg.setAttribute('xmlns:xlink',"http://www.w3.org/1999/xlink");
+			svg.setAttribute("style",'width: 1076px; height: 510.048px');
+			svg.setAttribute("id","svg");
+		var g1=document.createElementNS(svgNS,"g");
+		var rect1=document.createElementNS(svgNS,"rect");
+			rect1.setAttribute("width",'100%');
+			rect1.setAttribute("height",'100%');
+			rect1.setAttribute("fill",'rgb(240, 240, 240)');
+			rect1.setAttribute("style",'opacity: 0.5');
+		var image=document.createElementNS(svgNS,"image");
+			image.setAttribute("width",'100%');
+			image.setAttribute("height",'100%');
+			image.href.baseVal=src;
+			g1.appendChild(image);
+			g1.appendChild(rect1);
+			svg.appendChild(g1);
+		for(var i=0;i<data.length;i++){
+			//console.log(data[i],2)
+			var dataArea=data[i]['dataArea'];
+			//console.log(dataArea,1)
+			for(var j=0;j<dataArea.length;j++){
+				//console.log(dataArea[j]["name"],1,j)
+				var dataMsg=dataArea[j];
+				var g=document.createElementNS(svgNS,"g");
+				var path=document.createElementNS(svgNS,"path");
+				path.setAttribute("d",dataArea[j]['path']);
+		        path.setAttribute("fill",dataArea[j]['fillColor']);
+		        path.setAttribute("stroke",'#b9b9b9');
+		        path.setAttribute("style",'cursor:pointer;opacity:0.7');
+		        (function(dataMsg){
+		        	bindEvent(path,"mouseover",function(event){
+			        	var e=e||event;
+			        	var path=e.target;
+			        	setHover(path,dataMsg);
+			        });
+		        })(dataMsg);
+		        bindEvent(path,"mouseout",removeHover)
+		        g.appendChild(path);
+		        svg.appendChild(g);
+			}
+		}
+		ele.appendChild(svg);	
+	}
+
+function setHover(ele,msg){
+	var str="<p>名称"+msg.name+"</p>"+"<p>容纳人数"+msg.perpleNum+"</p>"
+	layer.tips(str, ele, {
+	  tips: [1, '#000'] //还可配置颜色
+	});
+}
+function removeHover(){
+	this.setAttribute("stroke-width",'');
+	layer.closeAll()
+	// 事件绑定
+}
+function bindEvent(obj,type,handler){
+    if (window.addEventListener) {// 标准浏览器    
+      obj.addEventListener(type, handler, false);     
+    } else if (window.attachEvent) {// IE浏览器      
+      obj.attachEvent("on" + type, handler);
+    }
+}
+ // 事件解除
+function removeEvent(elem,type,handler){
+    if (window.removeEventListener) {// 标准浏览器      
+      elem.removeEventListener(type, handler, false);       
+    } else if (window.detachEvent) {// IE浏览器
+      elem.detachEvent("on" + type, handler);    
+    }
+}
+	
+})
+	
+</script>
+</html>

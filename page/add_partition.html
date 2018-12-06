@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="../js/plugin/layui-v2.3.0/layui/css/layui.css">
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/index.css">
+	<link rel="stylesheet" href="../css/set.css">
+	<script src="../js/jquery-2.1.1.min.js"></script>
+	<script src="../js/plugin/layui-v2.3.0/layui/layui.js"></script>
+</head>
+<style>
+::-webkit-scrollbar-thumb {
+  background:#a2a2a2; 
+  border-radius: 10px;
+  height:50%;
+}
+::-webkit-scrollbar{width:6px;}
+body{
+	overflow-y: scroll;
+} 
+body{
+	height: 100%;
+	overflow-y:scroll;
+}
+</style>
+<body>
+<form>
+	<div class="kb-form-container">
+		<div style="width: 100%; height: 100%; position: relative;">
+			<div class="clearfix mag-bot-20">
+				<div class="area-status f-right flex">
+					<div class="status-title flex-center"><span style="background-color: rgb(200, 200, 200);"></span><span>已占用</span></div>
+					<div class="status-title flex-center"><span style="background-color: rgb(237, 102, 107);"></span><span>快到期</span></div>
+					<div class="status-title flex-center"><span style="background-color: rgb(98, 168, 233);"></span><span>未到期</span></div>
+				</div>
+			</div>
+			<div class="kb-row clearfix">
+				<div class="area-block  area-block_hover flex-vcenter" style="background-color: rgb(243, 247, 249); color: rgb(98, 168, 233);">
+					<div class="area-name t-over" style="max-width: 82px;">A001</div><span class="area-desk-num">剩余9个工位</span>
+				</div>
+				<div class="area-block  area-block_hover flex-vcenter" style="background-color: rgb(243, 247, 249); color: rgb(98, 168, 233);">
+					<div class="area-name t-over" style="max-width: 82px;">A001</div><span class="area-desk-num">剩余9个工位</span>
+				</div>
+				<div class="area-block flex-vcenter " style="background-color: rgb(247, 247, 247); color: rgb(200, 200, 200);">
+					<div class="area-name t-over" style="max-width: 82px;">金桥办公空间</div>
+					<span class="area-desk-num">已占用</span>
+				</div>
+				<div class="area-block  area-block_hover flex-vcenter area-block_active" style="background-color: rgb(243, 247, 249); color: rgb(98, 168, 233);">
+					<div class="area-name t-over" style="max-width: 82px;">A001</div><span class="area-desk-num">剩余9个工位</span>
+				</div>
+				<div class="area-block  area-block_hover flex-vcenter" style="background-color: rgb(243, 247, 249); color: rgb(98, 168, 233);">
+					<div class="area-name t-over" style="max-width: 82px;">A001</div><span class="area-desk-num">剩余9个工位</span>
+				</div>
+				<div class="area-block  area-block_hover flex-vcenter" style="background-color: rgb(243, 247, 249); color: rgb(98, 168, 233);">
+					<div class="area-name t-over" style="max-width: 82px;">A001</div><span class="area-desk-num">剩余9个工位</span>
+				</div>
+				<div class="area-block  area-block_hover flex-vcenter" style="background-color: rgb(243, 247, 249); color: rgb(98, 168, 233);">
+					<div class="area-name t-over" style="max-width: 82px;">A001</div><span class="area-desk-num">剩余9个工位</span>
+				</div>
+				<div class="area-block flex-vcenter " style="background-color: rgb(247, 247, 247); color: rgb(200, 200, 200);">
+					<div class="area-name t-over" style="max-width: 82px;">金桥办公空间</div>
+					<span class="area-desk-num">已占用</span>
+				</div>
+				<div class="area-block  area-block_hover flex-vcenter area-block_active" style="background-color: rgb(243, 247, 249); color: rgb(98, 168, 233);">
+					<div class="area-name t-over" style="max-width: 82px;">A001</div><span class="area-desk-num">剩余9个工位</span>
+				</div>
+				<div class="area-block  area-block_hover flex-vcenter" style="background-color: rgb(243, 247, 249); color: rgb(98, 168, 233);">
+					<div class="area-name t-over" style="max-width: 82px;">A001</div><span class="area-desk-num">剩余9个工位</span>
+				</div>
+				<div class="area-block  area-block_hover flex-vcenter" style="background-color: rgb(243, 247, 249); color: rgb(98, 168, 233);">
+					<div class="area-name t-over" style="max-width: 82px;">A001</div><span class="area-desk-num">剩余9个工位</span>
+				</div>
+				<div class="area-block  area-block_hover flex-vcenter" style="background-color: rgb(243, 247, 249); color: rgb(98, 168, 233);">
+					<div class="area-name t-over" style="max-width: 82px;">A001</div><span class="area-desk-num">剩余9个工位</span>
+				</div>
+				<div class="area-block flex-vcenter " style="background-color: rgb(247, 247, 247); color: rgb(200, 200, 200);">
+					<div class="area-name t-over" style="max-width: 82px;">金桥办公空间</div>
+					<span class="area-desk-num">已占用</span>
+				</div>
+				<div class="area-block  area-block_hover flex-vcenter area-block_active" style="background-color: rgb(243, 247, 249); color: rgb(98, 168, 233);">
+					<div class="area-name t-over" style="max-width: 82px;">A001</div><span class="area-desk-num">剩余9个工位</span>
+				</div>
+				<div class="area-block  area-block_hover flex-vcenter" style="background-color: rgb(243, 247, 249); color: rgb(98, 168, 233);">
+					<div class="area-name t-over" style="max-width: 82px;">A001</div><span class="area-desk-num">剩余9个工位</span>
+				</div>
+				<div class="area-block  area-block_hover flex-vcenter" style="background-color: rgb(243, 247, 249); color: rgb(98, 168, 233);">
+					<div class="area-name t-over" style="max-width: 82px;">A001</div><span class="area-desk-num">剩余9个工位</span>
+				</div>
+				<div class="area-block  area-block_hover flex-vcenter" style="background-color: rgb(243, 247, 249); color: rgb(98, 168, 233);">
+					<div class="area-name t-over" style="max-width: 82px;">A001</div><span class="area-desk-num">剩余9个工位</span>
+				</div>
+				<div class="area-block flex-vcenter " style="background-color: rgb(247, 247, 247); color: rgb(200, 200, 200);">
+					<div class="area-name t-over" style="max-width: 82px;">金桥办公空间</div>
+					<span class="area-desk-num">已占用</span>
+				</div>
+				<div class="area-block  area-block_hover flex-vcenter area-block_active" style="background-color: rgb(243, 247, 249); color: rgb(98, 168, 233);">
+					<div class="area-name t-over" style="max-width: 82px;">A001</div><span class="area-desk-num">剩余9个工位</span>
+				</div>
+				<div class="area-block  area-block_hover flex-vcenter" style="background-color: rgb(243, 247, 249); color: rgb(98, 168, 233);">
+					<div class="area-name t-over" style="max-width: 82px;">A001</div><span class="area-desk-num">剩余9个工位</span>
+				</div>
+
+			</div>
+			
+		</div>
+	</div>
+</form>
+</body>
+<script>
+$(function(){
+
+	setHeight()
+	layui.use(['element',"layer","form",'formSelects'], function(){
+		var layer=layui.layer,form = layui.form;			
+			
+	});
+	
+	function setHeight(){
+        var h = document.body.clientHeight*1;
+        console.log(h)
+        window.parent.test(h);
+    }
+})
+
+</script>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>分店管理-首页</title>
+	<link rel="stylesheet" href="../js/plugin/layui-v2.3.0/layui/css/layui.css">
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/index.css">
+	<link rel="stylesheet" href="../css/index_team.css">
+</head>
+<style>
+/* ::-webkit-scrollbar-thumb {
+  background:rgb(95,106,135); 
+  border-radius: 10px;
+  height:50%;
+}
+::-webkit-scrollbar{width:6px;}
+	body{
+		overflow-y: scroll;
+	} */
+</style>
+<body>
+	<div class="kb-content my-locations-list">	
+		<section class="kb-content-container clearfix">
+				<header class="nav-section-header clearfix">
+					<div class="nav-section-header-title  f-left"><span>入驻团队</span></div>	
+					<div class="f-right">
+						<button class="layui-btn layui-btn-radius layui-btn-normal">导出团队信息</button>
+						<button class="layui-btn layui-btn-radius layui-btn-normal" id="add_partition1">
+							<i class="layui-icon">&#xe654;</i>添加新公司
+						</button>
+					</div>
+				</header>
+				<div class="nav-section-content-container">
+					<div class="layui-tab layui-tab-brief my-tab" lay-filter="docDemoTabBrief">
+						  <ul class="layui-tab-title">
+						    <li class="layui-this">全部企业</li>
+						    <li>已入驻企业</li>
+						    <li>未入驻企业</li>
+						    <li>毕业企业</li>
+						    <li class="f-right"><i class="layui-icon" style="font-size:20px">&#xe60a;</i>列表显示</li>
+						    <li class="f-right"><i class="layui-icon" style="font-size:20px">&#xe62d;</i>Logo墙显示</li>
+						  </ul>
+						  <div>
+						  		<div class="nav-section-action-bar" style="display: inline-flex;margin-top: 0px;">	
+						  			<div class="layui-input-inline">
+										<input class="layui-input" id="test6" placeholder=" 选择日期 " type="text">
+								    </div>
+									<div class="border-show_status">
+										<span class="color-show" style="background-color: rgb(184, 94, 99);"></span>
+										<span class="status-text">一周内</span>
+									</div> 	
+									<div class="border-show_status">
+										<span class="color-show" style="background-color: rgb(246, 166, 35);"></span>
+										<span class="status-text">一月内</span>
+									</div> 	
+									<div class="border-show_status">
+										<span class="color-show" style="background-color: rgb(102, 102, 102);"></span>
+										<span class="status-text">两月内</span>
+									</div> 	
+									
+						  		</div>
+						  		<button class="layui-btn layui-btn-radius layui-btn-danger f-right clear-criteria show" style="width: 150px;"><i class="layui-icon">ဆ</i> 删除全部工位</button>
+						  </div>
+						  <div class="layui-tab-content ">
+						  		<div style='width: 100%; height: 100%; position: relative;'>
+						  			<div class="search-topic">
+						  				<span style="width: auto;">全部</span>
+						  				<span class="">A</span>
+						  				<span class="">B</span>
+						  				<span class="">C</span>
+						  				<span class="">D</span>
+						  				<span class="">E</span><span class="">F</span><span class="">G</span>
+						  				<span class="">H</span><span class="">I</span><span class="">J</span>
+						  				<span class="">K</span><span class="">L</span><span class="">M</span>
+						  				<span class="">N</span><span class="">O</span><span class="">P</span>
+						  				<span class="">Q</span><span class="">R</span><span class="">S</span>
+						  				<span class="">T</span><span class="">U</span><span class="">V</span>
+						  				<span class="">W</span><span class="">X</span><span class="">Y</span><span class="">Z</span>
+						  			</div>
+						  			<div class="clearfix">
+						  				<div class="company-logo-all t-center clearfix">
+						  					<a href="" class="company-message">
+						  						<img src="../images/icon_enter@3x.png" alt="" class="tag-img">
+						  						<div class="company-logo-position  f-left">
+						  							<div class="company-logo  f-left"><img src="../images/company_default.png" alt=""></div>
+						  							<div class="org_info f-left">
+						  								<div class="org_name">1</div>
+						  								<div class="industry_name">暂无行业信息</div>
+						  								<div class="desk_info">
+						  									<span style="margin-right: 5px;">4工位</span>
+						  									<span style="color: rgb(221, 90, 85);"></span>
+						  								</div>
+						  							</div>
+						  						</div>
+						  					</a>
+						  					<a href="" class="company-message">
+						  						<img src="../images/icon_enter@3x.png" alt="" class="tag-img">
+						  						<div class="company-logo-position  f-left">
+						  							<div class="company-logo  f-left"><img src="../images/company_default.png" alt=""></div>
+						  							<div class="org_info f-left">
+						  								<div class="org_name">1</div>
+						  								<div class="industry_name">暂无行业信息</div>
+						  								<div class="desk_info">
+						  									<span style="margin-right: 5px;">4工位</span>
+						  									<span style="color: rgb(221, 90, 85);"></span>
+						  								</div>
+						  							</div>
+						  						</div>
+						  					</a>
+						  					<a href="" class="company-message">
+						  						<img src="../images/icon_enter@3x.png" alt="" class="tag-img">
+						  						<div class="company-logo-position  f-left">
+						  							<div class="company-logo  f-left"><img src="../images/company_default.png" alt=""></div>
+						  							<div class="org_info f-left">
+						  								<div class="org_name">1</div>
+						  								<div class="industry_name">暂无行业信息</div>
+						  								<div class="desk_info">
+						  									<span style="margin-right: 5px;">4工位</span>
+						  									<span style="color: rgb(221, 90, 85);"></span>
+						  								</div>
+						  							</div>
+						  						</div>
+						  					</a>
+						  					<a href="" class="company-message">
+						  						<img src="../images/icon_enter@3x.png" alt="" class="tag-img">
+						  						<div class="company-logo-position  f-left">
+						  							<div class="company-logo  f-left"><img src="../images/company_default.png" alt=""></div>
+						  							<div class="org_info f-left">
+						  								<div class="org_name">1</div>
+						  								<div class="industry_name">暂无行业信息</div>
+						  								<div class="desk_info">
+						  									<span style="margin-right: 5px;">4工位</span>
+						  									<span style="color: rgb(221, 90, 85);"></span>
+						  								</div>
+						  							</div>
+						  						</div>
+						  					</a>
+						  					<a href="" class="company-message">
+						  						<img src="../images/icon_enter@3x.png" alt="" class="tag-img">
+						  						<div class="company-logo-position  f-left">
+						  							<div class="company-logo  f-left"><img src="../images/company_default.png" alt=""></div>
+						  							<div class="org_info f-left">
+						  								<div class="org_name">1</div>
+						  								<div class="industry_name">暂无行业信息</div>
+						  								<div class="desk_info">
+						  									<span style="margin-right: 5px;">4工位</span>
+						  									<span style="color: rgb(221, 90, 85);"></span>
+						  								</div>
+						  							</div>
+						  						</div>
+						  					</a>
+						  					<a href="" class="company-message">
+						  						<img src="../images/icon_enter@3x.png" alt="" class="tag-img">
+						  						<div class="company-logo-position  f-left">
+						  							<div class="company-logo  f-left"><img src="../images/company_default.png" alt=""></div>
+						  							<div class="org_info f-left">
+						  								<div class="org_name">1</div>
+						  								<div class="industry_name">暂无行业信息</div>
+						  								<div class="desk_info">
+						  									<span style="margin-right: 5px;">4工位</span>
+						  									<span style="color: rgb(221, 90, 85);"></span>
+						  								</div>
+						  							</div>
+						  						</div>
+						  					</a>
+						  				</div>
+						  			</div>
+						  		</div>
+						  </div>
+					</div>      
+				</div>
+		</section>
+	</div>
+</body>
+<script src='../js/jquery-2.1.1.min.js'></script>
+<script src="../js/plugin/layui-v2.3.0/layui/layui.js"></script>
+<script>
+	$(function(){
+
+		layui.use('element', function(){
+		  var element = layui.element;
+		
+		  
+		});
+ 
+	})
+</script>
+</html>

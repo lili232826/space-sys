@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>分店管理-设置</title>
+	<link rel="stylesheet" href="../js/plugin/layui-v2.3.0/layui/css/layui.css">
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/index.css">
+	<link rel="stylesheet" href="../css/workpos.css">
+	<!-- <link rel="stylesheet" href="../css/set.css"> --> 
+	<script src="../js/jquery-2.1.1.min.js"></script>
+	<link rel="stylesheet" href="../css/workpos.css">
+	<script src="../js/plugin/layui-v2.3.0/layui/layui.js"></script>
+</head>
+<style>
+ ::-webkit-scrollbar-thumb {
+  background:#a2a2a2; 
+  border-radius: 10px;
+  height:50%;
+}
+::-webkit-scrollbar{width:6px;}
+	body{
+		overflow-y: scroll;
+	}
+.all-chart .chart-box {
+    margin-right: 10px !important;
+} 
+</style>
+<body>
+<div class="kb-out-box">
+	<div class="svg-wrap-edit">
+		<header class="head-bar flex-between">
+			<div class="bar-left flex">
+				<div class="flex-vcenter">
+					<i class="upload_icon"></i>
+					<span> 上传</span>
+				</div>
+				<div class="flex-vcenter">
+					<i class="open_icon"></i>
+					<span> 打开</span>
+				</div>
+			</div>
+			<div class="bar-right flex"> 
+				<div class="flex-vcenter bar-btn" id='square-btn'>
+					<i class="square_icon"></i>
+					<span>正方形</span>
+				</div>
+				<div class="flex-vcenter bar-btn" id="line-btn">
+					<i class="broken_line_icon"></i>
+					<span> 折线图</span>
+				</div>
+				<div class="flex-center" id="change-size">
+					<i class="add_icon"></i>
+					<span class="percent-txt">100%</span>
+					<i class="reduce_icon"></i>
+				</div>
+				<div class="flex-vcenter">
+					<i class="close_icon"></i>
+					<span> 关闭</span>
+				</div>
+			</div>
+		</header>
+		<div class="svg-tool">
+			<div class="tool-content">
+				<div class="layui-tab layui-tab-brief" style="height: 100%" lay-filter="type-tab">
+					<ul class="layui-tab-title" id="partitionState">
+					    <li class="layui-this" value="0">分区</li>
+					    <li value="1">工位</li>
+					</ul>
+					<div class="layui-tab-content" style="height: 100%">
+						<div class="button-wrap">
+							<button class="layui-btn layui-btn-normal btn-bg" id="" lay-filter="formEmployee" lay-submit="" style="width: 180px">创建分区</button>
+						</div>
+						<div class="layui-form select-wrap hide" >
+					      	<select id="aresId" lay-filter="aresId" name="aresId">
+					      		<option value="">请选择分区</option>
+					      		<option>7777777</option>
+					      		<option>7777777</option>
+					      	</select>
+						</div>
+						<div class="areaList_container mag-top-20" id="areaList_container">
+							<!-- <div class="flex-between" style="padding: 5px 10px; cursor: pointer;">
+								<span class="t-over" style="max-width: 90px;">头等舱 </span>
+								<div class="block-relation flex-center"><i class="layui-icon layui-icon-share"></i><span>取消关联</span>
+								</div>
+							</div>
+							<div class="flex-between" style="padding: 5px 10px; cursor: pointer;">
+								<span class="t-over" style="max-width: 90px;">头等舱 </span>
+								<div class="block-relation flex-center"><i class="layui-icon layui-icon-share"></i><span>取消关联</span>
+								</div>
+							</div>
+							<div class="flex-between" style="padding: 5px 10px; cursor: pointer;">
+								<span class="t-over" style="max-width: 90px;">头等舱 </span>
+								<div class="block-relation flex-center"><i class="layui-icon layui-icon-share"></i><span>取消关联</span>
+								</div>
+							</div> -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="svg-detail">
+			<div style="height: 100%;padding: 10px;" id="area_details">
+				<!-- <div class="m-updown">
+					<button class="layui-btn layui-btn-normal btn-bg" id="" lay-filter="formEmployee" lay-submit="" style="width: 180px">编辑分区</button>
+				</div>
+				<div class="flex-between" style="padding: 5px 10px;">
+					<span>名称：</span><span>头等舱 </span>
+				</div>
+				<div class="flex-between " style="padding: 5px 10px;">
+					<span>类型：</span><span>头等舱 </span>		
+				</div>
+				<div class="flex-between " style="padding: 5px 10px;">
+					<span>工位数：</span><span>头等舱 </span>
+				</div>
+				<div class="flex-between " style="padding: 5px 10px;">
+					<span>容纳人数：</span><span>头等舱 </span>
+				</div>
+				<div class="flex-between " style="padding: 5px 10px;">
+					<span>面积：</span><span>头等舱 </span>
+				</div>
+				<div class="flex-between " style="padding: 5px 10px;">
+					<span>锁：</span><span>头等舱 </span>
+				</div>
+				<div class="flex-between " style="padding: 5px 10px;">
+					<span>墙：</span><span>头等舱 </span>	
+				</div>
+				<div class="flex-between " style="padding: 5px 10px;">
+					<span>朝向：</span><span>头等舱 </span>	
+				</div> -->
+			</div>
+		</div>
+		<div class="svg-editor">
+			<div class="svg-content">
+				<div class="svg-wrap" style="display: inline-block;">
+					<svg class="kb-fp-svg" id="svg-box" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="width: 888px; height: 420.932px;">
+						<g> 
+				            <image id="raster" height="100%" width="100%" xlink:href="../images/plan.png" style="opacity: 0.5;"></image>
+				            <rect width="100%" height="100%" style="fill: rgb(240, 240, 240);opacity: 0.5;"></rect>
+				        </g>
+					</svg>
+				</div>
+				
+			</div>
+		</div>
+		
+
+	</div>
+</div>
+</body>
+<script>
+//M10.105675675675675 324.145 L10.105675675675675 370.5899099099099 L119.18396396396398 370.5899099099099 L119.18396396396398 324.145  Z
+//
+var svgNS="http://www.w3.org/2000/svg";
+var typeVal=0;//点击左侧分区和工位的类型存储
+var classType="areapath";//默认绘画的分区；
+var scrollTop=0;//鼠标滚动的距离；
+var elementSvg= document.getElementById('svg-box');
+var newArr=[];//点击高亮时的path的路径
+var rectArr=[];//点击高亮动态生成的rect的路径
+var currentPath=null;//绘制的当前的四个方块的path对象,也是点击时的高亮path；
+var newArea=[];//页面的所有的分区；
+var newPos=[];//页面所有的的工位；
+
+var areaDate=null;//存储首次请求的数据；
+$(function(){
+	parent.setLayBody();//隐藏头部导航
+	
+	var svgLeft=$(".svg-wrap")[0].offsetLeft*1-200;//画布据浏览器的左边距离
+	var svgTop=$(".svg-wrap")[0].offsetTop*1+7;//画布距浏览器的上部距离
+
+	window.onresize=function(){
+	 svgLeft=$(".svg-wrap")[0].offsetLeft;
+	 svgTop=$(".svg-wrap")[0].offsetTop;
+	}  
+	//注意：折叠面板 依赖 element 模块，否则无法进行功能性操作
+	layui.use(['element','layer',"form"], function(){
+	  var element = layui.element;
+	  	  form = layui.form;
+	  var layer=layui.layer;
+	  form.on('select(aresId)', function(data){
+	  	  var areaId=data.value;
+	  	  var deskDate=null;
+	  	  for(var i=0;i<areaDate.length;i++){
+	  	  	if(areaDate[i]['id']==areaId){
+	  	  		deskDate=areaDate[i]['desks'];
+	  	  		break;
+	  	  	}
+	  	  }
+	  	  console.log(areaDate,"deskDate")
+	  	  renderSider(deskDate,$('#areaList_container'))
+	  });
+	  //监听Tab切换，工位或是分区；
+	element.on('tab(type-tab)', function(){
+	    typeVal=$(this).val();
+	    console.log(typeVal,'typeVal')
+	    if(typeVal==0){//切换分区 
+	    	classType="areapath";	
+	    	console.log(areaDate,"00000000000")
+			renderPath(areaDate,$("#svg-box")[0])//渲染分区path；
+			renderSider(areaDate,$('#areaList_container'));//渲染左侧的列表区域
+			//渲染新画的分区数组；
+			for(var i=0;i<newArea.length;i++){
+				var squareG=document.createElementNS(svgNS,"g");
+				var squarePath=newArea[i];
+				$(squareG).append(newArea[i]);
+				(function(squarePath){
+					bindEvent(squareG,"mousedown",function(e){//给新建的g加点击事件，防止工位的分区path可以移动；
+			      		//console.log(squareG,squarePath,"8888888")
+			        	preventBubble(e);
+			        	rectArr=[];currentPath=null;newArr=[];//清除方块后清空
+						currentPath=squarePath;
+			        	newPathDown(squarePath,e,elementSvg,newArr,rectArr,currentPath);
+			        	lineFleg=false;squareFleg=false;
+			        	$('#square-btn').removeClass('active');
+			        	$('.svg-content').removeClass('dreg-content');//在画布上去除的十字架
+			        });
+				})(squarePath);
+				$(elementSvg).append($(squareG));
+			}
+			//创建分区的按钮
+			$(".button-wrap").addClass("show").removeClass("hide");
+			//显示分区下拉；
+			$(".select-wrap").addClass('hide').removeClass('show');
+	    }else{//切换工位
+	    	classType="pospath";	
+	    	console.log(newArea,'11111')
+			renderPosition(areaDate,$("#svg-box")[0]);//渲染工位path；
+			initFormSelects('aresId',areaDate);//渲染下拉分区的下拉列表
+			console.log($('#aresId').val(),"val")
+			//渲染新画的分区数组；
+	    	for(var i=0;i<newArea.length;i++){
+				$("#svg-box").append(newArea[i])
+			}
+			//渲染新画的工位数组；
+			for(var i=0;i<newPos.length;i++){
+				var squareG=document.createElementNS(svgNS,"g");
+				var squarePath=newPos[i];
+				$(squareG).append(newPos[i]);
+				(function(squarePath){
+					bindEvent(squareG,"mousedown",function(e){//给新建的g加点击事件，防止工位的分区path可以移动；
+			      		//console.log(squareG,squarePath,"8888888")
+			        	preventBubble(e);
+			        	rectArr=[];currentPath=null;newArr=[];//清除方块后清空
+						currentPath=squarePath;
+			        	newPathDown(squarePath,e,elementSvg,newArr,rectArr,currentPath);
+			        	lineFleg=false;squareFleg=false;
+			        	$('#square-btn').removeClass('active');
+			        	$('.svg-content').removeClass('dreg-content');//在画布上去除的十字架
+			        });
+				})(squarePath);
+				$(elementSvg).append($(squareG));
+			}
+			//创建分区的按钮
+			$(".button-wrap").addClass("hide").removeClass("show");
+			//显示分区下拉；
+			$(".select-wrap").addClass('show').removeClass('hide');
+			//清空左侧的列表分区
+			$('#areaList_container').html("");
+	    };
+	    //console.log(newArea,newPos,"arrr")
+	  });
+	  //…
+	});	
+	//var fleg=true;//用来判断页面是否存在四个方块
+	//var elementSvg= document.getElementById('svg-box');
+
+	var pathAll=document.getElementsByTagName('path');
+	var squareFleg=false,lineFleg=false;//判断是否点击头部工具条;
+
+	//列表的点击事件，显示详情信息
+	$('#areaList_container').on("click",".list",function(){
+		$('#areaList_container .list').removeClass('active');
+		$(this).addClass("active");//点击的高亮
+		var dataA=JSON.parse($(this).attr("data-area"));
+		var id=$(this).attr("data-id");
+		renderDetails(dataA,$("#area_details"))//渲染右侧的信息详情
+		clearRect(elementSvg);
+		findIdPath(id,newArr,rectArr,currentPath,elementSvg)//对应的path高亮；
+		//console.log(currentPath,"currentPath")
+	})
+	//列表的点击绑定和取消绑定，根据id；
+	$("#areaList_container").on("click",".block-relation",function(){
+		//var
+	})
+	//渲染svg--PATH块的区域
+	runAsync('../data/areaPath.json').then(function(data){
+		areaDate=data;
+		renderPath(areaDate,$("#svg-box")[0])//渲染path
+		//path鼠标点下，抽出一个数组拉；
+	})
+	//点击其他地方方块消失；
+	var addFleg=true;//绘画不规则图形的时候，只能创建一个不规则图形，直到绘画完毕时（点击到本身）
+	elementSvg.onmousedown=function(event){
+		console.log('svg-down',typeVal)
+		clearRect(elementSvg);
+	    rectArr=[];//清除方块后清空
+		var mouseX=event.clientX;
+		var mouseY=event.clientY;//计算xy
+		//获取鼠标起始在svg上的点坐标；（startX，startY）;
+		var startX=mouseX-svgLeft;
+		var startY=(mouseY-svgTop)*1+scrollTop;
+		console.log(startX,startY,scrollTop);
+	    //点击头部正方形，绘画方块；
+	    if(squareFleg){
+	    	//画方块时创建对象g和path；
+	    	//判断画的属于什么？工位还是分区；
+	    	currentPath=null;
+			var squareG=document.createElementNS(svgNS,"g");
+			var squarePath=document.createElementNS(svgNS,"path");
+			currentPath=squarePath;
+		      bindEvent(squareG,"mousedown",function(e){//给新建的g加点击事件，防止工位的分区path可以移动；
+		      		//console.log(squareG,squarePath,"8888888")
+		        	preventBubble(e);
+		        	rectArr=[];currentPath=null;newArr=[];//清除方块后清空
+					currentPath=squarePath;
+		        	newPathDown(squarePath,e,elementSvg,newArr,rectArr,currentPath);
+		        	lineFleg=false;squareFleg=false;
+		        	$('#square-btn').removeClass('active');
+		        	$("#line-btn").removeClass('active');
+		        	$('.svg-content').removeClass('dreg-content');//在画布上去除的十字架
+		      });
+		      elementSvg.onmousemove=function(event){
+		        //获取结束的坐标点；（endX，endY）
+		        var endX=event.clientX-svgLeft;
+		        var endY=(event.clientY-svgTop)*1+scrollTop;
+		        var pathD="M"+startX+" "+startY+" L"+endX+" "+startY+" L"+endX+" "+endY+" L"+startX+" "+endY+" Z";
+		        newArr=[startX,startY,endX,startY,endX,endY,startX,endY];//存储当前绘画的path路径;
+		        squarePath.setAttribute("d",pathD);//M12.51 80.01 L68.34 80.01 L68.34 10.86 L12.51 10.86  Z
+		        squarePath.setAttribute("fill","rgba(119,206,235,0.6)");
+		        squarePath.setAttribute("class",classType);
+		        squareG.appendChild(squarePath);
+		        elementSvg.appendChild(squareG);
+
+		      };
+		      //画方块时的抬起；
+		      elementSvg.onmouseup=function(event){
+		        elementSvg.onmousemove=null;
+		        elementSvg.onmouseup=null;	
+		        squarePath.setAttribute("fill","rgba(150, 150, 150, 0.3)");	
+		        squarePath.setAttribute("stroke","rgb(185, 217, 245)");	
+		        if(typeVal==0){//判断是为了保证分区工位获取互不影响；
+		        	newArea=$("#svg-box .areapath");//获取所有的新分区path	
+		        	console.log(newArea,'0000000000000')
+		        }else{
+		        	newPos=$("#svg-box .pospath");//获取所有的新工位pos
+		        	console.log(newPos,'111111111')
+		        }
+		       // console.log(newArea,newPos,"arrr");
+				//创建四个方块；
+		        if(createRcetFleg(squarePath)){
+		          createRect(squareG,newArr,currentPath,rectArr,elementSvg);
+		        } 
+		      }
+	    }
+	    //点击头部的折线，绘画不规则图形
+	    if(lineFleg){
+	    	newArr.push(startX);
+			newArr.push(startY);
+		    var pathD='M';
+	       for(var m=0;m<newArr.length/2;m++){
+	       		pathD+=newArr[m*2]+" "+ newArr[m*2+1]+" ";
+	       }
+	       pathD+="Z";
+	    	if(addFleg){
+		    	var squareG=document.createElementNS(svgNS,"g");
+				var squarePath=document.createElementNS(svgNS,"path");
+				currentPath=squarePath;
+		    	//画line不规则的图像时；
+		    	 bindEvent(squareG,"mousedown",function(e){
+			        	preventBubble(e);
+			        	rectArr=[];currentPath=null;newArr=[];//清除方块后清空
+						currentPath=squarePath;
+			        	newPathDown(squarePath,e,elementSvg,newArr,rectArr,currentPath);
+			        	$('#square-btn').removeClass('active');
+			        	$('.svg-content').removeClass('dreg-content');//在画布上去除的十字架
+			        	lineFleg=false;
+			      });
+		       currentPath.setAttribute("d",pathD);//M12.51 80.01 L68.34 80.01 L68.34 10.86 L12.51 10.86  Z
+		       squarePath.setAttribute("fill","rgba(150, 150, 150, 0.3)");
+		       squarePath.setAttribute("stroke","rgb(185, 217, 245)");
+			   squarePath.setAttribute("class",classType);
+			   squareG.appendChild(squarePath);
+			   elementSvg.appendChild(squareG);
+			    if(typeVal==0){//判断是为了保证分区工位获取互不影响；
+		        	newArea=$("#svg-box .areapath");//获取所有的新分区path	
+		        }else{
+		        	newPos=$("#svg-box .pospath");//获取所有的新工位pos
+		        }
+			   addFleg=false;
+			   return false;
+			}
+	       currentPath.setAttribute("d",pathD);//M12.51 80.01 L68.34 80.01 L68.34 10.86 L12.51 10.86  Z
+			
+	    }
+    	
+	   
+	}   
+
+	//页面架加载渲染左侧的列表区域
+	renderSider(areaDate,$('#areaList_container'))
+
+	//正方形按下的画画
+	  $('#square-btn').on("click",function(){
+	  	clearRect(elementSvg);
+	  	rectArr=[];currentPath=null;newArr=[];//清除方块后清空
+	  	$(".bar-btn").removeClass('active');
+	    $(this).addClass('active');
+	    $('.svg-content').addClass('dreg-content');//在画布上移动的十字架
+	    squareFleg=true;lineFleg=false;
+	    
+	  })
+
+	//折线按下
+	  $("#line-btn").on("click",function(){
+	  	clearRect(elementSvg);
+	  	rectArr=[];currentPath=null;newArr=[];addFleg=true;//清除方块后清空,画不规则的启动
+	  	$(".bar-btn").removeClass('active');
+	  	$(this).addClass('active');
+	  	$('.svg-content').addClass('dreg-content');//在画布上移动的十字架
+	  	lineFleg=true;squareFleg=false;
+
+	  })
+	//监听删除事件
+	  $(document).keydown(function(event){
+	　　var code=event.keyCode;addFleg=true;
+		if(code==46){
+			//页面上的元素的移除
+			$(currentPath).parent('g').next("g").remove();
+			$(currentPath).parent('g').remove();
+			//对应删除数据，保证用数据渲染的path，再次渲染无影响；
+			var dataId=$(currentPath).attr("data-id");
+			var pathStr=$(currentPath).attr("d");
+			var index=changeAreaDate(dataId,pathStr,areaDate);
+			//areaDate.splice(index,1)
+			if(typeVal==0){//判断是为了保证分区工位获取互不影响；
+	        	newArea=$("#svg-box .areapath");//获取所有的新分区path	
+	        }else{
+	        	newPos=$("#svg-box .pospath");//获取所有的新工位pos
+	        }
+		}
+	　});
+	 //改变缩放的大小
+	 var sizeN=1;var precontNum=100;
+	 $('#change-size').on("click","i",function(){
+	 	var width=$('#svg-box').width()*1,height=$('#svg-box').height()*1;
+	 	clearRect(elementSvg);//缩放的时候清空小rect四方快
+	 	var targetI=$(this);
+	 	if(targetI.hasClass('add_icon')){
+	 		sizeN=(110/100);
+	 		precontNum+=10;
+	 	}else{
+	 		precontNum <=10?  sizeN=1 : sizeN=(90/100);
+	 		precontNum <=10?   precontNum=10 : precontNum-=10;
+	 	}
+	 	$('.percent-txt').text(precontNum+'%');
+	 	$('#svg-box').css({
+	 		'width':width*sizeN,
+	 		'height':height*sizeN
+	 	})
+		 svgLeft=$(".svg-wrap")[0].offsetLeft;//重新获取边距
+		 svgTop=$(".svg-wrap")[0].offsetTop;
+		 console.log(sizeN,'precontNum')
+		setZoom(elementSvg,sizeN)
+		//setZoomDate(areaDate,sizeN);
+		//setZoomDate(newArea,sizeN);
+		//setZoomDate(newPos,sizeN);
+		//renderPath(areaDate,$("#svg-box")[0])//渲染分区path；
+
+	 })
+	 //页面滚轮滚动的距离；
+	 $('.svg-content').on("scroll",function(event){
+	 	scrollTop=$(this).scrollTop();
+	 	console.log(scrollTop,"top")
+	 })
+
+})
+//首次进来渲染左侧菜单点击的右侧的详情
+function renderDetails(dataA,ele){
+	var strD=`<div class="m-updown">`
+					+`<button class="layui-btn layui-btn-normal btn-bg" id="" style="width: 180px">编辑分区</button>`
+				+`</div>`;
+				strD+=`<div class="flex-between" style="padding: 5px 10px;">`
+							+`<span>名称：</span><span>`+dataA['name']+` </span>`
+						+`</div>`
+						+`<div class="flex-between " style="padding: 5px 10px;">`
+							+`<span>类型：</span><span>`+dataA['area_type']+` </span>`		
+						+`</div>`
+						+`<div class="flex-between " style="padding: 5px 10px;">`
+							+`<span>工位数：</span><span>`+dataA['capacity'] +`</span>`
+						+`</div>`
+						+`<div class="flex-between " style="padding: 5px 10px;">`
+							+`<span>容纳人数：</span><span>`+dataA['real_capacity'] +`</span>`
+						+`</div>`
+						+`<div class="flex-between " style="padding: 5px 10px;">`
+							+`<span>面积：</span><span>`+dataA['size'] +` ㎡</span>`
+						+`</div>`
+						+`<div class="flex-between " style="padding: 5px 10px;">`
+							+`<span>锁：</span><span>`+dataA['lock'] +` </span>`
+						+`</div>`
+						+`<div class="flex-between " style="padding: 5px 10px;">`
+							+`<span>墙：</span><span>`+dataA['lock'] +` </span>`	
+						+`</div>`
+						+`<div class="flex-between " style="padding: 5px 10px;">`
+							+`<span>朝向：</span><span>南 </span>`	
+						+`</div>`
+		$(ele).html(strD)
+}
+//首次进来渲染path
+function renderPath(dataArea,svg){	
+	console.log(dataArea,'666666666666666666666')
+	var svgNS="http://www.w3.org/2000/svg";
+	$(svg).children('g').not(":first").remove();//先清空在渲染
+	$(svg).children('path').remove();	
+	for(var j=0;j<dataArea.length;j++){
+		if(!dataArea[j]['path']){
+			continue;
+		}
+		var g=document.createElementNS(svgNS,"g");
+		var pathNode=document.createElementNS(svgNS,"path");
+		pathNode.setAttribute("data-id",dataArea[j]['id']);
+		pathNode.setAttribute("class",'path');
+		pathNode.setAttribute("d",dataArea[j]['path']);
+        pathNode.setAttribute("fill",'rgba(120, 200, 60, 0.3)');
+        pathNode.setAttribute("stroke",'rgb(185, 217, 245)');
+        var name=dataArea[j]['name'];
+        (function(){
+       		 bindEvent(pathNode,"mousedown",function(event){
+	        	var e=e||event;
+	        	var path=e.target;
+	        	moveOldPath(path);
+	        });
+       })();
+       (function(name){
+       		 bindEvent(pathNode,"mouseover",function(event){
+	        	var e=e||event;
+	        	var path=e.target;
+	        	setHover(path,name);
+	        });
+       })(name);
+       (function(){
+       		bindEvent(pathNode,"mouseout",function(event){
+	        	var e=e||event;
+	        	var path=e.target;
+	        	removeHover(path,"rgb(120, 200, 60,0.3)")
+	        });
+       	})();
+       /* bindEvent(pathNode,"mousedown",pathDown)*/
+        g.appendChild(pathNode);
+        svg.appendChild(g);
+	}
+
+	//console.log($(svg).children('g').not(":first"))
+}
+//首次进来渲染左侧菜单
+function renderSider(areaDate,ele){
+	if(areaDate== null|| areaDate.length<=0) return;
+	var areaList="";
+　　for(var i=0;i<areaDate.length;i++){
+		var colorBg="#b6b7b8",tit="关联"
+		if(areaDate[i]["lock"]){
+			colorBg='#78c83c';
+			tit="取消关联";
+		}
+		areaList+=`<div class="flex-between list" style="padding: 5px 10px; cursor: pointer;" data-id="`+areaDate[i]["id"]+`" data-area='`+ JSON.stringify(areaDate[i])+`'>`
+						+`<span class="t-over" style="max-width: 90px;">`+areaDate[i]["name"]+` </span>`
+						+`<div class="block-relation flex-center" style="background-color:`+colorBg+`"><i class="layui-icon layui-icon-share"></i><span>`+tit+`</span>`
+						+`</div>`
+					+`</div>`
+	};
+	$(ele).html(areaList);
+}
+//渲染工位的的path;
+function renderPosition(dataArea,svg){
+	var svgNS="http://www.w3.org/2000/svg";
+	$(svg).children('g').not(":first").remove();//先清空在渲染
+	for(var j=0;j<dataArea.length;j++){
+		if(!dataArea[j]['path']){
+			continue;
+		}
+		var pathNode=document.createElementNS(svgNS,"path");
+		pathNode.setAttribute("class",'path');
+		pathNode.setAttribute("d",dataArea[j]['path']);
+        pathNode.setAttribute("fill",'rgba(120, 200, 60, 0.3)');
+        pathNode.setAttribute("stroke",'rgb(185, 217, 245)');
+        svg.appendChild(pathNode);
+	}	
+	for(var j=0;j<dataArea.length;j++){
+		if(!dataArea[j]['desk_serial_numbers']||dataArea[j]['desk_serial_numbers'].length<=0){
+			continue;
+		};
+		//console.log(dataArea[j]['desk_serial_numbers'])
+		for(var n=0;n<dataArea[j]['desk_serial_numbers'].length;n++){
+			var desk=dataArea[j]['desks'][n];
+			if(!desk['path']){
+				continue;
+			}
+			//console.log(desk)
+			var g=document.createElementNS(svgNS,"g");
+			var pathNode=document.createElementNS(svgNS,"path");
+			pathNode.setAttribute("data-id",desk['id']);
+			pathNode.setAttribute("class",'path');
+			pathNode.setAttribute("d",desk['path']);
+	        pathNode.setAttribute("fill",'rgb(120, 200, 60)');
+	        pathNode.setAttribute("stroke",'rgb(185, 217, 245)');  
+	        var name=desk['name'];
+	        (function(){
+	       		 bindEvent(pathNode,"mousedown",function(event){
+		        	var e=e||event;
+		        	var path=e.target;
+		        	moveOldPath(path);
+		        });
+       		})();
+	       (function(name){
+	       		 bindEvent(pathNode,"mouseover",function(event){
+		        	var e=e||event;
+		        	var path=e.target;
+		        	setHover(path,name,"rgb(120, 200, 60, 0.3)");
+		        });
+	       })(name);
+	       (function(name){
+	       		bindEvent(pathNode,"mouseout",function(event){
+		        	var e=e||event;
+		        	var path=e.target;
+		        	removeHover(path,"rgb(120, 200, 60)")
+		        });
+       	   })(name);
+	       /* bindEvent(pathNode,"mousedown",pathDown)*/
+	        g.appendChild(pathNode);
+	        svg.appendChild(g);
+		}
+	}	
+}
+//获取数据后渲染的path的点击移动方法
+function moveOldPath(path){
+	console.log(999999999999999999999999999999999999999999)
+	preventBubble(event);
+	console.log(elementSvg)
+	clearRect(elementSvg)
+    newArr=[];rectArr=[];//每次点击情况高亮path和高亮rect的存在数组里面的值;
+    var target=$(path);
+    	id=$(target).attr("data-id");
+   		currentPath=target[0];//点击时的高亮path
+    var gParent=$(path).parent()[0];//path的父亲g； 
+    newArr=getDfn($(path)[0])
+    //创建四个方块；
+    if(createRcetFleg(target[0])){
+      createRect(gParent,newArr,currentPath,rectArr,elementSvg);
+
+    }
+    target[0].setAttribute("fill",'rgb(185, 217, 245)');//移动时的蓝色高亮
+    findIDList(id)//点击path对应的左侧列表高亮
+    //位置
+    var mouseX=event.clientX;
+    var mouseY=event.clientY;//计算xy
+    var nodeRect=$(target).parent().next().children();
+    for(var m=0;m<nodeRect.length;m++){
+      rectArr.push(getXY(nodeRect[m]));
+    }
+    //移动
+    var chax=0,chay=0;
+    elementSvg.onmousemove=function(event){
+      var newX=event.clientX;chax=(newX-mouseX)*1;
+      var newY=event.clientY;chay=(newY-mouseY)*1;
+      var strAttr='';
+      for(var n=0;n<newArr.length/2;n++){
+         var x=newArr[n*2]*1+chax;
+        var y=newArr[n*2+1]*1+chay;
+        setXY(nodeRect.eq(n)[0],(rectArr[n]["x"]*1+chax),(rectArr[n]["y"]*1+chay))
+        if(n==0){
+           strAttr="M"+x+" "+y+" ";
+        }else{
+          strAttr+="L"+x+" "+y+" ";
+        }
+      }
+      strAttr+="Z";
+     $(target)[0].setAttribute("d", strAttr);
+     }
+    //抬起
+    elementSvg.onmouseup=function(event){
+    	//移动结束的时候，要给数据重新赋值path字段
+    	var pathStr=path.getAttribute("d");
+    	var dataId=path.getAttribute("data-id");
+    	if(typeVal==0){//存储分区
+    		changeAreaDate(dataId,pathStr,areaDate)//修改数据的
+    	}else{
+    		//changeAreaDate(dataId,pathStr,areaDate)//修改数据的
+    	}
+    	console.log(pathStr,dataId,"pathmove")
+       elementSvg.onmousemove=null;
+       elementSvg.onmouseup=null;
+       //抬起的时候存储信息；
+      for(var m=0;m<newArr.length/2;m++){
+        newArr[m*2]=newArr[m*2]*1+chax;
+        newArr[m*2+1]=newArr[m*2+1]*1+chay;
+        rectArr[m]["x"]=rectArr[m]["x"]*1+chax;
+        rectArr[m]["y"]=rectArr[m]["y"]*1+chay;
+      }
+    }
+}
+//划入的样式
+function setHover(path,name,color){
+	var color=color||'rgba(120, 200, 60, 0.9)'
+	var str="<p>"+name+"</p>";
+	//console.log(name,"name")
+	layer.tips(str, path, {
+	  tips: [1, '#000'] //还可配置颜色
+	});
+	path.setAttribute("fill",color);
+};
+//划出的样式
+function removeHover(path,color){
+	var color=color||'rgba(120, 200, 60, 0.3)';
+	//console.log(path,this,color)
+	path.setAttribute("stroke-width",'rgb(185, 217, 245)');
+	path.setAttribute("fill",color);
+	layer.closeAll();
+	// 事件绑定
+}
+function newPathDown(newPath,e,elementSvg,newArr,rectArr,currentPath){
+	console.log('newPathDown')
+	clearRect(elementSvg);
+	newArr=[];rectArr=[];//每次点击情况高亮path和高亮rect的存在数组里面的值;
+	//创建四个方块；
+	var gParent=$(newPath).parent();
+	    newArr=getDfn(newPath)
+    if(createRcetFleg(newPath)){
+      createRect(gParent[0],newArr,currentPath,rectArr,elementSvg);
+    }
+	var nodeRect=$(newPath).parent().next().children();
+    for(var m=0;m<nodeRect.length;m++){
+      rectArr.push(getXY(nodeRect[m]));
+    }
+	//位置
+    var mouseX=event.clientX;
+    var mouseY=event.clientY;//计算xy
+    //移动
+    elementSvg.onmousemove=function(event){
+		var newX=event.clientX,chax=(newX-mouseX)*1;
+		var newY=event.clientY;chay=(newY-mouseY)*1;
+		var strAttr='';
+		for(var n=0;n<newArr.length/2;n++){
+		 var x=newArr[n*2]*1+chax;
+		var y=newArr[n*2+1]*1+chay;
+		setXY(nodeRect.eq(n)[0],(rectArr[n]["x"]*1+chax),(rectArr[n]["y"]*1+chay))
+			if(n==0){
+			   strAttr="M"+x+" "+y+" ";
+			}else{
+			  strAttr+="L"+x+" "+y+" ";
+			}
+		}
+		strAttr+="Z";
+		newPath.setAttribute("d", strAttr);
+     }
+    //抬起
+    elementSvg.onmouseup=function(event){
+     	elementSvg.onmousemove=null;
+        elementSvg.onmouseup=null;
+        //清空重新储存，解决移动后，点击四方快会错位的问题；
+        clearRect(elementSvg);
+		newArr=[];rectArr=[];
+      newArr=getDfn(currentPath)
+      if(createRcetFleg(newPath)){
+	      createRect(gParent[0],newArr,currentPath,rectArr,elementSvg);
+	   }
+      var nodeRect=$(currentPath).parent().next().children();
+      for(var m=0;m<nodeRect.length;m++){
+          rectArr.push(getXY(nodeRect[m]));
+      }
+      //移动的时候清空绘画的类型
+		lineFleg=false;squareFleg=false;
+		$('#square-btn').removeClass('active');
+		$("#line-btn").removeClass('active');
+    }
+	return false;
+}
+//点击path对应的左侧列表高亮
+function findIDList(id){
+	var list=$("#areaList_container .list");
+    for(var k=0;k<list.length;k++){
+    	var dataId=$(list[k]).attr("data-id");
+    	$(list[k]).removeClass('active')
+    	if(dataId==id){
+    		$(list[k]).addClass('active')
+    	}
+    }
+}
+function findIdPath(id,newArr,rectArr,currentPath,elementSvg){
+	var ArrPath=$("#svg-box .path");
+	for(var n=0;n<ArrPath.length;n++){
+		var path=ArrPath[n];
+		var dataId=$(ArrPath[n]).attr("data-id");
+		//console.log(dataId)
+		if(dataId==id){
+			var gParent=$(path).parent()[0];//path的父亲g； 
+			currentPath=path;
+			console.log(currentPath,'ppp')
+			newArr=getDfn(path);
+			//创建四个方块；
+	        if(createRcetFleg(path)){
+	          createRect(gParent,newArr,currentPath,rectArr,elementSvg);
+	        }
+		}
+	}
+}
+//创建四个rect一个g,obj指path的父亲g;
+//arr---->newArr;
+//["12.51", "80.01", "68.34", "80.01", "68.34", "10.86", "12.51", "10.86", ""]
+function createRect(obj,newArr,currentPath,rectArr,elementSvg){
+  var svgNS="http://www.w3.org/2000/svg";
+ rectArr=[];
+  var g=document.createElementNS(svgNS,"g");
+    for(var j=0;j<newArr.length/2;j++){
+      var nodeRect= document.createElementNS(svgNS,"rect");
+      nodeRect.setAttribute("height",8);
+      nodeRect.setAttribute("width",8);
+      nodeRect.setAttribute("x",newArr[j*2]-4);
+      nodeRect.setAttribute("y",newArr[j*2+1]-4);
+      nodeRect.setAttribute("class","fp-tool-rect kb-cursor-edite");
+
+      rectArr.push({"x":newArr[j*2]-4,"y":newArr[j*2+1]-4});//画的就是高亮的，存储高亮的数据；
+      (function(nodeRect){
+      	bindEvent(nodeRect,"mousedown",function(event){
+	      	preventBubble(event);
+	      	rectMoveSet(nodeRect,rectArr,newArr,currentPath,event,elementSvg)//点击小方块的时候，修改图形
+	    })
+      })(nodeRect)
+      g.appendChild(nodeRect);
+    }
+    var svgParent = obj.parentNode;//获取该g的父节点svg；
+    var next = obj.nextSibling;//获取g的下一个兄弟节点
+    //判断兄弟节点是否存在
+    if(next) {
+        //存在则将新节点插入到div的下一个兄弟节点之前，即g之后
+        svgParent.insertBefore(g,next);
+    } else {
+        //console.log(svgParent)
+        //不存在则直接添加到最后,appendChild默认添加到svgParent的最后
+        svgParent.appendChild(g);
+    }
+    return false;
+}
+//点击设置方块的移动修改图形,
+function rectMoveSet(nodeRect,rectArr,newArr,currentPath,event,elementSvg){
+	var index=getChildrenIndex(nodeRect);
+	//位置
+	var startX=event.clientX,
+		startY=event.clientY;
+	var pathx=newArr[index*2],pathy=newArr[index*2+1];
+	var rectx=pathx-4,recty=pathy-4;
+	 //移动
+    elementSvg.onmousemove=function(event){
+    	//console.log(rectx,recty,'k');
+    	//修改高亮的rect：rectArr 和 高亮的path路径：newArr;
+		var newX=event.clientX,chax=(newX-startX)*1;
+		var newY=event.clientY,chay=(newY-startY)*1;
+		nodeRect.setAttribute("x",rectx*1+chax);
+        nodeRect.setAttribute("y",recty*1+chay);
+        rectArr[index]["x"]=rectx*1+chax;
+        rectArr[index]["y"]=recty*1+chay;
+        var pathD='M';
+		for(var m=0;m<newArr.length;m++){//设置path'的修改
+			if(m==index*2){
+	       		newArr[m]=pathx*1+chax;
+	       	}else if(m==index*2+1){
+	       		newArr[m]=pathy*1+chay;
+	       	}
+		}
+       for(var m=0;m<newArr.length/2;m++){//拼接path的d；
+	        if(m==0){	
+       			pathD+=newArr[m*2]+" "+ newArr[m*2+1]+" ";
+       		}else{
+       			pathD+="L"+newArr[m*2]+" "+ newArr[m*2+1]+" ";
+       		}
+       }
+       pathD+="Z";
+     currentPath.setAttribute("d",pathD);	
+     }
+    //抬起
+    elementSvg.onmouseup=function(event){
+    	//抬起的时候储存新的数据
+     	elementSvg.onmousemove=null;
+        elementSvg.onmouseup=null;
+        var dataId= currentPath.getAttribute("data-id");
+        var pathStr= currentPath.getAttribute("d");	
+        changeAreaDate(dataId,pathStr,areaDate)
+	    //console.log(rectArr,nodeRect,newArr,currentPath,'jjjjjjjjj')
+    }
+	
+}
+//清除页面中的全部的rect方块；
+function clearRect(svg){
+  var g=svg.getElementsByTagName("g");
+  for(var i=0;i<g.length;i++){
+  	var addG=g[i];
+    var childRect=g[i].getElementsByTagName("rect");
+    if(childRect.length>=4){
+      svg.removeChild(g[i]);
+    }
+  }
+}
+//清除单个path的方块包裹,传path对象
+function removeRect(path){
+  if(path){
+    var gParent=path.parentNode;
+    var rectParent=gParent.nextElementSibling
+    rectParent.parentNode.removeChild(rectParent);
+    return true;
+  }else{
+    return false;
+  }
+}
+//清除高亮的path对象；
+
+//判断点击的path对象是否存在rect方块,确保生成一次,传path[]对象；
+function createRcetFleg(nodePath){
+  var parentG=nodePath.parentNode;
+  var nodeNextG=parentG.nextElementSibling;
+  var fleg=true;
+  if(nodeNextG){
+    var rectChild=nodeNextG.getElementsByTagName('rect');
+    if(rectChild.length>0){
+      fleg= false;
+    }else{
+      fleg= true;
+    }
+  }else{
+    fleg= true;
+  }
+  return fleg;
+}
+//获取方块的坐标；
+function getXY(node){
+  var x=node.getAttribute("x");
+  var y=node.getAttribute("y");
+  return {
+    "x":x,
+    "y":y
+  }
+}
+
+//设置方块的坐标；
+function setXY(node,x,y){
+  node.setAttribute("x",x);
+  node.setAttribute("y",y);
+}
+function getDfn(obj){
+	var d=obj.getAttribute("d");
+	var arr=d.split(/\s+/);  
+	var newArr=[];    
+    for(var i=0;i<arr.length;i++){
+      newArr.push(arr[i].replace(/[a-z]+/ig,""));
+    }
+    newArr.splice(newArr.length-1,1)
+   return newArr;
+}
+function runAsync(url){
+　　var def = $.Deferred();
+　　//做一些异步操作
+　　$.ajax({
+        type:"get",
+        async:false,
+        url:url,
+        dataType:"json",
+        success:function(data){
+        	def.resolve(data);
+        }
+    })
+　　return def.promise(); //返回的deferred对象
+}
+function bindEvent(obj,type,handler){
+    if (window.addEventListener) {// 标准浏览器    
+      obj.addEventListener(type, handler, false);     
+    } else if (window.attachEvent) {// IE浏览器      
+      obj.attachEvent("on" + type, handler);
+    }
+}
+ // 事件解除
+function removeEvent(elem,type,handler){
+    if (window.removeEventListener) {// 标准浏览器      
+      elem.removeEventListener(type, handler, false);       
+    } else if (window.detachEvent) {// IE浏览器
+      elem.detachEvent("on" + type, handler);    
+    }
+}
+	
+function getChildrenIndex(ele){ 
+	//IE is simplest and fastest 
+	if(ele.sourceIndex){ 
+		return ele.sourceIndex - ele.parentNode.sourceIndex - 1; 
+	} 
+	//other browsers 
+	var i=0; 
+	while(ele = ele.previousElementSibling){ 
+		i++; 
+	} 
+	return i; 
+} 
+function sortId(a,b){  
+   return a.id-b.id  
+}
+/* 阻止事件冒泡 */
+function preventBubble(event){ //取消事件冒泡
+    var e=arguments.callee.caller.arguments[0]||event; //若省略此句，下面的e改为event，IE运行可以，但是其他浏览器就不兼容  
+    if (e && e.stopPropagation) {  
+      e.stopPropagation();  
+    } else if (event) {  
+      event.cancelBubble = true;  
+    }  
+}
+function setZoomDate(areaDate,precontNum){
+	var precontNum=precontNum;
+	//getAllPath(elementSvg);//首次获取所有的path
+	console.log(precontNum,"precontNum")
+	for(var i=0;i<areaDate.length;i++){	
+		//console.log(areaDate[i]['path'],'arrD');	
+		if(areaDate[i]['path']){
+			//continue;		
+			//console.log(areaDate[i]['path'],'arrD2');	
+			var arrD=getDfn(areaDate[i]['path']);
+			//console.log(arrD,"ARRD")
+			var strD='M';
+			for(var j=0;j<arrD.length/2;j++){
+				odd=arrD[j*2]*precontNum;
+				even=arrD[j*2+1]*precontNum;
+				//console.log(arrD[j*2],arrD[j*2]*precontNum,"odd")
+				if(j==0){
+					strD+=odd+' '+even+' ';
+				}else{
+					strD+="L"+odd+' '+even+' ';
+				};
+			};
+			areaDate[i]['path']=strD;
+		};
+		//
+	};	
+	console.log(areaDate,"5555555555555555")
+}	
+function setZoom(elementSvg,precontNum){
+	//getAllPath(elementSvg);//首次获取所有的path
+	var pathAll=elementSvg.getElementsByTagName('path');
+	for(var i=0;i<pathAll.length;i++){
+		var pathD=pathAll[i];
+		var arrD=getDfn(pathAll[i]);
+		//var arrD=pathAllSize[i];
+		var strD='M';
+		for(var j=0;j<arrD.length/2;j++){
+			odd=arrD[j*2]*precontNum;
+			even=arrD[j*2+1]*precontNum;
+			if(j==0){
+				strD+=odd+' '+even+' ';
+			}else{
+				strD+="L"+odd+' '+even+' ';
+			};
+		};
+		pathD.setAttribute('d',strD);
+	};	
+}
+function initFormSelects(id,res,defaultValue){
+	$("#"+id).html("<option value='' selected='selected'>请选择</option>");
+	for(var i=0;i<res.length;i++){
+		//console.log(res)
+		if(defaultValue==res[i].id){
+			$("#"+id).append("<option value='"+res[i].id+"' selected='selected'>"+res[i].name+"</option>");  
+		}else{
+			$("#"+id).append("<option value='"+res[i].id+"' >"+res[i].name+"</option>");  
+		}
+		
+	}
+	form.render();//表单重新渲染，要不然添加完显示不出来新的option  
+}
+//id，路径path;
+function changeAreaDate(dataId,pathStr,areaDate){
+	var index=-1;
+	for(var i=0;i<areaDate.length;i++){
+		var id=areaDate[i]['id'];
+		var path=areaDate[i]['path']
+		if(id==dataId){
+			index=i;
+			areaDate[i]['path']=pathStr;
+			return index;
+		}
+	}
+}
+</script>
+</html>

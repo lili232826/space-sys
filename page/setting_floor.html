@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>基本设置</title>
+	<link rel="stylesheet" href="../js/plugin/layui-v2.3.0/layui/css/layui.css">
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/index.css">
+	<link rel="stylesheet" href="../css/set.css">
+	<script src="../js/jquery-2.1.1.min.js"></script>
+	<script src="../js/plugin/layui-v2.3.0/layui/layui.js"></script>
+</head>
+<style>
+	body,html{
+		height: auto; 
+	}
+</style>
+<body>
+    <div class="nav-section-content-container" style="padding: 0px">
+		<header class="nav-header">
+			<div class="nav-section-header-title">
+				<span>楼层管理</span>
+				<div class='nav-header-btn f-right'><span class="layui-btn layui-btn-radius layui-btn-normal">添加部门</span></div>
+			</div>
+		</header>
+		<div class="nav-section-content-container">
+			<div class="pad-top-30">
+				<div class=" clearfix border-bottom pad-bot-20">
+					<div class="f-left">
+						<span class="font-18 ">金泰大厦</span>
+					</div>
+					<div class="f-right">
+						<button class="layui-btn layui-btn-sm layui-btn-radius layui-btn-normal ">
+						添加楼层
+						</button>
+						<button class="layui-btn layui-btn-sm layui-btn-radius layui-btn-normal ">
+							修改大楼
+						</button>
+						<button class="layui-btn layui-btn-sm layui-btn-radius layui-btn-normal ">
+							删除大楼
+						</button>
+					</div>
+				</div>
+				<div>
+					<!-- 表格 -->
+				</div>		
+		</div>
+	</div>
+</body>
+<script>
+	$(function(){
+		setHeight()
+		function setHeight(){
+	        var h = document.body.clientHeight*1+30;
+	        window.parent.test(h);
+	    }
+	})
+</script>
+</html>

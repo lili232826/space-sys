@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>分店管理-设置</title>
+	<link rel="stylesheet" href="../js/plugin/layui-v2.3.0/layui/css/layui.css">
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/index.css">
+	<link rel="stylesheet" href="../css/set.css">
+	<script src="../js/jquery-2.1.1.min.js"></script>
+	<script src="../js/plugin/layui-v2.3.0/layui/layui.js"></script>
+</head>
+<style>
+/* ::-webkit-scrollbar-thumb {
+  background:rgb(95,106,135); 
+  border-radius: 10px;
+  height:50%;
+}
+::-webkit-scrollbar{width:6px;}*/
+	body{
+		overflow-y: scroll;
+	} 
+</style>
+<body>
+<div class="kb-out-box">
+	<div class="kb-content my-locations-list">	
+		<div class="nav-container f-left">
+			<div class="nav-container-content">
+				<header class="nav-header">
+					<h2 class="header-title">分店设置</h2>
+				</header>
+				<div class="nav-body">
+					<ul class="nav-container-list">
+						<li class="nav-container-list-hover"><a href="">基本设置</a></li>
+						<li class=""><a href="">权限设置</a></li>
+						<li class=""><a href="">门禁设置</a></li>
+						<li class=""><a href="">会议室设置</a></li>
+						<li class=""><a href="">工位置</a></li>
+						<li class=""><a href="">数据导入</a></li>
+						<li class=""><a href="">楼层管理</a></li>
+						<li class=""><a href="">开放功能管理</a></li>
+						<li class=""><a href="">打印机管理</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>	
+		<div class="nav-section-container nav-section-container-bg f-right">
+			<div style="width: 100%;min-height: 100%; position: relative;" id="iframepage-wrap">
+				<!-- <iframe id="iframepage" src="setting_floor.html" frameborder="0" width="100%" height="100%" scroll='no'></iframe> -->
+				<!-- <iframe id="iframepage" src="setting_basic.html" frameborder="0" width="100%" height="100%" scroll='no'></iframe> -->
+				<!-- <iframe id="iframepage" src="setting_power.html" frameborder="0" width="100%" height="100%" scroll='no'></iframe> -->
+				<!-- <iframe id="iframepage" src="setting_roomsetting.html" frameborder="0" width="100%" height="100%" scroll='no'></iframe> -->
+				<iframe id="iframepage" src="setting_pos.html" frameborder="0" width="100%" height="100%" scroll='no'></iframe>
+			</div>
+		</div>	
+	</div>
+</div>
+</body>
+<script>
+	
+$(function(){
+		
+
+	/*layui.config({
+	        base: '../js/plugin/layui-v2.3.0/layui/' //此处路径请自行处理, 可以使用绝对路径
+	    }).extend({
+	        formSelects: 'formSelects-v3'
+	    }).use(['element',"layer","form",'formSelects'], function(){
+			var layer=layui.layer,form = layui.form,formSelects = layui.formSelects;
+			formSelects.render({
+				name:'bumen',
+				type:1,
+				date:{
+					arr:[
+					     {content:"测试1",value:"1",sel:true,dis:true},
+					     {content:"测试2",value:"1",sel:false,dis:true},
+					     {content:"测试3",value:"1",sel:false,dis:false},
+					     {content:"测试4",value:"1",sel:false,dis:false},
+					]
+				}
+			});
+			formSelects.value('bumen', [1, 3]);	//动态赋值
+			//监听提交
+			  form.on('submit(formEmployee)', function(data){
+			    return false;
+			  });
+			
+		});*/
+
+})
+function parentHeight(h){
+    document.getElementById("iframepage-wrap").style.height = h+"px"
+}	
+
+</script>
+</html>

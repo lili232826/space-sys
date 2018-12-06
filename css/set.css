@@ -1,0 +1,703 @@
+/* left-nav */
+.layui-form-label{
+    text-align: left;
+}
+.nav-container {
+    width: 225px;
+    border-radius: 2px;
+}
+.nav-body {
+    padding: 30px 0;
+    max-height: 550px;
+    overflow-y: auto;
+    position: relative;
+    box-sizing: border-box;
+}
+.nav-container-list li {
+    cursor: pointer;
+    position: relative;
+}
+.nav-container-list li:hover:before {
+    content: " ";
+    display: block;
+    height: 100%;
+    width: 8px;
+    background-color: #a7b4c8;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.nav-container-list .nav-container-list-hover {
+    background-color: #5fa7ec;
+}
+.nav-container-list li > a {
+    color: #333333;
+    font-size: 14px;
+    display: block;
+    padding: 10px 30px;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.nav-container-list .nav-container-list-hover > a{
+    color: #fff;
+}
+/* right-content */
+.nav-section-container{
+    width: 881px;
+    min-height: 100%;
+    background-color: white;
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+}
+.kb-form-container {
+    padding: 30px;
+    box-sizing: border-box;
+}
+.kb-form-container .fieldset {
+    margin-bottom: 30px;
+    border: none;
+    margin: 0 0 20px;
+    padding: 0;
+}
+.kb-form-container .fieldset legend {
+    font-size: 20px;
+    font-weight: 300;
+    width: 100%;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e6e6e6;
+}
+.kb-form-container .bottom-tip{
+    color: rgb(153, 153, 153);
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+/* 输入合同细节的 */
+.kb-title {
+    border-bottom: 1px solid #e6e6e6;
+    padding-bottom: 10px;
+}
+.kb-title span {
+    font-size: 18px;
+    color: #666;
+    font-weight: 500;
+}
+.location-provider {
+    border: 1px solid #DFE4E7;
+    background-color: #F6F8F9;
+    margin-bottom: 10px;
+    padding: 10px 12px;
+    position: relative;
+}
+.location-provider .provider-line{
+    margin-bottom: 8px;
+}
+.location-provider .provider-line > div{
+    width: 50%;
+}
+.location-provider .provider-line > div > span:first-child {
+    color: #999999;
+    width: 80px;
+    display: inline-block;
+    text-align: right;
+    margin-right: 10px;
+}
+.location-provider .provider-line > div > span:last-child {
+    color: #333333;
+}
+.region-input-box {
+    margin-bottom: 20px;
+    padding: 10px 0;
+}
+.region-input-box li {
+    padding: 10px 30px;
+    position: relative;
+    cursor: pointer;
+}
+.region-input-box .layui-icon-close {
+    position: absolute;
+    color: #999999;
+    top: 10px;
+    right: 8px;
+    cursor: pointer;
+}
+.region-input-box li .layui-icon-close:hover {
+    color: #5fa7ec;
+}
+.input-num {
+    border: 1px solid #e6e6e6;
+    padding-right:60px !important;
+    background: url(../images/icon/input-num.jpg) no-repeat right center !important;
+    background-size: 49px 44px;
+}
+.input-dollar-moth {
+    border: 1px solid #e6e6e6;
+    padding-right: 60px !important;
+    background: url(https://media-ssl.kuban.io/static/web/v1/images/input-dollar-month.png) no-repeat right center !important;
+    background-color: #ffffff !important;
+}
+.content-table {
+    margin-top: 15px;
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.content-table th, .content-table tr {
+    border-bottom: 1px solid #e6e6e6;
+}
+.content-table td {
+    color: #333333;
+    padding: 15px 10px 0px 0;
+    font-size: 14px;
+    position: relative;
+}
+.content-table td:last-child, .content-table th:last-child{
+    padding-top: 0px;
+    font-weight: bold;
+}
+.a-hover:hover {
+    color: #62a8e9 !important;
+    cursor: pointer;
+}
+.content-table .layui-form-label{
+    width: auto;
+}
+.total-num {
+    padding: 15px 0 15px 15px;
+    text-align: right;
+}
+.total-num span {
+    display: inline-block;
+    padding: 15px 30px;
+    border-bottom: 1px solid #e6e6e6;
+}
+.hint-frame {
+    background-color: #e7f4fd;
+    padding: 15px 20px;
+}
+.hint-frame > img {
+    margin-right: 12px;
+    width: 20px;
+    height: 20px;
+}
+.kb-form-66  label {
+    width: 16.66667%;
+    font-size: 14px;
+    margin: 9px 0 8px;
+    color: #999999;
+    position: relative;
+}
+.group-content {
+    line-height: 37px;
+}
+/* 员工页面的相关样式 */
+.dotted-name{
+    width: 50px; height: 50px; 
+    border-radius: 50px;background-color: rgb(251, 110, 82);
+    font-size: 26px;line-height: 55px;
+    font-family: 'Lantinghei SC';
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+}
+.member-box .member_name {
+    display: block;
+    text-align: center;
+    padding-top: 5px;
+    width: 100%;
+}
+.member-message .message-list {
+    width: 50%;
+    text-align: left;
+    padding-bottom: 30px;
+    padding-top: 20px;
+    border-bottom: 1px solid #e6e6e6;
+}
+.member-message .message-list > li{
+    padding: 5px 0px;
+}
+.member-message .message-list > li > span:nth-child(1) {
+    display:inline-block; 
+    width: 70px;
+    margin-right: 5px;
+}
+.member-credits {
+    padding: 30px 0;
+    border-bottom: 1px solid #e6e6e6;
+}
+.member-credits .credit-message > span:nth-child(1) {
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+.member-credits .credit-message > span:nth-child(2){
+    color: #666666
+}
+/* 添加合同里面的---添加灵活工位 */
+.area-status .status-title > span:first-child {
+    display: block;
+    width: 14px;
+    height: 14px;
+    border-radius: 2px;
+    margin-right: 5px;
+}
+.area-status .status-title{
+   margin-left: 15px;
+}
+.area-block {
+    width: 100px;
+    height: 100px;
+    border-radius: 2px;
+    text-align: center;
+    margin-bottom: 20px;
+    float: left;
+    margin-right: 15px;
+    cursor: pointer;
+    padding: 0 5px;
+    box-sizing: border-box;
+}
+.area-block:nth-child(5n) {
+    margin-right: 0;
+}
+.area-block_active {
+    background-color: #62a8e9 !important;
+    color: #ffffff !important;
+}
+.area-block_hover:hover {
+    background-color: #62a8e9 !important;
+    color: #ffffff !important;
+}
+.area-block_active {
+    background-color: #62a8e9 !important;
+    color: #ffffff !important;
+}
+/* 添加封闭工位 */
+.rent-box{
+    padding: 15px;
+    background-color: rgb(251, 252, 252);
+}
+/* 会议室设置 */
+.counterBox {
+    display: inline-block;
+    position: relative;
+    width: 120px;
+}
+.counterBox .subtracter, .counterBox .summator {
+    position: absolute;
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background-color: #e0e7f1;
+    color: #848484;
+    top: 1px;
+    cursor: pointer;
+    outline: none;
+    font-size: 16px;
+    text-align: center;
+    line-height: 28px;
+}
+.counterBox .summator {
+    right: 0px;
+}
+.counterBox > input {
+    width: 100%;
+    border: 1px solid #e6e6e6;
+    background-color: #ffffff;
+    height: 30px;
+    padding: 0px 32px;
+    text-align: center;
+    box-sizing: border-box;
+}
+.input-percent{
+    padding-right: 60px;
+    background: url(../images/icon/input-percent.png) no-repeat right center;
+}
+
+/* 场地管理 */
+.meeting-room {
+    display: block;
+    width: 250px;
+    height: 228px;
+    float: left;
+    margin-right: 35px;
+    margin-top: 30px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.meeting-room:nth-child(3n) {
+    margin-right: 0;
+}
+.meeting-room img {
+    width: 100%;
+}
+.meeting-room .meeting-content {
+    text-align: left;
+    font-size: 12px;
+}
+.meeting-room .meeting-room-name {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 3px;
+    color: #484848;
+    max-width: 240px;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.meeting-room .meeting-people-num {
+    color: #484848;
+    font-size: 16px;
+}
+/* 预约场地 */
+.time-filter {
+    display: inline-block;
+    margin-left: 20px;
+}
+.time-filter > button {
+    padding: 8px 10px;
+    background-color: #ffffff;
+    border: none;
+    border-bottom: 1px solid #e6e6e6;
+    border-left: 1px solid #e6e6e6;
+    border-top: 1px solid #e6e6e6;
+}
+.time-filter > button:last-child {
+    border-right: 1px solid #e6e6e6;
+}
+.time-filter .active {
+    background-color: #999999;
+    color: #FFFFFF;
+    border-color: #999999;
+}
+/* 场地的条形图 */
+.meeting-title-box {
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+}
+.line-meet {
+    width: 140px;
+    overflow: hidden;
+    margin-bottom: 17px;
+}
+.line-meet .meet-title {
+    cursor: pointer;
+}
+.line-meet .meet-title a {
+    display: inline-block;
+    max-width: 120px !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    -o-text-overflow: ellipsis !important;
+    text-overflow: ellipsis !important;
+    font-size: 14px;
+    font-weight: 500;
+    color: #62a8e9;
+}
+.line-time {
+    top: 6px;
+    white-space: nowrap;
+}
+.line-box {
+    margin-bottom: 10px;
+    position: relative;
+    white-space: nowrap;
+}
+.line-date {
+    width: 140px;
+    margin-bottom: 19px;
+}
+.line-date .week {
+    font-size: 12px;
+    color: #999;
+    margin-right: 16px;
+}
+.line-date .day {
+    font-size: 16px;
+    color: #999;
+}
+.time-quantum {
+    width: 33px;
+    height: 26px;
+    text-align: left;
+    line-height: 26px;
+    margin-right: 33px;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 500;
+    color: #666666;
+}
+.time-quantum:last-child {
+    margin-right: 0;
+}
+.time-grid {
+    width: 33px;
+    height: 26px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 26px;
+    display: inline-block;
+    position: relative;
+    background-color: #f4f6f7;
+}
+.time-grid:hover {
+    background-color: #d4d5d6;
+}
+.time-grid:nth-child(even):before {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 1px;
+    height: 20px;
+    background-color: #dbdcdd;
+}
+.time-grid:nth-child(odd):after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 1px;
+    height: 12px;
+    background-color: #dbdcdd;
+    z-index: 1;
+}
+.meeting-block_disabled:before, .meeting-block_disabled:after {
+    display: none !important;
+}
+.time-grid:nth-child(48):before {
+    content: '';
+    display: none !important;
+}
+.timeline-box{
+    position: relative;
+    padding-top: 6px;
+}
+.timeline-box .current-time {
+    position: absolute;
+    z-index: 10;
+    height: calc(100% - 5px);
+    top: 0px;
+    width: 1px;
+    background-color: #ef7070;
+}
+.meeting-block_disabled {
+    background: url(/images/icon/meeting_disabled.png) no-repeat !important;
+    background-size: 100% 100% !important;
+}
+.past-tense {
+    background-color: #e6e6e6 !important;
+}
+/* 场地的条形图-end */
+.meeting-room-imgs {
+    padding: 10px 0px;
+}
+.meeting-room-imgs img {
+    width: 140px;
+    height: 96px;
+    border: 1px solid #E0E3E5;
+    margin-right: 20px;
+}
+.meeting-room-message {
+    display: inline-block;
+    padding: 0 15px;
+    border-right: 1px solid #e6e6e6;
+}
+.meeting-room-message:first-child {
+    padding-left: 0;
+}
+.meeting-status {
+    position: absolute;
+    top: 0;
+    height: 26px;
+    background-color: #9ac7f0;
+    opacity: 0.6;
+    cursor: pointer;
+}
+/* //预约场地的客户弹出框 */
+.meeting-popup {
+    position: absolute;
+    width: 260px;
+    z-index: 15;
+    background-color: #FFFFFF;
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    cursor: default;
+    margin-left: -130px;
+    margin-bottom: 30px;
+}
+.meeting-popup .meeting-header {
+    padding: 30px;
+    border-bottom: 1px solid #e6e6e6;
+}
+.meeting-popup .meeting-header .header-title {
+    float: left;
+}
+.meeting-popup .meeting-header .icon-cancel {
+    float: right;
+    font-size: 18px;
+    color: #999;
+    cursor: pointer;
+}
+.meeting-popup .meeting-header .icon-cancel:hover {
+    color: #62a8e9;
+}
+/* 会议状态显示 */
+.badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 12px;
+    border-radius: 4px;
+    color: #333;
+    border: 1px solid #333;
+}
+.progress-upcoming {
+    color: #62a8e9;
+    border-color: #62a8e9;
+}
+.progress-proceeding {
+    color: #73b43b;
+    border-color: #73b43b;
+}
+.progress-ended {
+    color: #c8174b;
+    border-color: #c8174b;
+}
+.subscribe-details {
+    padding: 20px 30px;
+}
+.subscribe-details li {
+    padding: 10px 0;
+}
+.subscribe-details li span {
+    font-size: 14px;
+    color: #666666;
+}
+.meeting-popup .meeting-footer {
+    padding: 12px 0;
+    text-align: center;
+}
+
+/* 添加门禁style */
+.transfer-box{
+    position: relative;
+}
+.transfer-container{
+    border: 1px solid #e6e6e6;
+    box-sizing: border-box;
+}
+.line-v{
+    position: absolute;
+     top: 60px;
+    height: calc(100% - 80px);
+    width: 1px;
+    background-color: #e6e6e6;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+.transfer-wrap,.transfer-target{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.transfer-header{
+    padding: 10px 0;
+    background-color: #d4d9df;
+    color: #747f8c;
+}
+.transfer-content{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-right: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+.first-tier {
+    padding: 10px 0;
+     box-sizing: border-box;
+}
+.second-tier{
+    padding: 5px;
+     box-sizing: border-box;
+}
+.second-tier:hover {
+    background-color: #f4f6f7;
+}
+.parent-label{
+    height: 25px;
+    cursor: pointer;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.parent-label:hover {
+    background-color: #f4f6f7;
+}
+.parent-label .data-name {
+    -ms-flex: 1 1;
+    flex: 1 1;
+}
+.first-tier .toggle-trans-btn:hover {
+    color: #62a8e9;
+}
+.parent-label .adder-subtractor-btn{
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+    color: #ffffff;
+    background-color: #62a8e9;
+    box-sizing: border-box;
+}
+.second-tier-item {
+    margin-top: 10px;
+    padding-left: 16px;
+}
+.children-label{
+    cursor: pointer;
+}
+.children-label .adder-subtractor-btn{
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+    color: #62a8e9;
+    border: 1px solid #62a8e9;
+    box-sizing: border-box;
+}
+.children-label .data-name>div{
+    width: 20px; 
+    height: 20px;
+    font-size: 11px;
+    line-height: 22px; 
+    font-family: "Lantinghei SC";
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    border-radius: 50px;
+    display: inline-block; 
+    margin-right: 5px;"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

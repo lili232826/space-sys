@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>员工</title>
+	<link rel="stylesheet" href="../js/plugin/layui-v2.3.0/layui/css/layui.css">
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/index.css">
+	<script src="../js/jquery-2.1.1.min.js"></script>
+	<script src="../js/plugin/layui-v2.3.0/layui/layui.js"></script>
+</head>
+<body>
+	<div class="kb-out-box">
+		<div class="kb-content">
+			<nav class="nav-container-bg f-left">
+				<div class="nav-container-content">
+					<header class="nav-header clear-fix">
+						<h2 class='header-title'>组织架构</h2>
+						<div class='nav-header-btn f-right'><span class="add-btn">添加部门</span></div>
+					</header>
+					<div class="section">
+						<div class="tree-view">
+							<div class="tree-view_item" style="padding-left: 30px;">
+								<i class="layui-icon icon-arrow_drop_down_circle layui-icon-down"></i>
+								<div class="tree-view_content">
+									<nobr class="node">全公司</nobr>
+									<div class="kb_dropdown ">
+			                	 		<a class="kb_dropdown__trigger " href="#dropdown-trigger"><i class="layui-icon icon-settings">&#xe614;</i></a>
+				                	 	<div class="kb_dropdown__content ">
+															<ul class="section-option" style="left: 160px;">
+																<li><i class="layui-icon">&#xe631;</i>新建下级部门</li>
+															</ul>
+				                	 	</div>
+			                		</div>
+								</div>
+							</div>
+							<!-- <div class="tree-view">
+								<div class="tree-view_item" style="padding-left: 48px;">
+									<i class="layui-icon icon-arrow_drop_down_circle layui-icon-down"></i>
+									<div class="tree-view_content"><nobr class="node">金泰大厦租赁部</nobr></div>
+								</div>
+								<div class="tree-view">
+									<div class="tree-view_item" style="padding-left: 66px;">
+										<div class="tree-view_content"><nobr class="node">能+空间</nobr></div>
+									</div>
+								</div>
+							</div>--> 
+						</div>
+					</div>
+				</div>
+			</nav>
+			<section class="nav-section-container-bg f-right">
+				<header class="nav-header">
+					<h2 class="nav-section-header-title">
+						<span>全公司</span>
+						<div class="f-right">
+							<button class="layui-btn layui-btn-normal layui-btn-radius" id="add-btn" ><i class="layui-icon"> &#xe654;</i>添加新员工</button>	
+						</div>
+				    </h2>					
+					<div class="color-nine">
+						<i class="layui-icon">&#xe66f;</i>9人
+					</div>
+				</header>
+				<div class="nav-section-content-container">
+					
+				</div>
+			</section>
+		</div>
+	</div>
+</body>
+<script>
+var navData={
+	"code": 0,
+	"msg": "",
+	"count": 8,
+	"data": [{
+		"folderid": "001",
+		"foldername": "元霆数据",
+		"id": "a41304a3837c36911e7886e4ccc62ab4",
+		"modified": "2018-05-11",
+		"parentfolderid": "root",
+		"sortNumber": 4
+	}, {
+		"created": "2018-06-08",
+		"creater": "admin",
+		"folderid": "001001",
+		"foldername": "测试",
+		"id": "fc499066ddbc4c32a19c1a14c0d1c3cc",
+		"modified": "2018-06-08",
+		"parentfolderid": "a41304a3837c36911e7886e4ccc62ab4",
+		"sortNumber": 1
+	}, {
+		"created": "2018-02-28",
+		"creater": "admin",
+		"folderid": "002",
+		"foldername": "信息部门",
+		"id": "1c080197cb924d17b060f5fa5757a71f",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 6
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "003",
+		"foldername": "租赁公司",
+		"id": "8a2efd47134e4039bd7847c97dbc49c4",
+		"modified": "2018-04-10",
+		"parentfolderid": "root",
+		"sortNumber": 1
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "004",
+		"foldername": "公寓管理公司",
+		"id": "5b5dc3d910674b37b0ab08e745d4ecf3",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 2
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "005",
+		"foldername": "写字楼管理公司",
+		"id": "90aad0aafd4e44378f47c505e1bff41a",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 1
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "006",
+		"foldername": "酒店管理公司",
+		"id": "c8ebf878a30a4cc6b81f2d4d74f38ce6",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 3
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "007",
+		"foldername": "总公司",
+		"id": "79cea264e2994266a6fbc2b64bcd5ea9",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 5
+	}]
+}
+	$(function(){
+		layui.use(['element',"layer","form"], function(){
+			var layer=layui.layer,form = layui.form;
+			$("#add-btn").on("click",function(){
+				parent.layer.open({
+				  type: 2, 
+				  title:"添加新员工",
+				  area: ['650px','700px'],
+			      shade: [0.6, '#000'],
+				  content:"page/add.html" , //这里content是一个普通的String
+				});
+			})
+		});
+		var createTree = function(jsons, pid) {
+		    if (jsons != null) {
+		        var navBlock = `<div class="tree-view">`;
+		        for (var i = 0; i < jsons.length; i++) {
+		        	var padN=30*1;
+		            if (jsons[i].parentfolderid == pid) {
+		            	var len=jsons[i].folderid.length*1/3;
+		            	padN += 18*len;
+		                navBlock += `<div class="tree-view_item" style="padding-left:` +padN +`px" >`
+			                +`<i class="layui-icon icon-arrow_drop_down_circle layui-icon-down"></i>`
+			                +`<div class="tree-view_content">`
+			               		+ `<nobr class="node">` + jsons[i].foldername +`</nobr>`
+			                	+` <div class="kb_dropdown ">`
+			                	 +	`<a class="kb_dropdown__trigger " href="#dropdown-trigger"><i class="layui-icon icon-settings">&#xe614;</i></a>`
+			                	 	+`<div class="kb_dropdown__content ">`
+										+`<ul class="section-option" style="left: 160px;">`
+											+`<li><i class="layui-icon">&#xe631;</i>新建下级部门</li>`
+											+`<li><i class="layui-icon">&#xe642;</i>修改部门</li>`
+											+`<li><i class="layui-icon">&#xe640;</i>删除</li></ul>`
+			                	 	+`</div>`
+			                	+ `</div>`
+			                +`</div>`
+		               + `</div>`;
+		                navBlock += createTree(jsons, jsons[i].id);
+		            }
+		        }
+		        navBlock += "</div>";
+		    }
+		    return navBlock;
+		}
+
+		renderNav();//渲染左侧导航
+		function renderNav(){
+			var data=navData.data;
+			var strAll = createTree(data, 'root');
+		        $(".section>.tree-view").append(strAll);
+		}
+		$('.section').on("click",'i',function(){
+			var objI=$(this),title=$(objI).parent('.tree-view_item'),subNext=$(objI).parent('.tree-view_item').next('.tree-view');
+			if(!objI.hasClass('right')){
+				$(objI).addClass('right');
+				$(subNext).hide(500);
+				$(title).addClass('tree-view_click');
+			}else{
+				$(objI).removeClass('right');
+				$(subNext).show(500);
+				$(title).removeClass('tree-view_click');
+			}
+			if(objI.hasClass('icon-settings')){
+				var pCont=$(objI).parent().parent('.kb_dropdown')
+				if($(pCont).hasClass('kb_dropdown--active')){
+					$(pCont).removeClass('kb_dropdown--active')
+				}else{
+					$(pCont).addClass('kb_dropdown--active')
+				}
+			}
+
+		})
+	})
+</script>
+</html>

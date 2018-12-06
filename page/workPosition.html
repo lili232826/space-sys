@@ -1,0 +1,2624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>分店管理-设置</title>
+	<link rel="stylesheet" href="../js/plugin/layui-v2.3.0/layui/css/layui.css">
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/index.css">
+	<link rel="stylesheet" href="../css/set.css"> 
+	<script src="../js/jquery-2.1.1.min.js"></script>
+	<link rel="stylesheet" href="../css/workpos.css">
+	<script src="../js/plugin/layui-v2.3.0/layui/layui.js"></script>
+</head>
+<style>
+ ::-webkit-scrollbar-thumb {
+  background:#a2a2a2; 
+  border-radius: 10px;
+  height:50%;
+
+::-webkit-scrollbar{width:6px;}
+	body{
+		overflow-y: scroll;
+	} 
+</style>
+<body>
+<div class="kb-out-box">
+	<header class=" position-header">
+		<span class="f-left " style="font-size: 24px;">工位</span>
+		<div class="edit-way f-right">
+			<a href="javascript:void(0)">平面图</a>
+			<a class=" active" href="javascript:void(0)">列表显示</a>
+			<a href="javascript:void(0)">切面显示</a>
+			<a href="javascript:void(0)">时间轴显示</a>
+		</div>
+	</header>
+	<div class="kb-content my-locations-list">	
+		<div class="nav-container f-left">
+			<div class="nav-container-content">
+				<header class="nav-header">
+					<h2 class="header-title">分区</h2>
+					<div class="nav-header-btn"><a class="add-btn" href="javascript:void(0)">添加新分区</a></div>
+				</header>
+				<div class="nav-body">
+					<div style="width: 100%; height: 100%; position: relative;">
+						<div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+							<ul class="layui-tab-title">
+							    <li class="layui-this">所有</li>
+							    <li>开放</li>
+							    <li>封闭</li>
+							    <li>灵活</li>
+							</ul>
+							<div class="layui-tab-content">
+								<ul class="nav-container-list">
+									<li class="active">
+										<a href="javascript:void(0)">
+											<span class="default-space open-space" style="margin-right: 10px;">开放</span>头等舱 
+											<div class="proportion-bar">
+												<div class="proportion-bar_show color-free" style="width: 12.5px;"></div>
+											</div>
+										</a>
+										<span class="station-num">0/0</span>
+									</li>
+									<li>
+										<a href="javascript:void(0)">
+											<span class="default-space close-space" style="margin-right: 10px;">封闭</span>头等舱 
+											<div class="proportion-bar">
+												<div class="proportion-bar_show color-full" style="width: 12.5px;"></div>
+											</div>
+										</a>
+										<span class="station-num">0/0</span>
+									</li>
+									<li>
+										<a href="javascript:void(0)">
+											<span class="default-space close-space" style="margin-right: 10px;">封闭</span>头等舱 
+											<div class="proportion-bar">
+												<div class="proportion-bar_show color-full" style="width: 12.5px;"></div>
+											</div>
+										</a>
+										<span class="station-num">0/0</span>
+									</li>
+									<li>
+										<a href="javascript:void(0)">
+											<span class="default-space close-space" style="margin-right: 10px;">封闭</span>头等舱 
+											<div class="proportion-bar">
+												<div class="proportion-bar_show color-full" style="width: 12.5px;"></div>
+											</div>
+										</a>
+										<span class="station-num">0/0</span>
+									</li>
+									<li>
+										<a href="javascript:void(0)">
+											<span class="default-space close-space" style="margin-right: 10px;">封闭</span>头等舱 
+											<div class="proportion-bar">
+												<div class="proportion-bar_show color-full" style="width: 12.5px;"></div>
+											</div>
+										</a>
+										<span class="station-num">0/0</span>
+									</li>
+									
+									
+									<li>
+										<a href="javascript:void(0)">
+											<span class="default-space close-space" style="margin-right: 10px;">封闭</span>头等舱 
+											<div class="proportion-bar">
+												<div class="proportion-bar_show color-full" style="width: 12.5px;"></div>
+											</div>
+										</a>
+										<span class="station-num">0/0</span>
+									</li>
+								</ul>
+							</div>
+						</div> 
+					</div>
+				</div>
+			</div>
+		</div>	
+		<div class="nav-section-container nav-section-container-bg f-right">
+			<div style="width: 100%;min-height: 100%; position: relative;" id="iframepage-wrap">
+				<header class="nav-header">
+					<div class="clearfix">
+						<h2 class="nav-section-header-title f-left"><span>头等舱 </span></h2>	
+						<div class="f-right">
+							<button class="layui-btn layui-btn-radius layui-btn-normal"><i class="layui-icon">&#xe642;</i> 编辑</button>
+							<button class="layui-btn layui-btn-radius layui-btn-normal"><i class="layui-icon">&#xe654;</i> 添加</button>
+							<button class="layui-btn layui-btn-radius layui-btn-normal"><i class="layui-icon">&#xe640;</i> 删除</button>
+						</div>
+					</div>
+					<div class="color-nine clearfix">
+						<div class="f-left" style="padding-top: 10px;">
+							<i class="icon-Enclosedspace"></i>
+							<span>封闭办公区</span>
+							<div class="mag-top-20">
+								<span class="area-organization">已租公司：无</span>
+							</div>
+						</div>
+						<div class="f-right">
+							<div class="chart-box t-left">
+								<div class="statistic-box">
+									<div class="header">
+										<span class="number">30</span>
+										<span class="unit">㎡</span>
+									</div>
+									<div class="name"><span>总面积数</span></div>
+								</div>
+							</div>
+							<div class="chart-box  t-left">
+								<div class="statistic-box">
+									<div class="header">
+										<span class="number">0</span>
+										<span class="unit">个</span>
+									</div>
+									<div class="name"><span>额定工位数</span></div>
+								</div>
+							</div>
+							<div class="chart-box  t-left">
+								<div class="statistic-box">
+									<div class="header">
+										<span class="number">0</span>
+										<span class="unit">个</span>
+									</div>
+									<div class="name"><span>已使用工位数</span></div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</header>
+				<div class="nav-section-content-container">
+					<div class="nav-section-action-bar">
+						<div class="select-progress">
+							<span style="margin-right: 8px;">选择工位状态</span>
+							<div class="d-iblock">
+								<div class="color-show">
+									<span class="station-empty"></span>
+								</div>
+								<span class="receipt-status ">未分配</span> 	
+							</div>
+							<div class="d-iblock">
+								<div class="color-show">
+									<span class="station-occupy"></span>
+								</div>
+								<span class="receipt-status">已分配</span> 	
+							</div>
+							<div class="d-iblock">
+								<div class="color-show">
+									<span class="station-expiring"></span>
+								</div>
+								<span class="receipt-status">快到期</span> 	
+							</div>
+							<div class="d-iblock">
+								<div class="color-show">
+									<span class="station-reserved"></span>
+								</div>
+								<span class="receipt-status">已出租</span> 	
+							</div>
+						</div>
+					</div>
+					<div class="clear-criteria" >
+						<button class="layui-btn layui-btn-sm layui-btn-radius layui-btn-danger"><i class="layui-icon">&#x1006;</i>清除所有选项</button>
+					</div>
+					<div style="width: 100%; height: 100%; position: relative;">
+						<div class="station-all clearfix" id="station-all">
+							<!-- <div class="desk-box">
+								<div class="station-box station-occupy">
+									<span>201</span>
+									<div class="station-message">
+										<span class="station-status">田茂昌</span>
+										<span class="station-user">已分配</span>
+									</div>
+								</div>
+								
+							</div>
+							<div class="desk-box">
+								<div class="station-box station-empty">
+									<span>201</span>
+									<div class="station-message">
+										<span class="station-status">田茂昌</span>
+										<span class="station-user">已分配</span>
+									</div>
+								</div>
+								
+							</div>
+							<div class="desk-box">
+								<div class="station-box station-reserved">
+									<span>201</span>
+									<div class="station-message">
+										<span class="station-status">田茂昌</span>
+										<span class="station-user">已分配</span>
+									</div>
+								</div>
+								
+							</div>
+							<div class="desk-box">
+								<div class="station-box station-expiring">
+									<span>201</span>
+									<div class="station-message">
+										<span class="station-status">田茂昌</span>
+										<span class="station-user">已分配</span>
+									</div>
+								</div>
+								
+							</div>
+							<div class="desk-box">
+								<div class="station-box station-occupy">
+									<span>201</span>
+									<div class="station-message">
+										<span class="station-status">田茂昌</span>
+										<span class="station-user">已分配</span>
+									</div>
+								</div>
+								
+							</div>
+							<div class="desk-box">
+								<div class="station-box station-empty">
+									<span>201</span>
+									<div class="station-message">
+										<span class="station-status">田茂昌</span>
+										<span class="station-user">已分配</span>
+									</div>
+								</div>
+								
+							</div>
+							<div class="desk-box">
+								<div class="station-box station-reserved">
+									<span>201</span>
+									<div class="station-message">
+										<span class="station-status">田茂昌</span>
+										<span class="station-user">已分配</span>
+									</div>
+								</div>
+								
+							</div>
+							<div class="desk-box">
+								<div class="station-box station-expiring">
+									<span>201</span>
+									<div class="station-message">
+										<span class="station-status">田茂昌</span>
+										<span class="station-user">已分配</span>
+									</div>
+								</div>
+								
+							</div> -->
+						</div>
+						<div id="page-break"></div>
+					</div>
+				</div>
+			</div>
+		</div>	
+	</div>
+</div>
+</body>
+<script>
+var stateDate={
+	"code": 0,
+	"msg": "",
+	"count": 8,
+	"data": [{
+		"folderid": "001",
+		"foldername": "元霆数据",
+		"id": "a41304a3837c36911e7886e4ccc62ab4",
+		"modified": "2018-05-11",
+		"parentfolderid": "root",
+		"state":"station-occupy",
+		"sortNumber": 4
+	}, {
+		"created": "2018-06-08",
+		"creater": "admin",
+		"folderid": "009",
+		"foldername": "测试",
+		"state":"station-empty",
+		"id": "fc499066ddbc4c32a19c1a14c0d1c3cc",
+		"modified": "2018-06-08",
+		"parentfolderid": "a41304a3837c36911e7886e4ccc62ab4",
+		"sortNumber": 1
+	}, {
+		"created": "2018-02-28",
+		"creater": "admin",
+		"folderid": "002",
+		"foldername": "信息部门",
+		"state":"station-reserved",
+		"id": "1c080197cb924d17b060f5fa5757a71f",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 6
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "003",
+		"foldername": "租赁公司",
+		"state":"station-expiring",
+		"id": "8a2efd47134e4039bd7847c97dbc49c4",
+		"modified": "2018-04-10",
+		"parentfolderid": "root",
+		"sortNumber": 1
+	},{
+		"folderid": "001",
+		"foldername": "元霆数据",
+		"id": "a41304a3837c36911e7886e4ccc62ab4",
+		"modified": "2018-05-11",
+		"parentfolderid": "root",
+		"state":"station-occupy",
+		"sortNumber": 4
+	}, {
+		"created": "2018-06-08",
+		"creater": "admin",
+		"folderid": "009",
+		"foldername": "测试",
+		"state":"station-empty",
+		"id": "fc499066ddbc4c32a19c1a14c0d1c3cc",
+		"modified": "2018-06-08",
+		"parentfolderid": "a41304a3837c36911e7886e4ccc62ab4",
+		"sortNumber": 1
+	}, {
+		"created": "2018-02-28",
+		"creater": "admin",
+		"folderid": "002",
+		"foldername": "信息部门",
+		"state":"station-reserved",
+		"id": "1c080197cb924d17b060f5fa5757a71f",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 6
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "003",
+		"foldername": "租赁公司",
+		"state":"station-expiring",
+		"id": "8a2efd47134e4039bd7847c97dbc49c4",
+		"modified": "2018-04-10",
+		"parentfolderid": "root",
+		"sortNumber": 1
+	},{
+		"folderid": "001",
+		"foldername": "元霆数据",
+		"id": "a41304a3837c36911e7886e4ccc62ab4",
+		"modified": "2018-05-11",
+		"parentfolderid": "root",
+		"state":"station-occupy",
+		"sortNumber": 4
+	}, {
+		"created": "2018-06-08",
+		"creater": "admin",
+		"folderid": "009",
+		"foldername": "测试",
+		"state":"station-empty",
+		"id": "fc499066ddbc4c32a19c1a14c0d1c3cc",
+		"modified": "2018-06-08",
+		"parentfolderid": "a41304a3837c36911e7886e4ccc62ab4",
+		"sortNumber": 1
+	}, {
+		"created": "2018-02-28",
+		"creater": "admin",
+		"folderid": "002",
+		"foldername": "信息部门",
+		"state":"station-reserved",
+		"id": "1c080197cb924d17b060f5fa5757a71f",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 6
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "003",
+		"foldername": "租赁公司",
+		"state":"station-expiring",
+		"id": "8a2efd47134e4039bd7847c97dbc49c4",
+		"modified": "2018-04-10",
+		"parentfolderid": "root",
+		"sortNumber": 1
+	},{
+		"folderid": "001",
+		"foldername": "元霆数据",
+		"id": "a41304a3837c36911e7886e4ccc62ab4",
+		"modified": "2018-05-11",
+		"parentfolderid": "root",
+		"state":"station-occupy",
+		"sortNumber": 4
+	}, {
+		"created": "2018-06-08",
+		"creater": "admin",
+		"folderid": "009",
+		"foldername": "测试",
+		"state":"station-empty",
+		"id": "fc499066ddbc4c32a19c1a14c0d1c3cc",
+		"modified": "2018-06-08",
+		"parentfolderid": "a41304a3837c36911e7886e4ccc62ab4",
+		"sortNumber": 1
+	}, {
+		"created": "2018-02-28",
+		"creater": "admin",
+		"folderid": "002",
+		"foldername": "信息部门",
+		"state":"station-reserved",
+		"id": "1c080197cb924d17b060f5fa5757a71f",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 6
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "003",
+		"foldername": "租赁公司",
+		"state":"station-expiring",
+		"id": "8a2efd47134e4039bd7847c97dbc49c4",
+		"modified": "2018-04-10",
+		"parentfolderid": "root",
+		"sortNumber": 1
+	},{
+		"folderid": "001",
+		"foldername": "元霆数据",
+		"id": "a41304a3837c36911e7886e4ccc62ab4",
+		"modified": "2018-05-11",
+		"parentfolderid": "root",
+		"state":"station-occupy",
+		"sortNumber": 4
+	}, {
+		"created": "2018-06-08",
+		"creater": "admin",
+		"folderid": "009",
+		"foldername": "测试",
+		"state":"station-empty",
+		"id": "fc499066ddbc4c32a19c1a14c0d1c3cc",
+		"modified": "2018-06-08",
+		"parentfolderid": "a41304a3837c36911e7886e4ccc62ab4",
+		"sortNumber": 1
+	}, {
+		"created": "2018-02-28",
+		"creater": "admin",
+		"folderid": "002",
+		"foldername": "信息部门",
+		"state":"station-reserved",
+		"id": "1c080197cb924d17b060f5fa5757a71f",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 6
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "003",
+		"foldername": "租赁公司",
+		"state":"station-expiring",
+		"id": "8a2efd47134e4039bd7847c97dbc49c4",
+		"modified": "2018-04-10",
+		"parentfolderid": "root",
+		"sortNumber": 1
+	},{
+		"folderid": "001",
+		"foldername": "元霆数据",
+		"id": "a41304a3837c36911e7886e4ccc62ab4",
+		"modified": "2018-05-11",
+		"parentfolderid": "root",
+		"state":"station-occupy",
+		"sortNumber": 4
+	}, {
+		"created": "2018-06-08",
+		"creater": "admin",
+		"folderid": "009",
+		"foldername": "测试",
+		"state":"station-empty",
+		"id": "fc499066ddbc4c32a19c1a14c0d1c3cc",
+		"modified": "2018-06-08",
+		"parentfolderid": "a41304a3837c36911e7886e4ccc62ab4",
+		"sortNumber": 1
+	}, {
+		"created": "2018-02-28",
+		"creater": "admin",
+		"folderid": "002",
+		"foldername": "信息部门",
+		"state":"station-reserved",
+		"id": "1c080197cb924d17b060f5fa5757a71f",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 6
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "003",
+		"foldername": "租赁公司",
+		"state":"station-expiring",
+		"id": "8a2efd47134e4039bd7847c97dbc49c4",
+		"modified": "2018-04-10",
+		"parentfolderid": "root",
+		"sortNumber": 1
+	},{
+		"folderid": "001",
+		"foldername": "元霆数据",
+		"id": "a41304a3837c36911e7886e4ccc62ab4",
+		"modified": "2018-05-11",
+		"parentfolderid": "root",
+		"state":"station-occupy",
+		"sortNumber": 4
+	}, {
+		"created": "2018-06-08",
+		"creater": "admin",
+		"folderid": "009",
+		"foldername": "测试",
+		"state":"station-empty",
+		"id": "fc499066ddbc4c32a19c1a14c0d1c3cc",
+		"modified": "2018-06-08",
+		"parentfolderid": "a41304a3837c36911e7886e4ccc62ab4",
+		"sortNumber": 1
+	}, {
+		"created": "2018-02-28",
+		"creater": "admin",
+		"folderid": "002",
+		"foldername": "信息部门",
+		"state":"station-reserved",
+		"id": "1c080197cb924d17b060f5fa5757a71f",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 6
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "003",
+		"foldername": "租赁公司",
+		"state":"station-expiring",
+		"id": "8a2efd47134e4039bd7847c97dbc49c4",
+		"modified": "2018-04-10",
+		"parentfolderid": "root",
+		"sortNumber": 1
+	},{
+		"folderid": "001",
+		"foldername": "元霆数据",
+		"id": "a41304a3837c36911e7886e4ccc62ab4",
+		"modified": "2018-05-11",
+		"parentfolderid": "root",
+		"state":"station-occupy",
+		"sortNumber": 4
+	}, {
+		"created": "2018-06-08",
+		"creater": "admin",
+		"folderid": "009",
+		"foldername": "测试",
+		"state":"station-empty",
+		"id": "fc499066ddbc4c32a19c1a14c0d1c3cc",
+		"modified": "2018-06-08",
+		"parentfolderid": "a41304a3837c36911e7886e4ccc62ab4",
+		"sortNumber": 1
+	}, {
+		"created": "2018-02-28",
+		"creater": "admin",
+		"folderid": "002",
+		"foldername": "信息部门",
+		"state":"station-reserved",
+		"id": "1c080197cb924d17b060f5fa5757a71f",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 6
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "003",
+		"foldername": "租赁公司",
+		"state":"station-expiring",
+		"id": "8a2efd47134e4039bd7847c97dbc49c4",
+		"modified": "2018-04-10",
+		"parentfolderid": "root",
+		"sortNumber": 1
+	},{
+		"folderid": "001",
+		"foldername": "元霆数据",
+		"id": "a41304a3837c36911e7886e4ccc62ab4",
+		"modified": "2018-05-11",
+		"parentfolderid": "root",
+		"state":"station-occupy",
+		"sortNumber": 4
+	}, {
+		"created": "2018-06-08",
+		"creater": "admin",
+		"folderid": "009",
+		"foldername": "测试",
+		"state":"station-empty",
+		"id": "fc499066ddbc4c32a19c1a14c0d1c3cc",
+		"modified": "2018-06-08",
+		"parentfolderid": "a41304a3837c36911e7886e4ccc62ab4",
+		"sortNumber": 1
+	}, {
+		"created": "2018-02-28",
+		"creater": "admin",
+		"folderid": "002",
+		"foldername": "信息部门",
+		"state":"station-reserved",
+		"id": "1c080197cb924d17b060f5fa5757a71f",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 6
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "003",
+		"foldername": "租赁公司",
+		"state":"station-expiring",
+		"id": "8a2efd47134e4039bd7847c97dbc49c4",
+		"modified": "2018-04-10",
+		"parentfolderid": "root",
+		"sortNumber": 1
+	},{
+		"folderid": "001",
+		"foldername": "元霆数据",
+		"id": "a41304a3837c36911e7886e4ccc62ab4",
+		"modified": "2018-05-11",
+		"parentfolderid": "root",
+		"state":"station-occupy",
+		"sortNumber": 4
+	}, {
+		"created": "2018-06-08",
+		"creater": "admin",
+		"folderid": "009",
+		"foldername": "测试",
+		"state":"station-empty",
+		"id": "fc499066ddbc4c32a19c1a14c0d1c3cc",
+		"modified": "2018-06-08",
+		"parentfolderid": "a41304a3837c36911e7886e4ccc62ab4",
+		"sortNumber": 1
+	}, {
+		"created": "2018-02-28",
+		"creater": "admin",
+		"folderid": "002",
+		"foldername": "信息部门",
+		"state":"station-reserved",
+		"id": "1c080197cb924d17b060f5fa5757a71f",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 6
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "003",
+		"foldername": "租赁公司",
+		"state":"station-expiring",
+		"id": "8a2efd47134e4039bd7847c97dbc49c4",
+		"modified": "2018-04-10",
+		"parentfolderid": "root",
+		"sortNumber": 1
+	},{
+		"folderid": "001",
+		"foldername": "元霆数据",
+		"id": "a41304a3837c36911e7886e4ccc62ab4",
+		"modified": "2018-05-11",
+		"parentfolderid": "root",
+		"state":"station-occupy",
+		"sortNumber": 4
+	}, {
+		"created": "2018-06-08",
+		"creater": "admin",
+		"folderid": "009",
+		"foldername": "测试",
+		"state":"station-empty",
+		"id": "fc499066ddbc4c32a19c1a14c0d1c3cc",
+		"modified": "2018-06-08",
+		"parentfolderid": "a41304a3837c36911e7886e4ccc62ab4",
+		"sortNumber": 1
+	}, {
+		"created": "2018-02-28",
+		"creater": "admin",
+		"folderid": "002",
+		"foldername": "信息部门",
+		"state":"station-reserved",
+		"id": "1c080197cb924d17b060f5fa5757a71f",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 6
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "003",
+		"foldername": "租赁公司",
+		"state":"station-expiring",
+		"id": "8a2efd47134e4039bd7847c97dbc49c4",
+		"modified": "2018-04-10",
+		"parentfolderid": "root",
+		"sortNumber": 1
+	},{
+		"folderid": "001",
+		"foldername": "元霆数据",
+		"id": "a41304a3837c36911e7886e4ccc62ab4",
+		"modified": "2018-05-11",
+		"parentfolderid": "root",
+		"state":"station-occupy",
+		"sortNumber": 4
+	}, {
+		"created": "2018-06-08",
+		"creater": "admin",
+		"folderid": "009",
+		"foldername": "测试",
+		"state":"station-empty",
+		"id": "fc499066ddbc4c32a19c1a14c0d1c3cc",
+		"modified": "2018-06-08",
+		"parentfolderid": "a41304a3837c36911e7886e4ccc62ab4",
+		"sortNumber": 1
+	}, {
+		"created": "2018-02-28",
+		"creater": "admin",
+		"folderid": "002",
+		"foldername": "信息部门",
+		"state":"station-reserved",
+		"id": "1c080197cb924d17b060f5fa5757a71f",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 6
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "003",
+		"foldername": "租赁公司",
+		"state":"station-expiring",
+		"id": "8a2efd47134e4039bd7847c97dbc49c4",
+		"modified": "2018-04-10",
+		"parentfolderid": "root",
+		"sortNumber": 1
+	},{
+		"folderid": "001",
+		"foldername": "元霆数据",
+		"id": "a41304a3837c36911e7886e4ccc62ab4",
+		"modified": "2018-05-11",
+		"parentfolderid": "root",
+		"state":"station-occupy",
+		"sortNumber": 4
+	}, {
+		"created": "2018-06-08",
+		"creater": "admin",
+		"folderid": "009",
+		"foldername": "测试",
+		"state":"station-empty",
+		"id": "fc499066ddbc4c32a19c1a14c0d1c3cc",
+		"modified": "2018-06-08",
+		"parentfolderid": "a41304a3837c36911e7886e4ccc62ab4",
+		"sortNumber": 1
+	}, {
+		"created": "2018-02-28",
+		"creater": "admin",
+		"folderid": "002",
+		"foldername": "信息部门",
+		"state":"station-reserved",
+		"id": "1c080197cb924d17b060f5fa5757a71f",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 6
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "003",
+		"foldername": "租赁公司",
+		"state":"station-expiring",
+		"id": "8a2efd47134e4039bd7847c97dbc49c4",
+		"modified": "2018-04-10",
+		"parentfolderid": "root",
+		"sortNumber": 1
+	},{
+		"folderid": "001",
+		"foldername": "元霆数据",
+		"id": "a41304a3837c36911e7886e4ccc62ab4",
+		"modified": "2018-05-11",
+		"parentfolderid": "root",
+		"state":"station-occupy",
+		"sortNumber": 4
+	}, {
+		"created": "2018-06-08",
+		"creater": "admin",
+		"folderid": "009",
+		"foldername": "测试",
+		"state":"station-empty",
+		"id": "fc499066ddbc4c32a19c1a14c0d1c3cc",
+		"modified": "2018-06-08",
+		"parentfolderid": "a41304a3837c36911e7886e4ccc62ab4",
+		"sortNumber": 1
+	}, {
+		"created": "2018-02-28",
+		"creater": "admin",
+		"folderid": "002",
+		"foldername": "信息部门",
+		"state":"station-reserved",
+		"id": "1c080197cb924d17b060f5fa5757a71f",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 6
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "003",
+		"foldername": "租赁公司",
+		"state":"station-expiring",
+		"id": "8a2efd47134e4039bd7847c97dbc49c4",
+		"modified": "2018-04-10",
+		"parentfolderid": "root",
+		"sortNumber": 1
+	},{
+		"folderid": "001",
+		"foldername": "元霆数据",
+		"id": "a41304a3837c36911e7886e4ccc62ab4",
+		"modified": "2018-05-11",
+		"parentfolderid": "root",
+		"state":"station-occupy",
+		"sortNumber": 4
+	}, {
+		"created": "2018-06-08",
+		"creater": "admin",
+		"folderid": "009",
+		"foldername": "测试",
+		"state":"station-empty",
+		"id": "fc499066ddbc4c32a19c1a14c0d1c3cc",
+		"modified": "2018-06-08",
+		"parentfolderid": "a41304a3837c36911e7886e4ccc62ab4",
+		"sortNumber": 1
+	}, {
+		"created": "2018-02-28",
+		"creater": "admin",
+		"folderid": "002",
+		"foldername": "信息部门",
+		"state":"station-reserved",
+		"id": "1c080197cb924d17b060f5fa5757a71f",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 6
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "003",
+		"foldername": "租赁公司",
+		"state":"station-expiring",
+		"id": "8a2efd47134e4039bd7847c97dbc49c4",
+		"modified": "2018-04-10",
+		"parentfolderid": "root",
+		"sortNumber": 1
+	},{
+		"folderid": "001",
+		"foldername": "元霆数据",
+		"id": "a41304a3837c36911e7886e4ccc62ab4",
+		"modified": "2018-05-11",
+		"parentfolderid": "root",
+		"state":"station-occupy",
+		"sortNumber": 4
+	}, {
+		"created": "2018-06-08",
+		"creater": "admin",
+		"folderid": "009",
+		"foldername": "测试",
+		"state":"station-empty",
+		"id": "fc499066ddbc4c32a19c1a14c0d1c3cc",
+		"modified": "2018-06-08",
+		"parentfolderid": "a41304a3837c36911e7886e4ccc62ab4",
+		"sortNumber": 1
+	}, {
+		"created": "2018-02-28",
+		"creater": "admin",
+		"folderid": "002",
+		"foldername": "信息部门",
+		"state":"station-reserved",
+		"id": "1c080197cb924d17b060f5fa5757a71f",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 6
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "003",
+		"foldername": "租赁公司",
+		"state":"station-expiring",
+		"id": "8a2efd47134e4039bd7847c97dbc49c4",
+		"modified": "2018-04-10",
+		"parentfolderid": "root",
+		"sortNumber": 1
+	},{
+		"folderid": "001",
+		"foldername": "元霆数据",
+		"id": "a41304a3837c36911e7886e4ccc62ab4",
+		"modified": "2018-05-11",
+		"parentfolderid": "root",
+		"state":"station-occupy",
+		"sortNumber": 4
+	}, {
+		"created": "2018-06-08",
+		"creater": "admin",
+		"folderid": "009",
+		"foldername": "测试",
+		"state":"station-empty",
+		"id": "fc499066ddbc4c32a19c1a14c0d1c3cc",
+		"modified": "2018-06-08",
+		"parentfolderid": "a41304a3837c36911e7886e4ccc62ab4",
+		"sortNumber": 1
+	}, {
+		"created": "2018-02-28",
+		"creater": "admin",
+		"folderid": "002",
+		"foldername": "信息部门",
+		"state":"station-reserved",
+		"id": "1c080197cb924d17b060f5fa5757a71f",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 6
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "003",
+		"foldername": "租赁公司",
+		"state":"station-expiring",
+		"id": "8a2efd47134e4039bd7847c97dbc49c4",
+		"modified": "2018-04-10",
+		"parentfolderid": "root",
+		"sortNumber": 1
+	},{
+		"folderid": "001",
+		"foldername": "元霆数据",
+		"id": "a41304a3837c36911e7886e4ccc62ab4",
+		"modified": "2018-05-11",
+		"parentfolderid": "root",
+		"state":"station-occupy",
+		"sortNumber": 4
+	}, {
+		"created": "2018-06-08",
+		"creater": "admin",
+		"folderid": "009",
+		"foldername": "测试",
+		"state":"station-empty",
+		"id": "fc499066ddbc4c32a19c1a14c0d1c3cc",
+		"modified": "2018-06-08",
+		"parentfolderid": "a41304a3837c36911e7886e4ccc62ab4",
+		"sortNumber": 1
+	}, {
+		"created": "2018-02-28",
+		"creater": "admin",
+		"folderid": "002",
+		"foldername": "信息部门",
+		"state":"station-reserved",
+		"id": "1c080197cb924d17b060f5fa5757a71f",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 6
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "003",
+		"foldername": "租赁公司",
+		"state":"station-expiring",
+		"id": "8a2efd47134e4039bd7847c97dbc49c4",
+		"modified": "2018-04-10",
+		"parentfolderid": "root",
+		"sortNumber": 1
+	},{
+		"folderid": "001",
+		"foldername": "元霆数据",
+		"id": "a41304a3837c36911e7886e4ccc62ab4",
+		"modified": "2018-05-11",
+		"parentfolderid": "root",
+		"state":"station-occupy",
+		"sortNumber": 4
+	}, {
+		"created": "2018-06-08",
+		"creater": "admin",
+		"folderid": "009",
+		"foldername": "测试",
+		"state":"station-empty",
+		"id": "fc499066ddbc4c32a19c1a14c0d1c3cc",
+		"modified": "2018-06-08",
+		"parentfolderid": "a41304a3837c36911e7886e4ccc62ab4",
+		"sortNumber": 1
+	}, {
+		"created": "2018-02-28",
+		"creater": "admin",
+		"folderid": "002",
+		"foldername": "信息部门",
+		"state":"station-reserved",
+		"id": "1c080197cb924d17b060f5fa5757a71f",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 6
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "003",
+		"foldername": "租赁公司",
+		"state":"station-expiring",
+		"id": "8a2efd47134e4039bd7847c97dbc49c4",
+		"modified": "2018-04-10",
+		"parentfolderid": "root",
+		"sortNumber": 1
+	},{
+		"folderid": "001",
+		"foldername": "元霆数据",
+		"id": "a41304a3837c36911e7886e4ccc62ab4",
+		"modified": "2018-05-11",
+		"parentfolderid": "root",
+		"state":"station-occupy",
+		"sortNumber": 4
+	}, {
+		"created": "2018-06-08",
+		"creater": "admin",
+		"folderid": "009",
+		"foldername": "测试",
+		"state":"station-empty",
+		"id": "fc499066ddbc4c32a19c1a14c0d1c3cc",
+		"modified": "2018-06-08",
+		"parentfolderid": "a41304a3837c36911e7886e4ccc62ab4",
+		"sortNumber": 1
+	}, {
+		"created": "2018-02-28",
+		"creater": "admin",
+		"folderid": "002",
+		"foldername": "信息部门",
+		"state":"station-reserved",
+		"id": "1c080197cb924d17b060f5fa5757a71f",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 6
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "003",
+		"foldername": "租赁公司",
+		"state":"station-expiring",
+		"id": "8a2efd47134e4039bd7847c97dbc49c4",
+		"modified": "2018-04-10",
+		"parentfolderid": "root",
+		"sortNumber": 1
+	},{
+		"folderid": "001",
+		"foldername": "元霆数据",
+		"id": "a41304a3837c36911e7886e4ccc62ab4",
+		"modified": "2018-05-11",
+		"parentfolderid": "root",
+		"state":"station-occupy",
+		"sortNumber": 4
+	}, {
+		"created": "2018-06-08",
+		"creater": "admin",
+		"folderid": "009",
+		"foldername": "测试",
+		"state":"station-empty",
+		"id": "fc499066ddbc4c32a19c1a14c0d1c3cc",
+		"modified": "2018-06-08",
+		"parentfolderid": "a41304a3837c36911e7886e4ccc62ab4",
+		"sortNumber": 1
+	}, {
+		"created": "2018-02-28",
+		"creater": "admin",
+		"folderid": "002",
+		"foldername": "信息部门",
+		"state":"station-reserved",
+		"id": "1c080197cb924d17b060f5fa5757a71f",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 6
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "003",
+		"foldername": "租赁公司",
+		"state":"station-expiring",
+		"id": "8a2efd47134e4039bd7847c97dbc49c4",
+		"modified": "2018-04-10",
+		"parentfolderid": "root",
+		"sortNumber": 1
+	},{
+		"folderid": "001",
+		"foldername": "元霆数据",
+		"id": "a41304a3837c36911e7886e4ccc62ab4",
+		"modified": "2018-05-11",
+		"parentfolderid": "root",
+		"state":"station-occupy",
+		"sortNumber": 4
+	}, {
+		"created": "2018-06-08",
+		"creater": "admin",
+		"folderid": "009",
+		"foldername": "测试",
+		"state":"station-empty",
+		"id": "fc499066ddbc4c32a19c1a14c0d1c3cc",
+		"modified": "2018-06-08",
+		"parentfolderid": "a41304a3837c36911e7886e4ccc62ab4",
+		"sortNumber": 1
+	}, {
+		"created": "2018-02-28",
+		"creater": "admin",
+		"folderid": "002",
+		"foldername": "信息部门",
+		"state":"station-reserved",
+		"id": "1c080197cb924d17b060f5fa5757a71f",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 6
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "003",
+		"foldername": "租赁公司",
+		"state":"station-expiring",
+		"id": "8a2efd47134e4039bd7847c97dbc49c4",
+		"modified": "2018-04-10",
+		"parentfolderid": "root",
+		"sortNumber": 1
+	},{
+		"folderid": "001",
+		"foldername": "元霆数据",
+		"id": "a41304a3837c36911e7886e4ccc62ab4",
+		"modified": "2018-05-11",
+		"parentfolderid": "root",
+		"state":"station-occupy",
+		"sortNumber": 4
+	}, {
+		"created": "2018-06-08",
+		"creater": "admin",
+		"folderid": "009",
+		"foldername": "测试",
+		"state":"station-empty",
+		"id": "fc499066ddbc4c32a19c1a14c0d1c3cc",
+		"modified": "2018-06-08",
+		"parentfolderid": "a41304a3837c36911e7886e4ccc62ab4",
+		"sortNumber": 1
+	}, {
+		"created": "2018-02-28",
+		"creater": "admin",
+		"folderid": "002",
+		"foldername": "信息部门",
+		"state":"station-reserved",
+		"id": "1c080197cb924d17b060f5fa5757a71f",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 6
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "003",
+		"foldername": "租赁公司",
+		"state":"station-expiring",
+		"id": "8a2efd47134e4039bd7847c97dbc49c4",
+		"modified": "2018-04-10",
+		"parentfolderid": "root",
+		"sortNumber": 1
+	},{
+		"folderid": "001",
+		"foldername": "元霆数据",
+		"id": "a41304a3837c36911e7886e4ccc62ab4",
+		"modified": "2018-05-11",
+		"parentfolderid": "root",
+		"state":"station-occupy",
+		"sortNumber": 4
+	}, {
+		"created": "2018-06-08",
+		"creater": "admin",
+		"folderid": "009",
+		"foldername": "测试",
+		"state":"station-empty",
+		"id": "fc499066ddbc4c32a19c1a14c0d1c3cc",
+		"modified": "2018-06-08",
+		"parentfolderid": "a41304a3837c36911e7886e4ccc62ab4",
+		"sortNumber": 1
+	}, {
+		"created": "2018-02-28",
+		"creater": "admin",
+		"folderid": "002",
+		"foldername": "信息部门",
+		"state":"station-reserved",
+		"id": "1c080197cb924d17b060f5fa5757a71f",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 6
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "003",
+		"foldername": "租赁公司",
+		"state":"station-expiring",
+		"id": "8a2efd47134e4039bd7847c97dbc49c4",
+		"modified": "2018-04-10",
+		"parentfolderid": "root",
+		"sortNumber": 1
+	},{
+		"folderid": "001",
+		"foldername": "元霆数据",
+		"id": "a41304a3837c36911e7886e4ccc62ab4",
+		"modified": "2018-05-11",
+		"parentfolderid": "root",
+		"state":"station-occupy",
+		"sortNumber": 4
+	}, {
+		"created": "2018-06-08",
+		"creater": "admin",
+		"folderid": "009",
+		"foldername": "测试",
+		"state":"station-empty",
+		"id": "fc499066ddbc4c32a19c1a14c0d1c3cc",
+		"modified": "2018-06-08",
+		"parentfolderid": "a41304a3837c36911e7886e4ccc62ab4",
+		"sortNumber": 1
+	}, {
+		"created": "2018-02-28",
+		"creater": "admin",
+		"folderid": "002",
+		"foldername": "信息部门",
+		"state":"station-reserved",
+		"id": "1c080197cb924d17b060f5fa5757a71f",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 6
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "003",
+		"foldername": "租赁公司",
+		"state":"station-expiring",
+		"id": "8a2efd47134e4039bd7847c97dbc49c4",
+		"modified": "2018-04-10",
+		"parentfolderid": "root",
+		"sortNumber": 1
+	},{
+		"folderid": "001",
+		"foldername": "元霆数据",
+		"id": "a41304a3837c36911e7886e4ccc62ab4",
+		"modified": "2018-05-11",
+		"parentfolderid": "root",
+		"state":"station-occupy",
+		"sortNumber": 4
+	}, {
+		"created": "2018-06-08",
+		"creater": "admin",
+		"folderid": "009",
+		"foldername": "测试",
+		"state":"station-empty",
+		"id": "fc499066ddbc4c32a19c1a14c0d1c3cc",
+		"modified": "2018-06-08",
+		"parentfolderid": "a41304a3837c36911e7886e4ccc62ab4",
+		"sortNumber": 1
+	}, {
+		"created": "2018-02-28",
+		"creater": "admin",
+		"folderid": "002",
+		"foldername": "信息部门",
+		"state":"station-reserved",
+		"id": "1c080197cb924d17b060f5fa5757a71f",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 6
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "003",
+		"foldername": "租赁公司",
+		"state":"station-expiring",
+		"id": "8a2efd47134e4039bd7847c97dbc49c4",
+		"modified": "2018-04-10",
+		"parentfolderid": "root",
+		"sortNumber": 1
+	},{
+		"folderid": "001",
+		"foldername": "元霆数据",
+		"id": "a41304a3837c36911e7886e4ccc62ab4",
+		"modified": "2018-05-11",
+		"parentfolderid": "root",
+		"state":"station-occupy",
+		"sortNumber": 4
+	}, {
+		"created": "2018-06-08",
+		"creater": "admin",
+		"folderid": "009",
+		"foldername": "测试",
+		"state":"station-empty",
+		"id": "fc499066ddbc4c32a19c1a14c0d1c3cc",
+		"modified": "2018-06-08",
+		"parentfolderid": "a41304a3837c36911e7886e4ccc62ab4",
+		"sortNumber": 1
+	}, {
+		"created": "2018-02-28",
+		"creater": "admin",
+		"folderid": "002",
+		"foldername": "信息部门",
+		"state":"station-reserved",
+		"id": "1c080197cb924d17b060f5fa5757a71f",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 6
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "003",
+		"foldername": "租赁公司",
+		"state":"station-expiring",
+		"id": "8a2efd47134e4039bd7847c97dbc49c4",
+		"modified": "2018-04-10",
+		"parentfolderid": "root",
+		"sortNumber": 1
+	},{
+		"folderid": "001",
+		"foldername": "元霆数据",
+		"id": "a41304a3837c36911e7886e4ccc62ab4",
+		"modified": "2018-05-11",
+		"parentfolderid": "root",
+		"state":"station-occupy",
+		"sortNumber": 4
+	}, {
+		"created": "2018-06-08",
+		"creater": "admin",
+		"folderid": "009",
+		"foldername": "测试",
+		"state":"station-empty",
+		"id": "fc499066ddbc4c32a19c1a14c0d1c3cc",
+		"modified": "2018-06-08",
+		"parentfolderid": "a41304a3837c36911e7886e4ccc62ab4",
+		"sortNumber": 1
+	}, {
+		"created": "2018-02-28",
+		"creater": "admin",
+		"folderid": "002",
+		"foldername": "信息部门",
+		"state":"station-reserved",
+		"id": "1c080197cb924d17b060f5fa5757a71f",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 6
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "003",
+		"foldername": "租赁公司",
+		"state":"station-expiring",
+		"id": "8a2efd47134e4039bd7847c97dbc49c4",
+		"modified": "2018-04-10",
+		"parentfolderid": "root",
+		"sortNumber": 1
+	},{
+		"folderid": "001",
+		"foldername": "元霆数据",
+		"id": "a41304a3837c36911e7886e4ccc62ab4",
+		"modified": "2018-05-11",
+		"parentfolderid": "root",
+		"state":"station-occupy",
+		"sortNumber": 4
+	}, {
+		"created": "2018-06-08",
+		"creater": "admin",
+		"folderid": "009",
+		"foldername": "测试",
+		"state":"station-empty",
+		"id": "fc499066ddbc4c32a19c1a14c0d1c3cc",
+		"modified": "2018-06-08",
+		"parentfolderid": "a41304a3837c36911e7886e4ccc62ab4",
+		"sortNumber": 1
+	}, {
+		"created": "2018-02-28",
+		"creater": "admin",
+		"folderid": "002",
+		"foldername": "信息部门",
+		"state":"station-reserved",
+		"id": "1c080197cb924d17b060f5fa5757a71f",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 6
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "003",
+		"foldername": "租赁公司",
+		"state":"station-expiring",
+		"id": "8a2efd47134e4039bd7847c97dbc49c4",
+		"modified": "2018-04-10",
+		"parentfolderid": "root",
+		"sortNumber": 1
+	},{
+		"folderid": "001",
+		"foldername": "元霆数据",
+		"id": "a41304a3837c36911e7886e4ccc62ab4",
+		"modified": "2018-05-11",
+		"parentfolderid": "root",
+		"state":"station-occupy",
+		"sortNumber": 4
+	}, {
+		"created": "2018-06-08",
+		"creater": "admin",
+		"folderid": "009",
+		"foldername": "测试",
+		"state":"station-empty",
+		"id": "fc499066ddbc4c32a19c1a14c0d1c3cc",
+		"modified": "2018-06-08",
+		"parentfolderid": "a41304a3837c36911e7886e4ccc62ab4",
+		"sortNumber": 1
+	}, {
+		"created": "2018-02-28",
+		"creater": "admin",
+		"folderid": "002",
+		"foldername": "信息部门",
+		"state":"station-reserved",
+		"id": "1c080197cb924d17b060f5fa5757a71f",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 6
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "003",
+		"foldername": "租赁公司",
+		"state":"station-expiring",
+		"id": "8a2efd47134e4039bd7847c97dbc49c4",
+		"modified": "2018-04-10",
+		"parentfolderid": "root",
+		"sortNumber": 1
+	},{
+		"folderid": "001",
+		"foldername": "元霆数据",
+		"id": "a41304a3837c36911e7886e4ccc62ab4",
+		"modified": "2018-05-11",
+		"parentfolderid": "root",
+		"state":"station-occupy",
+		"sortNumber": 4
+	}, {
+		"created": "2018-06-08",
+		"creater": "admin",
+		"folderid": "009",
+		"foldername": "测试",
+		"state":"station-empty",
+		"id": "fc499066ddbc4c32a19c1a14c0d1c3cc",
+		"modified": "2018-06-08",
+		"parentfolderid": "a41304a3837c36911e7886e4ccc62ab4",
+		"sortNumber": 1
+	}, {
+		"created": "2018-02-28",
+		"creater": "admin",
+		"folderid": "002",
+		"foldername": "信息部门",
+		"state":"station-reserved",
+		"id": "1c080197cb924d17b060f5fa5757a71f",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 6
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "003",
+		"foldername": "租赁公司",
+		"state":"station-expiring",
+		"id": "8a2efd47134e4039bd7847c97dbc49c4",
+		"modified": "2018-04-10",
+		"parentfolderid": "root",
+		"sortNumber": 1
+	},{
+		"folderid": "001",
+		"foldername": "元霆数据",
+		"id": "a41304a3837c36911e7886e4ccc62ab4",
+		"modified": "2018-05-11",
+		"parentfolderid": "root",
+		"state":"station-occupy",
+		"sortNumber": 4
+	}, {
+		"created": "2018-06-08",
+		"creater": "admin",
+		"folderid": "009",
+		"foldername": "测试",
+		"state":"station-empty",
+		"id": "fc499066ddbc4c32a19c1a14c0d1c3cc",
+		"modified": "2018-06-08",
+		"parentfolderid": "a41304a3837c36911e7886e4ccc62ab4",
+		"sortNumber": 1
+	}, {
+		"created": "2018-02-28",
+		"creater": "admin",
+		"folderid": "002",
+		"foldername": "信息部门",
+		"state":"station-reserved",
+		"id": "1c080197cb924d17b060f5fa5757a71f",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 6
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "003",
+		"foldername": "租赁公司",
+		"state":"station-expiring",
+		"id": "8a2efd47134e4039bd7847c97dbc49c4",
+		"modified": "2018-04-10",
+		"parentfolderid": "root",
+		"sortNumber": 1
+	},{
+		"folderid": "001",
+		"foldername": "元霆数据",
+		"id": "a41304a3837c36911e7886e4ccc62ab4",
+		"modified": "2018-05-11",
+		"parentfolderid": "root",
+		"state":"station-occupy",
+		"sortNumber": 4
+	}, {
+		"created": "2018-06-08",
+		"creater": "admin",
+		"folderid": "009",
+		"foldername": "测试",
+		"state":"station-empty",
+		"id": "fc499066ddbc4c32a19c1a14c0d1c3cc",
+		"modified": "2018-06-08",
+		"parentfolderid": "a41304a3837c36911e7886e4ccc62ab4",
+		"sortNumber": 1
+	}, {
+		"created": "2018-02-28",
+		"creater": "admin",
+		"folderid": "002",
+		"foldername": "信息部门",
+		"state":"station-reserved",
+		"id": "1c080197cb924d17b060f5fa5757a71f",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 6
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "003",
+		"foldername": "租赁公司",
+		"state":"station-expiring",
+		"id": "8a2efd47134e4039bd7847c97dbc49c4",
+		"modified": "2018-04-10",
+		"parentfolderid": "root",
+		"sortNumber": 1
+	},{
+		"folderid": "001",
+		"foldername": "元霆数据",
+		"id": "a41304a3837c36911e7886e4ccc62ab4",
+		"modified": "2018-05-11",
+		"parentfolderid": "root",
+		"state":"station-occupy",
+		"sortNumber": 4
+	}, {
+		"created": "2018-06-08",
+		"creater": "admin",
+		"folderid": "009",
+		"foldername": "测试",
+		"state":"station-empty",
+		"id": "fc499066ddbc4c32a19c1a14c0d1c3cc",
+		"modified": "2018-06-08",
+		"parentfolderid": "a41304a3837c36911e7886e4ccc62ab4",
+		"sortNumber": 1
+	}, {
+		"created": "2018-02-28",
+		"creater": "admin",
+		"folderid": "002",
+		"foldername": "信息部门",
+		"state":"station-reserved",
+		"id": "1c080197cb924d17b060f5fa5757a71f",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 6
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "003",
+		"foldername": "租赁公司",
+		"state":"station-expiring",
+		"id": "8a2efd47134e4039bd7847c97dbc49c4",
+		"modified": "2018-04-10",
+		"parentfolderid": "root",
+		"sortNumber": 1
+	},{
+		"folderid": "001",
+		"foldername": "元霆数据",
+		"id": "a41304a3837c36911e7886e4ccc62ab4",
+		"modified": "2018-05-11",
+		"parentfolderid": "root",
+		"state":"station-occupy",
+		"sortNumber": 4
+	}, {
+		"created": "2018-06-08",
+		"creater": "admin",
+		"folderid": "009",
+		"foldername": "测试",
+		"state":"station-empty",
+		"id": "fc499066ddbc4c32a19c1a14c0d1c3cc",
+		"modified": "2018-06-08",
+		"parentfolderid": "a41304a3837c36911e7886e4ccc62ab4",
+		"sortNumber": 1
+	}, {
+		"created": "2018-02-28",
+		"creater": "admin",
+		"folderid": "002",
+		"foldername": "信息部门",
+		"state":"station-reserved",
+		"id": "1c080197cb924d17b060f5fa5757a71f",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 6
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "003",
+		"foldername": "租赁公司",
+		"state":"station-expiring",
+		"id": "8a2efd47134e4039bd7847c97dbc49c4",
+		"modified": "2018-04-10",
+		"parentfolderid": "root",
+		"sortNumber": 1
+	},{
+		"folderid": "001",
+		"foldername": "元霆数据",
+		"id": "a41304a3837c36911e7886e4ccc62ab4",
+		"modified": "2018-05-11",
+		"parentfolderid": "root",
+		"state":"station-occupy",
+		"sortNumber": 4
+	}, {
+		"created": "2018-06-08",
+		"creater": "admin",
+		"folderid": "009",
+		"foldername": "测试",
+		"state":"station-empty",
+		"id": "fc499066ddbc4c32a19c1a14c0d1c3cc",
+		"modified": "2018-06-08",
+		"parentfolderid": "a41304a3837c36911e7886e4ccc62ab4",
+		"sortNumber": 1
+	}, {
+		"created": "2018-02-28",
+		"creater": "admin",
+		"folderid": "002",
+		"foldername": "信息部门",
+		"state":"station-reserved",
+		"id": "1c080197cb924d17b060f5fa5757a71f",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 6
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "003",
+		"foldername": "租赁公司",
+		"state":"station-expiring",
+		"id": "8a2efd47134e4039bd7847c97dbc49c4",
+		"modified": "2018-04-10",
+		"parentfolderid": "root",
+		"sortNumber": 1
+	},{
+		"folderid": "001",
+		"foldername": "元霆数据",
+		"id": "a41304a3837c36911e7886e4ccc62ab4",
+		"modified": "2018-05-11",
+		"parentfolderid": "root",
+		"state":"station-occupy",
+		"sortNumber": 4
+	}, {
+		"created": "2018-06-08",
+		"creater": "admin",
+		"folderid": "009",
+		"foldername": "测试",
+		"state":"station-empty",
+		"id": "fc499066ddbc4c32a19c1a14c0d1c3cc",
+		"modified": "2018-06-08",
+		"parentfolderid": "a41304a3837c36911e7886e4ccc62ab4",
+		"sortNumber": 1
+	}, {
+		"created": "2018-02-28",
+		"creater": "admin",
+		"folderid": "002",
+		"foldername": "信息部门",
+		"state":"station-reserved",
+		"id": "1c080197cb924d17b060f5fa5757a71f",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 6
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "003",
+		"foldername": "租赁公司",
+		"state":"station-expiring",
+		"id": "8a2efd47134e4039bd7847c97dbc49c4",
+		"modified": "2018-04-10",
+		"parentfolderid": "root",
+		"sortNumber": 1
+	},{
+		"folderid": "001",
+		"foldername": "元霆数据",
+		"id": "a41304a3837c36911e7886e4ccc62ab4",
+		"modified": "2018-05-11",
+		"parentfolderid": "root",
+		"state":"station-occupy",
+		"sortNumber": 4
+	}, {
+		"created": "2018-06-08",
+		"creater": "admin",
+		"folderid": "009",
+		"foldername": "测试",
+		"state":"station-empty",
+		"id": "fc499066ddbc4c32a19c1a14c0d1c3cc",
+		"modified": "2018-06-08",
+		"parentfolderid": "a41304a3837c36911e7886e4ccc62ab4",
+		"sortNumber": 1
+	}, {
+		"created": "2018-02-28",
+		"creater": "admin",
+		"folderid": "002",
+		"foldername": "信息部门",
+		"state":"station-reserved",
+		"id": "1c080197cb924d17b060f5fa5757a71f",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 6
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "003",
+		"foldername": "租赁公司",
+		"state":"station-expiring",
+		"id": "8a2efd47134e4039bd7847c97dbc49c4",
+		"modified": "2018-04-10",
+		"parentfolderid": "root",
+		"sortNumber": 1
+	},{
+		"folderid": "001",
+		"foldername": "元霆数据",
+		"id": "a41304a3837c36911e7886e4ccc62ab4",
+		"modified": "2018-05-11",
+		"parentfolderid": "root",
+		"state":"station-occupy",
+		"sortNumber": 4
+	}, {
+		"created": "2018-06-08",
+		"creater": "admin",
+		"folderid": "009",
+		"foldername": "测试",
+		"state":"station-empty",
+		"id": "fc499066ddbc4c32a19c1a14c0d1c3cc",
+		"modified": "2018-06-08",
+		"parentfolderid": "a41304a3837c36911e7886e4ccc62ab4",
+		"sortNumber": 1
+	}, {
+		"created": "2018-02-28",
+		"creater": "admin",
+		"folderid": "002",
+		"foldername": "信息部门",
+		"state":"station-reserved",
+		"id": "1c080197cb924d17b060f5fa5757a71f",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 6
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "003",
+		"foldername": "租赁公司",
+		"state":"station-expiring",
+		"id": "8a2efd47134e4039bd7847c97dbc49c4",
+		"modified": "2018-04-10",
+		"parentfolderid": "root",
+		"sortNumber": 1
+	},{
+		"folderid": "001",
+		"foldername": "元霆数据",
+		"id": "a41304a3837c36911e7886e4ccc62ab4",
+		"modified": "2018-05-11",
+		"parentfolderid": "root",
+		"state":"station-occupy",
+		"sortNumber": 4
+	}, {
+		"created": "2018-06-08",
+		"creater": "admin",
+		"folderid": "009",
+		"foldername": "测试",
+		"state":"station-empty",
+		"id": "fc499066ddbc4c32a19c1a14c0d1c3cc",
+		"modified": "2018-06-08",
+		"parentfolderid": "a41304a3837c36911e7886e4ccc62ab4",
+		"sortNumber": 1
+	}, {
+		"created": "2018-02-28",
+		"creater": "admin",
+		"folderid": "002",
+		"foldername": "信息部门",
+		"state":"station-reserved",
+		"id": "1c080197cb924d17b060f5fa5757a71f",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 6
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "003",
+		"foldername": "租赁公司",
+		"state":"station-expiring",
+		"id": "8a2efd47134e4039bd7847c97dbc49c4",
+		"modified": "2018-04-10",
+		"parentfolderid": "root",
+		"sortNumber": 1
+	},{
+		"folderid": "001",
+		"foldername": "元霆数据",
+		"id": "a41304a3837c36911e7886e4ccc62ab4",
+		"modified": "2018-05-11",
+		"parentfolderid": "root",
+		"state":"station-occupy",
+		"sortNumber": 4
+	}, {
+		"created": "2018-06-08",
+		"creater": "admin",
+		"folderid": "009",
+		"foldername": "测试",
+		"state":"station-empty",
+		"id": "fc499066ddbc4c32a19c1a14c0d1c3cc",
+		"modified": "2018-06-08",
+		"parentfolderid": "a41304a3837c36911e7886e4ccc62ab4",
+		"sortNumber": 1
+	}, {
+		"created": "2018-02-28",
+		"creater": "admin",
+		"folderid": "002",
+		"foldername": "信息部门",
+		"state":"station-reserved",
+		"id": "1c080197cb924d17b060f5fa5757a71f",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 6
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "003",
+		"foldername": "租赁公司",
+		"state":"station-expiring",
+		"id": "8a2efd47134e4039bd7847c97dbc49c4",
+		"modified": "2018-04-10",
+		"parentfolderid": "root",
+		"sortNumber": 1
+	},{
+		"folderid": "001",
+		"foldername": "元霆数据",
+		"id": "a41304a3837c36911e7886e4ccc62ab4",
+		"modified": "2018-05-11",
+		"parentfolderid": "root",
+		"state":"station-occupy",
+		"sortNumber": 4
+	}, {
+		"created": "2018-06-08",
+		"creater": "admin",
+		"folderid": "009",
+		"foldername": "测试",
+		"state":"station-empty",
+		"id": "fc499066ddbc4c32a19c1a14c0d1c3cc",
+		"modified": "2018-06-08",
+		"parentfolderid": "a41304a3837c36911e7886e4ccc62ab4",
+		"sortNumber": 1
+	}, {
+		"created": "2018-02-28",
+		"creater": "admin",
+		"folderid": "002",
+		"foldername": "信息部门",
+		"state":"station-reserved",
+		"id": "1c080197cb924d17b060f5fa5757a71f",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 6
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "003",
+		"foldername": "租赁公司",
+		"state":"station-expiring",
+		"id": "8a2efd47134e4039bd7847c97dbc49c4",
+		"modified": "2018-04-10",
+		"parentfolderid": "root",
+		"sortNumber": 1
+	},{
+		"folderid": "001",
+		"foldername": "元霆数据",
+		"id": "a41304a3837c36911e7886e4ccc62ab4",
+		"modified": "2018-05-11",
+		"parentfolderid": "root",
+		"state":"station-occupy",
+		"sortNumber": 4
+	}, {
+		"created": "2018-06-08",
+		"creater": "admin",
+		"folderid": "009",
+		"foldername": "测试",
+		"state":"station-empty",
+		"id": "fc499066ddbc4c32a19c1a14c0d1c3cc",
+		"modified": "2018-06-08",
+		"parentfolderid": "a41304a3837c36911e7886e4ccc62ab4",
+		"sortNumber": 1
+	}, {
+		"created": "2018-02-28",
+		"creater": "admin",
+		"folderid": "002",
+		"foldername": "信息部门",
+		"state":"station-reserved",
+		"id": "1c080197cb924d17b060f5fa5757a71f",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 6
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "003",
+		"foldername": "租赁公司",
+		"state":"station-expiring",
+		"id": "8a2efd47134e4039bd7847c97dbc49c4",
+		"modified": "2018-04-10",
+		"parentfolderid": "root",
+		"sortNumber": 1
+	},{
+		"folderid": "001",
+		"foldername": "元霆数据",
+		"id": "a41304a3837c36911e7886e4ccc62ab4",
+		"modified": "2018-05-11",
+		"parentfolderid": "root",
+		"state":"station-occupy",
+		"sortNumber": 4
+	}, {
+		"created": "2018-06-08",
+		"creater": "admin",
+		"folderid": "009",
+		"foldername": "测试",
+		"state":"station-empty",
+		"id": "fc499066ddbc4c32a19c1a14c0d1c3cc",
+		"modified": "2018-06-08",
+		"parentfolderid": "a41304a3837c36911e7886e4ccc62ab4",
+		"sortNumber": 1
+	}, {
+		"created": "2018-02-28",
+		"creater": "admin",
+		"folderid": "002",
+		"foldername": "信息部门",
+		"state":"station-reserved",
+		"id": "1c080197cb924d17b060f5fa5757a71f",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 6
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "003",
+		"foldername": "租赁公司",
+		"state":"station-expiring",
+		"id": "8a2efd47134e4039bd7847c97dbc49c4",
+		"modified": "2018-04-10",
+		"parentfolderid": "root",
+		"sortNumber": 1
+	},{
+		"folderid": "001",
+		"foldername": "元霆数据",
+		"id": "a41304a3837c36911e7886e4ccc62ab4",
+		"modified": "2018-05-11",
+		"parentfolderid": "root",
+		"state":"station-occupy",
+		"sortNumber": 4
+	}, {
+		"created": "2018-06-08",
+		"creater": "admin",
+		"folderid": "009",
+		"foldername": "测试",
+		"state":"station-empty",
+		"id": "fc499066ddbc4c32a19c1a14c0d1c3cc",
+		"modified": "2018-06-08",
+		"parentfolderid": "a41304a3837c36911e7886e4ccc62ab4",
+		"sortNumber": 1
+	}, {
+		"created": "2018-02-28",
+		"creater": "admin",
+		"folderid": "002",
+		"foldername": "信息部门",
+		"state":"station-reserved",
+		"id": "1c080197cb924d17b060f5fa5757a71f",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 6
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "003",
+		"foldername": "租赁公司",
+		"state":"station-expiring",
+		"id": "8a2efd47134e4039bd7847c97dbc49c4",
+		"modified": "2018-04-10",
+		"parentfolderid": "root",
+		"sortNumber": 1
+	},{
+		"folderid": "001",
+		"foldername": "元霆数据",
+		"id": "a41304a3837c36911e7886e4ccc62ab4",
+		"modified": "2018-05-11",
+		"parentfolderid": "root",
+		"state":"station-occupy",
+		"sortNumber": 4
+	}, {
+		"created": "2018-06-08",
+		"creater": "admin",
+		"folderid": "009",
+		"foldername": "测试",
+		"state":"station-empty",
+		"id": "fc499066ddbc4c32a19c1a14c0d1c3cc",
+		"modified": "2018-06-08",
+		"parentfolderid": "a41304a3837c36911e7886e4ccc62ab4",
+		"sortNumber": 1
+	}, {
+		"created": "2018-02-28",
+		"creater": "admin",
+		"folderid": "002",
+		"foldername": "信息部门",
+		"state":"station-reserved",
+		"id": "1c080197cb924d17b060f5fa5757a71f",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 6
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "003",
+		"foldername": "租赁公司",
+		"state":"station-expiring",
+		"id": "8a2efd47134e4039bd7847c97dbc49c4",
+		"modified": "2018-04-10",
+		"parentfolderid": "root",
+		"sortNumber": 1
+	},{
+		"folderid": "001",
+		"foldername": "元霆数据",
+		"id": "a41304a3837c36911e7886e4ccc62ab4",
+		"modified": "2018-05-11",
+		"parentfolderid": "root",
+		"state":"station-occupy",
+		"sortNumber": 4
+	}, {
+		"created": "2018-06-08",
+		"creater": "admin",
+		"folderid": "009",
+		"foldername": "测试",
+		"state":"station-empty",
+		"id": "fc499066ddbc4c32a19c1a14c0d1c3cc",
+		"modified": "2018-06-08",
+		"parentfolderid": "a41304a3837c36911e7886e4ccc62ab4",
+		"sortNumber": 1
+	}, {
+		"created": "2018-02-28",
+		"creater": "admin",
+		"folderid": "002",
+		"foldername": "信息部门",
+		"state":"station-reserved",
+		"id": "1c080197cb924d17b060f5fa5757a71f",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 6
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "003",
+		"foldername": "租赁公司",
+		"state":"station-expiring",
+		"id": "8a2efd47134e4039bd7847c97dbc49c4",
+		"modified": "2018-04-10",
+		"parentfolderid": "root",
+		"sortNumber": 1
+	},{
+		"folderid": "001",
+		"foldername": "元霆数据",
+		"id": "a41304a3837c36911e7886e4ccc62ab4",
+		"modified": "2018-05-11",
+		"parentfolderid": "root",
+		"state":"station-occupy",
+		"sortNumber": 4
+	}, {
+		"created": "2018-06-08",
+		"creater": "admin",
+		"folderid": "009",
+		"foldername": "测试",
+		"state":"station-empty",
+		"id": "fc499066ddbc4c32a19c1a14c0d1c3cc",
+		"modified": "2018-06-08",
+		"parentfolderid": "a41304a3837c36911e7886e4ccc62ab4",
+		"sortNumber": 1
+	}, {
+		"created": "2018-02-28",
+		"creater": "admin",
+		"folderid": "002",
+		"foldername": "信息部门",
+		"state":"station-reserved",
+		"id": "1c080197cb924d17b060f5fa5757a71f",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 6
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "003",
+		"foldername": "租赁公司",
+		"state":"station-expiring",
+		"id": "8a2efd47134e4039bd7847c97dbc49c4",
+		"modified": "2018-04-10",
+		"parentfolderid": "root",
+		"sortNumber": 1
+	},{
+		"folderid": "001",
+		"foldername": "元霆数据",
+		"id": "a41304a3837c36911e7886e4ccc62ab4",
+		"modified": "2018-05-11",
+		"parentfolderid": "root",
+		"state":"station-occupy",
+		"sortNumber": 4
+	}, {
+		"created": "2018-06-08",
+		"creater": "admin",
+		"folderid": "009",
+		"foldername": "测试",
+		"state":"station-empty",
+		"id": "fc499066ddbc4c32a19c1a14c0d1c3cc",
+		"modified": "2018-06-08",
+		"parentfolderid": "a41304a3837c36911e7886e4ccc62ab4",
+		"sortNumber": 1
+	}, {
+		"created": "2018-02-28",
+		"creater": "admin",
+		"folderid": "002",
+		"foldername": "信息部门",
+		"state":"station-reserved",
+		"id": "1c080197cb924d17b060f5fa5757a71f",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 6
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "003",
+		"foldername": "租赁公司",
+		"state":"station-expiring",
+		"id": "8a2efd47134e4039bd7847c97dbc49c4",
+		"modified": "2018-04-10",
+		"parentfolderid": "root",
+		"sortNumber": 1
+	},{
+		"folderid": "001",
+		"foldername": "元霆数据",
+		"id": "a41304a3837c36911e7886e4ccc62ab4",
+		"modified": "2018-05-11",
+		"parentfolderid": "root",
+		"state":"station-occupy",
+		"sortNumber": 4
+	}, {
+		"created": "2018-06-08",
+		"creater": "admin",
+		"folderid": "009",
+		"foldername": "测试",
+		"state":"station-empty",
+		"id": "fc499066ddbc4c32a19c1a14c0d1c3cc",
+		"modified": "2018-06-08",
+		"parentfolderid": "a41304a3837c36911e7886e4ccc62ab4",
+		"sortNumber": 1
+	}, {
+		"created": "2018-02-28",
+		"creater": "admin",
+		"folderid": "002",
+		"foldername": "信息部门",
+		"state":"station-reserved",
+		"id": "1c080197cb924d17b060f5fa5757a71f",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 6
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "003",
+		"foldername": "租赁公司",
+		"state":"station-expiring",
+		"id": "8a2efd47134e4039bd7847c97dbc49c4",
+		"modified": "2018-04-10",
+		"parentfolderid": "root",
+		"sortNumber": 1
+	},{
+		"folderid": "001",
+		"foldername": "元霆数据",
+		"id": "a41304a3837c36911e7886e4ccc62ab4",
+		"modified": "2018-05-11",
+		"parentfolderid": "root",
+		"state":"station-occupy",
+		"sortNumber": 4
+	}, {
+		"created": "2018-06-08",
+		"creater": "admin",
+		"folderid": "009",
+		"foldername": "测试",
+		"state":"station-empty",
+		"id": "fc499066ddbc4c32a19c1a14c0d1c3cc",
+		"modified": "2018-06-08",
+		"parentfolderid": "a41304a3837c36911e7886e4ccc62ab4",
+		"sortNumber": 1
+	}, {
+		"created": "2018-02-28",
+		"creater": "admin",
+		"folderid": "002",
+		"foldername": "信息部门",
+		"state":"station-reserved",
+		"id": "1c080197cb924d17b060f5fa5757a71f",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 6
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "003",
+		"foldername": "租赁公司",
+		"state":"station-expiring",
+		"id": "8a2efd47134e4039bd7847c97dbc49c4",
+		"modified": "2018-04-10",
+		"parentfolderid": "root",
+		"sortNumber": 1
+	},{
+		"folderid": "001",
+		"foldername": "元霆数据",
+		"id": "a41304a3837c36911e7886e4ccc62ab4",
+		"modified": "2018-05-11",
+		"parentfolderid": "root",
+		"state":"station-occupy",
+		"sortNumber": 4
+	}, {
+		"created": "2018-06-08",
+		"creater": "admin",
+		"folderid": "009",
+		"foldername": "测试",
+		"state":"station-empty",
+		"id": "fc499066ddbc4c32a19c1a14c0d1c3cc",
+		"modified": "2018-06-08",
+		"parentfolderid": "a41304a3837c36911e7886e4ccc62ab4",
+		"sortNumber": 1
+	}, {
+		"created": "2018-02-28",
+		"creater": "admin",
+		"folderid": "002",
+		"foldername": "信息部门",
+		"state":"station-reserved",
+		"id": "1c080197cb924d17b060f5fa5757a71f",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 6
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "003",
+		"foldername": "租赁公司",
+		"state":"station-expiring",
+		"id": "8a2efd47134e4039bd7847c97dbc49c4",
+		"modified": "2018-04-10",
+		"parentfolderid": "root",
+		"sortNumber": 1
+	},{
+		"folderid": "001",
+		"foldername": "元霆数据",
+		"id": "a41304a3837c36911e7886e4ccc62ab4",
+		"modified": "2018-05-11",
+		"parentfolderid": "root",
+		"state":"station-occupy",
+		"sortNumber": 4
+	}, {
+		"created": "2018-06-08",
+		"creater": "admin",
+		"folderid": "009",
+		"foldername": "测试",
+		"state":"station-empty",
+		"id": "fc499066ddbc4c32a19c1a14c0d1c3cc",
+		"modified": "2018-06-08",
+		"parentfolderid": "a41304a3837c36911e7886e4ccc62ab4",
+		"sortNumber": 1
+	}, {
+		"created": "2018-02-28",
+		"creater": "admin",
+		"folderid": "002",
+		"foldername": "信息部门",
+		"state":"station-reserved",
+		"id": "1c080197cb924d17b060f5fa5757a71f",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 6
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "003",
+		"foldername": "租赁公司",
+		"state":"station-expiring",
+		"id": "8a2efd47134e4039bd7847c97dbc49c4",
+		"modified": "2018-04-10",
+		"parentfolderid": "root",
+		"sortNumber": 1
+	},{
+		"folderid": "001",
+		"foldername": "元霆数据",
+		"id": "a41304a3837c36911e7886e4ccc62ab4",
+		"modified": "2018-05-11",
+		"parentfolderid": "root",
+		"state":"station-occupy",
+		"sortNumber": 4
+	}, {
+		"created": "2018-06-08",
+		"creater": "admin",
+		"folderid": "009",
+		"foldername": "测试",
+		"state":"station-empty",
+		"id": "fc499066ddbc4c32a19c1a14c0d1c3cc",
+		"modified": "2018-06-08",
+		"parentfolderid": "a41304a3837c36911e7886e4ccc62ab4",
+		"sortNumber": 1
+	}, {
+		"created": "2018-02-28",
+		"creater": "admin",
+		"folderid": "002",
+		"foldername": "信息部门",
+		"state":"station-reserved",
+		"id": "1c080197cb924d17b060f5fa5757a71f",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 6
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "003",
+		"foldername": "租赁公司",
+		"state":"station-expiring",
+		"id": "8a2efd47134e4039bd7847c97dbc49c4",
+		"modified": "2018-04-10",
+		"parentfolderid": "root",
+		"sortNumber": 1
+	},{
+		"folderid": "001",
+		"foldername": "元霆数据",
+		"id": "a41304a3837c36911e7886e4ccc62ab4",
+		"modified": "2018-05-11",
+		"parentfolderid": "root",
+		"state":"station-occupy",
+		"sortNumber": 4
+	}, {
+		"created": "2018-06-08",
+		"creater": "admin",
+		"folderid": "009",
+		"foldername": "测试",
+		"state":"station-empty",
+		"id": "fc499066ddbc4c32a19c1a14c0d1c3cc",
+		"modified": "2018-06-08",
+		"parentfolderid": "a41304a3837c36911e7886e4ccc62ab4",
+		"sortNumber": 1
+	}, {
+		"created": "2018-02-28",
+		"creater": "admin",
+		"folderid": "002",
+		"foldername": "信息部门",
+		"state":"station-reserved",
+		"id": "1c080197cb924d17b060f5fa5757a71f",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 6
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "003",
+		"foldername": "租赁公司",
+		"state":"station-expiring",
+		"id": "8a2efd47134e4039bd7847c97dbc49c4",
+		"modified": "2018-04-10",
+		"parentfolderid": "root",
+		"sortNumber": 1
+	},{
+		"folderid": "001",
+		"foldername": "元霆数据",
+		"id": "a41304a3837c36911e7886e4ccc62ab4",
+		"modified": "2018-05-11",
+		"parentfolderid": "root",
+		"state":"station-occupy",
+		"sortNumber": 4
+	}, {
+		"created": "2018-06-08",
+		"creater": "admin",
+		"folderid": "009",
+		"foldername": "测试",
+		"state":"station-empty",
+		"id": "fc499066ddbc4c32a19c1a14c0d1c3cc",
+		"modified": "2018-06-08",
+		"parentfolderid": "a41304a3837c36911e7886e4ccc62ab4",
+		"sortNumber": 1
+	}, {
+		"created": "2018-02-28",
+		"creater": "admin",
+		"folderid": "002",
+		"foldername": "信息部门",
+		"state":"station-reserved",
+		"id": "1c080197cb924d17b060f5fa5757a71f",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 6
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "003",
+		"foldername": "租赁公司",
+		"state":"station-expiring",
+		"id": "8a2efd47134e4039bd7847c97dbc49c4",
+		"modified": "2018-04-10",
+		"parentfolderid": "root",
+		"sortNumber": 1
+	},{
+		"folderid": "001",
+		"foldername": "元霆数据",
+		"id": "a41304a3837c36911e7886e4ccc62ab4",
+		"modified": "2018-05-11",
+		"parentfolderid": "root",
+		"state":"station-occupy",
+		"sortNumber": 4
+	}, {
+		"created": "2018-06-08",
+		"creater": "admin",
+		"folderid": "009",
+		"foldername": "测试",
+		"state":"station-empty",
+		"id": "fc499066ddbc4c32a19c1a14c0d1c3cc",
+		"modified": "2018-06-08",
+		"parentfolderid": "a41304a3837c36911e7886e4ccc62ab4",
+		"sortNumber": 1
+	}, {
+		"created": "2018-02-28",
+		"creater": "admin",
+		"folderid": "002",
+		"foldername": "信息部门",
+		"state":"station-reserved",
+		"id": "1c080197cb924d17b060f5fa5757a71f",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 6
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "003",
+		"foldername": "租赁公司",
+		"state":"station-expiring",
+		"id": "8a2efd47134e4039bd7847c97dbc49c4",
+		"modified": "2018-04-10",
+		"parentfolderid": "root",
+		"sortNumber": 1
+	},{
+		"folderid": "001",
+		"foldername": "元霆数据",
+		"id": "a41304a3837c36911e7886e4ccc62ab4",
+		"modified": "2018-05-11",
+		"parentfolderid": "root",
+		"state":"station-occupy",
+		"sortNumber": 4
+	}, {
+		"created": "2018-06-08",
+		"creater": "admin",
+		"folderid": "009",
+		"foldername": "测试",
+		"state":"station-empty",
+		"id": "fc499066ddbc4c32a19c1a14c0d1c3cc",
+		"modified": "2018-06-08",
+		"parentfolderid": "a41304a3837c36911e7886e4ccc62ab4",
+		"sortNumber": 1
+	}, {
+		"created": "2018-02-28",
+		"creater": "admin",
+		"folderid": "002",
+		"foldername": "信息部门",
+		"state":"station-reserved",
+		"id": "1c080197cb924d17b060f5fa5757a71f",
+		"modified": "2018-04-09",
+		"parentfolderid": "root",
+		"sortNumber": 6
+	}, {
+		"created": "2018-04-09",
+		"creater": "admin",
+		"folderid": "003",
+		"foldername": "租赁公司",
+		"state":"station-expiring",
+		"id": "8a2efd47134e4039bd7847c97dbc49c4",
+		"modified": "2018-04-10",
+		"parentfolderid": "root",
+		"sortNumber": 1
+	},{
+		"folderid": "001",
+		"foldername": "元霆数据",
+		"id": "a41304a3837c36911e7886e4ccc62ab4",
+		"modified": "2018-05-11",
+		"parentfolderid": "root",
+		"state":"station-occupy",
+		"sortNumber": 4
+	}, {
+		"created": "2018-06-08",
+		"creater": "admin",
+		"folderid": "009",
+		"foldername": "测试",
+		"state":"station-empty",
+		"id": "fc499066ddbc4c32a19c1a14c0d1c3cc",
+		"modified": "2018-06-08",
+		"parentfolderid": "a41304a3837c36911e7886e4ccc62ab4",
+		"sortNumber": 1
+	},{
+		"folderid": "001",
+		"foldername": "元霆数据",
+		"id": "a41304a3837c36911e7886e4ccc62ab4",
+		"modified": "2018-05-11",
+		"parentfolderid": "root",
+		"state":"station-occupy",
+		"sortNumber": 4
+	}, {
+		"created": "2018-06-08",
+		"creater": "admin",
+		"folderid": "009",
+		"foldername": "测试",
+		"state":"station-empty",
+		"id": "fc499066ddbc4c32a19c1a14c0d1c3cc",
+		"modified": "2018-06-08",
+		"parentfolderid": "a41304a3837c36911e7886e4ccc62ab4",
+		"sortNumber": 1
+	}]
+}
+	function test(h){
+            document.getElementById("iframepage-wrap").style.height = h+"px"
+    }
+$(function(){
+	layui.use(['element',"layer","form",'laypage'], function(){
+		var layer=layui.layer,form = layui.form,element=layui.elemnet;
+		var laypage = layui.laypage;
+		//渲染工位
+		/*runAsync().then(function(data){
+			console.log(data,"aaaaaaaaa")
+			renderWorkPos(data)
+		})*/
+		renderWorkPos(stateDate.data)
+		 function renderWorkPos(data){
+		 	laypage.render({
+			    elem: 'page-break'
+			    ,count: data.length
+			    ,theme: '#1E9FFF'
+			    ,limit:80
+			    ,first: '首页'
+		        ,last: '尾页'
+		        ,next:"下一页"
+		        ,pre:"上一页"
+			    ,jump: function(obj){
+			      //模拟渲染
+			      document.getElementById('station-all').innerHTML = function(){
+			        var arr = []
+			        ,thisData = data.concat().splice(obj.curr*obj.limit - obj.limit, obj.limit);
+			        layui.each(thisData, function(index,item){
+			          arr.push(`<div class="desk-box">`
+									+`<div class="station-box `+item.state+`">`
+										+`<span>`+item.folderid+`</span>`
+										+`<div class="station-message">`
+											+`<span class="station-status">`+item.foldername+`</span>`
+											+`<span class="station-user">已分配</span>`
+										+`</div>`
+									+`</div>`
+								+`</div>`);
+			        });
+			        return arr.join('');
+			      }();
+			    }
+			});
+		 }
+		/*化上去的提示*/
+		$("#station-all").on('mouseenter','.desk-box',function(event) {
+			var target=$(this);
+			var tipStr=`<div class="station-popup" style="padding: 20px;">`
+							+`<div class="kb-title">`
+								+`<span>基本信息</span>`
+							+`</div>`
+							+`<ul class="basic-message">`
+								+`<li class="clearfix">`
+									+`<div class="group"><i class="layui-icon"  style="color:#333">&#xe66f;</i><span>田茂昌</span></div>`
+									+`<div class="group"><i class="layui-icon" style="color:#333">&#xe68e;</i><span>燕博园</span></div>`
+								+`</li>`
+								+`<li class="clearfix">`
+									+`<div class="group"><i class="layui-icon" style="color:#333">&#xe678;</i><span>13269503421</span></div>`
+									+`<div class="group"><i class="layui-icon" style="color:#333">&#xe66e;</i><span>工位号201</span></div>`
+								+`</li>`
+							+`</ul>`
+							+`<div class="kb-title"><span>备注</span></div>`
+							+`<div class="remark">`
+								+`<textarea name="" placeholder="编辑备注"></textarea>`
+							+`</div>`
+							+`<div class="footer">`
+									+`<button class="layui-btn layui-btn-sm layui-btn-normal">个人主页</button>`
+							+`</div>`
+						+`</div>`
+			layer.tips(tipStr,target , {
+			  tips: [3, '#000'],
+			  area: ['400px', 'auto'],
+			  time: 0
+			});
+		});
+	});
+	/*方格切换*/
+	$(".nav-section-action-bar").on("click",".receipt-status",function(){
+		$(".receipt-status").removeClass('')
+	})
+
+	
+})
+	
+</script>
+</html>

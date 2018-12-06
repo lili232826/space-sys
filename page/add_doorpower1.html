@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="../js/plugin/layui-v2.3.0/layui/css/layui.css">
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/index.css">
+	<link rel="stylesheet" href="../css/set.css">
+	<script src="../js/jquery-2.1.1.min.js"></script>
+	<script src="../js/plugin/layui-v2.3.0/layui/layui.js"></script>
+</head>
+<style>
+::-webkit-scrollbar-thumb {
+  background:#a2a2a2; 
+  border-radius: 10px;
+  height:50%;
+}
+::-webkit-scrollbar{width:6px;}
+body{
+	overflow-y: scroll;
+} 
+body{
+	height: 100%;
+	overflow-y:scroll;
+}
+</style>
+<body>
+<div style="width: 100%; height: 100%; position: relative;">
+	<div class="kb-form-container" >
+		<div class="kb-title border-none">
+			<i class="layui-icon layui-icon-rate" style="font-size: 18px; margin-right: 5px; color: rgb(102, 102, 102);"></i><span>会员选择</span>
+		</div>
+		<div class="">
+			<div class="flex transfer-box" >
+				<div class="transfer-container" style="flex:1;border-right: none;">
+					<div class="transfer-header flex-center border-none">
+						<span class="title">会员</span><span class="show-count">(0)</span>
+					</div>
+					<div class="transfer-wrap">
+						<div class="transfer-content">
+							<!-- <div class="first-tier">
+								<label class="parent-label flex-center">
+									<div class="load-btn">
+										<span class="toggle-trans-btn"><i class="layui-icon layui-icon-right"></i></span>
+									</div>
+									<div class="data-name"><span>王晓晋的测试团队</span></div>
+									<div class="adder-subtractor-btn flex-center"><i class="layui-icon layui-icon-add-1" style="margin-right: 0px;"></i></div>
+								</label>
+								<div class="second-tier-item">
+									<div class="second-tier">
+										<label class="children-label flex-between">
+											<div class="data-name">	
+												<div style=" background-color: rgb(236, 136, 192);">t</div>
+												<span>test</span>
+											</div>
+											<div class="adder-subtractor-btn flex-center"><i class="layui-icon layui-icon-add-1" style="margin-right: 0px;"></i></div>
+										</label>
+									</div>
+									<div class="second-tier">
+										<label class="children-label flex-between">
+											<div class="data-name">	
+												<div style=" background-color: rgb(236, 13, 192);">t</div>
+												<span>小草</span>
+											</div>
+											<div class="adder-subtractor-btn flex-center"><i class="layui-icon layui-icon-add-1" style="margin-right: 0px;"></i></div>
+										</label>
+									</div>
+									<div class="second-tier">
+										<label class="children-label flex-between">
+											<div class="data-name">	
+												<div style=" background-color: rgb(236, 136, 192);">t</div>
+												<span>test</span>
+											</div>
+											<div class="adder-subtractor-btn flex-center"><i class="layui-icon layui-icon-add-1" style="margin-right: 0px;"></i></div>
+										</label>
+									</div>
+									<div class="second-tier">
+										<label class="children-label flex-between">
+											<div class="data-name">	
+												<div style=" background-color: rgb(236, 13, 192);">t</div>
+												<span>小草</span>
+											</div>
+											<div class="adder-subtractor-btn flex-center"><i class="layui-icon layui-icon-add-1" style="margin-right: 0px;"></i></div>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="first-tier">
+								<label class="parent-label flex-center">
+									<div class="load-btn">
+										<span class="toggle-trans-btn"><i class="layui-icon layui-icon-right"></i></span>
+									</div>
+									<div class="data-name"><span>周洋</span></div>
+									<div class="adder-subtractor-btn flex-center"><i class="layui-icon layui-icon-add-1" style="margin-right: 0px;"></i></div>
+								</label>
+								<div class="second-tier-item">
+									<div class="second-tier">
+										<label class="children-label flex-between">
+											<div class="data-name">	
+												<div style=" background-color: rgb(236, 136, 192);">t</div>
+												<span>test</span>
+											</div>
+											<div class="adder-subtractor-btn flex-center"><i class="layui-icon layui-icon-add-1" style="margin-right: 0px;"></i></div>
+										</label>
+									</div>
+									<div class="second-tier">
+										<label class="children-label flex-between">
+											<div class="data-name">	
+												<div style=" background-color: rgb(236, 13, 192);">t</div>
+												<span>小草</span>
+											</div>
+											<div class="adder-subtractor-btn flex-center"><i class="layui-icon layui-icon-add-1" style="margin-right: 0px;"></i></div>
+										</label>
+									</div>			
+								</div>
+							</div> -->
+						</div>
+					</div>
+		        </div>
+		        <div class="line-v"></div>
+		        <div class="transfer-container" style="flex:1;border-left: none;">
+					<div class="transfer-header flex-center"><span class="title">已添加</span><span class="show-count">(0)</span></div>
+					<div class="transfer-target">
+						<div class="transfer-content"></div>
+					</div>
+		        </div>
+		    </div>
+		</div>
+	</div>
+</div>
+</body>
+<script>
+$(function(){
+	setHeight();
+	layui.use(['element',"layer","form"], function(){
+		var layer=layui.layer,form = layui.form;			
+			
+	});
+	var teamData=[
+		{
+			id: 432, 
+			name: "王晓晋的测试团队",
+			users:[
+					{id: 88, name: "test", name_pinyin: "test", phone_num: "13301319823"},
+					{id: 89, name: "梦娇", name_pinyin: "meng jiao", phone_num: "13301319823"},
+					{id: 90, name: "传龙", name_pinyin: "chuan long", phone_num: "13301319823"},
+				]
+		},
+		{
+			id: 431, 
+			name: "周洋",
+			users:[
+					{id: 100, name: "马乐", name_pinyin: "ma le", phone_num: "13301319823"},
+					{id: 101, name: "李佩珊", name_pinyin: "li pei shan", phone_num: "13301319823"},
+					{id: 109, name: "李晓舒", name_pinyin: "li xiao shu", phone_num: "13301319823"},
+					{id: 110, name: "蒋媛媛", name_pinyin: "jiang yuan yuan", phone_num: "13301319823"},
+				]
+		},
+		{
+			id: 43, 
+			name: "韶九影视",
+			users:[
+					{id: 1, name: "田佳玉", name_pinyin: "tian jia yu", phone_num: "13301319823"},
+					{id: 2, name: "孟斯静", name_pinyin: "meng si jing", phone_num: "13301319823"},
+					{id: 3, name: "郑博雅", name_pinyin: "zheng bo ya", phone_num: "13301319823"},
+					{id: 4, name: "赵莹", name_pinyin: "zhao ying", phone_num: "13301319823"},
+				]
+		}
+	];
+	
+	//渲染左侧会员团队；
+	renderTeam($('.transfer-wrap>.transfer-content'));
+
+
+//点击下拉
+	
+	$('.transfer-wrap>.transfer-content').on("click",".toggle-icon",function(){
+		var firstTierObj=$(this).parents(".first-tier");
+		var index=$(firstTierObj).index();
+		if($(this).hasClass('layui-icon-right')){
+			var secondArr=teamData[index]["users"];
+			$(this).removeClass('layui-icon-right').addClass('layui-icon-down');
+			renderMember(secondArr,firstTierObj)
+			setNum();//计算头部显示个数
+		}else{
+			$(this).removeClass('layui-icon-down').addClass('layui-icon-right');
+			$(firstTierObj).children('.second-tier-item').remove();
+		}
+		
+	})
+
+//点击左侧添加按钮
+	var newArr=[];//右侧渲染的数据；
+	$('.transfer-wrap>.transfer-content').on("click",".adder-subtractor-btn",function(){
+		var parentLabel=$(this).parent();
+		var parentFirst=$(parentLabel).parent();
+		var indFirst=$(parentLabel).parent().index();
+		var numFirst=$(parentFirst).parent().children().length;
+		//console.log(numFirst,"ggggggggggggggggggg")
+		if(parentLabel.hasClass("parent-label")){//点击标题的添加；
+			if(newArr.length>0){
+				for(var n=0;n<newArr.length;n++){
+					if(newArr[n]['id']==teamData[indFirst]['id']){
+						//虽然两个不同的数组（newArr，teamData），但是保存的是同一个对象；直接改变一个的内容，会有影响，需要处理
+						newArr=JSON.parse(JSON.stringify(newArr));
+						newArr[n]['users']=newArr[n]['users'].concat(teamData[indFirst]['users']);
+					}else{
+						newArr.push(teamData[indFirst]);
+					}
+				}
+			}else{
+				newArr.push(teamData[indFirst]);
+			}
+			renderAdd(newArr);//添加右侧列表
+			//console.log(newArr,'66666666')
+			teamData.splice(indFirst,1);	
+			setNum();
+			
+		}else{//点击小列表的添加
+			var firstTierInd=$(parentFirst).parent().parent('.first-tier').index(); 
+			//console.log(teamData,"666");
+			getNewArr(firstTierInd,indFirst);
+			renderAdd(newArr);
+			//teamData[firstTierInd]['users'].splice(indFirst,1);
+			//console.log(teamData[firstTierInd]['users'],"pppp")
+			//console.log(teamData,"arr")
+			
+		};
+		if(numFirst<=1){
+			$(this).parents(".first-tier").remove();
+		}else{
+			$(parentFirst).remove();
+		}
+	})
+//点击右侧删除按钮
+	$('.transfer-target>.transfer-content').on("click",".adder-subtractor-btn",function(){
+		var parentLabel=$(this).parent();
+		var parentFirst=$(parentLabel).parent();
+		var indFirst=$(parentLabel).parent().index();
+		if(parentLabel.hasClass("parent-label")){//点击标题的删除；
+			teamData.unshift(newArr[indFirst]);
+			//renderTeam(teamData)
+			prependTeam(newArr[indFirst],$('.transfer-wrap>.transfer-content'))
+			newArr.splice(indFirst,1);
+			renderAdd(newArr);
+			setNum()
+		}else{//点击小列表的删除
+
+			//renderAdd(arrMember)
+		}
+	})
+	
+	//渲染左侧的会员团队
+	function renderTeam(node){
+		var teamStr="";
+		for(var i=0;i<teamData.length;i++){
+			teamStr+=`<div class="first-tier">`
+				+`<label class="parent-label flex-center">`
+					+`<div class="load-btn">`
+						+`<span class="toggle-trans-btn"><i class="toggle-icon layui-icon layui-icon-right"></i></span>`
+					+`</div>`
+					+`<div class="data-name"><span>`+teamData[i].name+`</span></div>`
+					+`<div class="adder-subtractor-btn flex-center"><i class="layui-icon layui-icon-add-1" style="margin-right: 0px;"></i></div>`
+				+`</label>`
+			+`</div>`
+		};
+		$(node).html(teamStr)
+		//$('.transfer-wrap>.transfer-content').html(teamStr)
+	}
+	//在左侧追加的会员团队
+	function prependTeam(prependData,node){
+		var teamStr="";
+		//console.log(prependData,node,"11111111111")
+		if(prependData){
+				teamStr+=`<div class="first-tier">`
+					+`<label class="parent-label flex-center">`
+						+`<div class="load-btn">`
+							+`<span class="toggle-trans-btn"><i class="toggle-icon layui-icon layui-icon-down"></i></span>`
+						+`</div>`
+						+`<div class="data-name"><span>`+prependData.name+`</span></div>`
+						+`<div class="adder-subtractor-btn flex-center"><i class="layui-icon layui-icon-add-1" style="margin-right: 0px;"></i></div>`
+					+`</label>`;
+				if(prependData.users.length>0){
+					teamStr+=`<div class="second-tier-item">`;
+					for(var j=0;j<prependData.users.length;j++){
+						teamStr+=`<div class="second-tier">`
+									+`<label class="children-label flex-between">`
+										+`<div class="data-name">`	
+											+`<div style=" background-color: rgb(236, 136, 192);">t</div>`
+											+`<span>`+prependData.users[j].name+`</span>`
+										+`</div>`
+										+`<div class="adder-subtractor-btn flex-center"><i class="layui-icon layui-icon-add-1" style="margin-right: 0px;"></i></div>`
+									+`</label>`
+								+`</div>`				
+					}
+					teamStr+=`</div>`;
+				};
+				teamStr+=`</div>`;					
+		}
+		$(node).prepend($(teamStr))
+		//$('.transfer-wrap>.transfer-content').html(teamStr)
+	}
+	//渲染左侧的会员团队下的人
+	function renderMember(arrMember,node){
+		var secondStr='<div class="second-tier-item">';
+		for(var j=0;j<arrMember.length;j++){
+				var secondName=arrMember[j]['name'].substr(0,1);
+				secondStr+=`<div class="second-tier">`
+								+`<label class="children-label flex-between">`
+									+`<div class="data-name">`	
+										+`<div style=" background-color: rgb(236, 136, 192);">`+secondName+`</div>`
+										+`<span>`+arrMember[j]['name']+`</span>`
+									+`</div>`
+									+`<div class="adder-subtractor-btn flex-center"><i class="layui-icon layui-icon-add-1" style="margin-right: 0px;"></i></div>`
+								+`</label>`
+							+`</div>`				
+			}
+			secondStr+='</div>';
+			node.append(secondStr);
+	}
+	//渲染右侧的会员和团队下的人
+	function renderAdd(arrMember){
+		var teamStr="";
+		//console.log(arrMember,"11111111111")
+		if(arrMember.length>0){
+			for(var i=0;i<arrMember.length;i++){
+				teamStr+=`<div class="first-tier">`
+					+`<label class="parent-label flex-center">`
+						+`<div class="data-name"><span>`+arrMember[i].name+`</span></div>`
+						+`<div class="adder-subtractor-btn flex-center"><i class="layui-icon layui-icon-close" style="margin-right: 0px;"></i></div>`
+					+`</label>`;
+				if(arrMember[i].users.length>0){
+					teamStr+=`<div class="second-tier-item">`;
+					for(var j=0;j<arrMember[i].users.length;j++){
+						teamStr+=`<div class="second-tier">`
+									+`<label class="children-label flex-between">`
+										+`<div class="data-name">`	
+											+`<div style=" background-color: rgb(236, 136, 192);">t</div>`
+											+`<span>`+arrMember[i].users[j].name+`</span>`
+										+`</div>`
+										+`<div class="adder-subtractor-btn flex-center"><i class="layui-icon layui-icon-close" style="margin-right: 0px;"></i></div>`
+									+`</label>`
+								+`</div>`				
+					}
+					teamStr+=`</div>`;
+				};
+				teamStr+=`</div>`;					
+			};
+		}
+		$('.transfer-target>.transfer-content').html(teamStr);		
+	}
+	//设置单个添加的数据
+	function getNewArr(firstInd,secondInd){
+		console.log(newArr,teamData,"0")
+		//var id=teamData[firstInd].id;
+		//var user=teamData[firstInd]['users'][secondInd];
+		//console.log(teamData[firstInd].id)
+
+		if(newArr.length>0){
+			for(var i=0;i<newArr.length;i++){
+				console.log(newArr[i]["id"],"id")
+				if(newArr[i]["id"]==teamData[firstInd].id){
+					newArr[i]['users'].push(teamData[firstInd]['users'][secondInd]);
+					break;
+					console.log(newArr,"有团队，加人员")
+				}else{
+					//虽然两个不同的数组（newArr，teamData），但是保存的是同一个对象；直接改变一个的内容，会有影响，需要处理
+					/*newArr.unshift(teamData[firstInd]);
+					newArr=JSON.parse(JSON.stringify(newArr));
+					console.log(newArr,'没团队，不重复')
+					newArr[0]['users'].length=0;
+					newArr[0]['users'].push(teamData[firstInd]['users'][secondInd]);*/
+					continue;
+					//break;
+				}
+			}
+		}else{
+			newArr.push(teamData[firstInd]);
+			//虽然两个不同的数组（newArr，teamData），但是保存的是同一个对象；直接改变一个的内容，会有影响，需要处理
+			newArr=JSON.parse(JSON.stringify(newArr));
+			newArr[0]['users'].length=0;
+			newArr[0]['users'].push(teamData[firstInd]['users'][secondInd]);
+			//console.log(newArr,teamData,"1")
+		}
+		console.log('77777777777')
+		teamData[firstInd]['users'].splice(secondInd,1);
+	}
+
+	//设置头部的显示数目
+	function setNum(){
+		var secondItemLeft=$('.transfer-wrap').find('.second-tier').length;
+		var secondItemRight=$('.transfer-target').find('.second-tier').length;
+		//console.log(secondItemLeft,'ppppp')
+		$('.show-count').eq(0).text("("+secondItemLeft+")");
+		$('.show-count').eq(1).text("("+secondItemRight+")");
+	}
+	function setHeight(){
+        var h = document.body.clientHeight*1;
+        //console.log(h)
+        //window.parent.test(h);
+    }
+})
+
+</script>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>分店管理-首页</title>
+	<link rel="stylesheet" href="../js/plugin/layui-v2.3.0/layui/css/layui.css">
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/index.css">
+	<link rel="stylesheet" href="../css/index_team.css">
+</head>
+<style>
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  height:50%;
+}
+::-webkit-scrollbar{width:6px;}
+	body{
+		overflow-y: scroll;
+}
+.my-tab .layui-tab-title{
+	padding:0 30px;
+}
+.layui-form-label{
+	width: 92px;
+	text-align: left;
+}
+.layui-input-block{
+	margin-left: 122px;
+}
+</style>
+<body>
+	<div class="">
+		<div class="layui-tab layui-tab-brief my-tab" lay-filter="docDemoTabBrief">
+		  <ul class="layui-tab-title mag-top-20">
+		    <li class="layui-this">充值</li>
+		    <li>赠送</li>
+		    <li>扣除</li>
+		  </ul>
+		  <div class="layui-tab-content" style="padding-right: 30px; padding-left: 15px;">
+		  		<div class="layui-tab-item layui-show">
+		  			<form class="layui-form" id="defaultForm" th:action="@{/app/projectPartition/save}" th:method="post" lay-filter="employee-form">
+							<div class="layui-form-item">
+							    <label class="layui-form-label"><span class="must-fill">*</span>充值积分数量</label>
+							    <div class="layui-input-block">
+							      	<input type="text" name="integralNum" id="" required  lay-verify="integralNum" placeholder="" autocomplete="off" class="layui-input">
+							    	<span style="color: rgb(153, 153, 153); font-size: 12px; padding: 4px 0px 0px;">价值：¥0</span>
+							    </div>
+							</div>
+							<div class="layui-form-item">
+							    <label class="layui-form-label"><span class="must-fill">*</span>收款金额</label>
+							    <div class="layui-input-block">
+							      	<input type="text" name="gatherMoney" id="" required  lay-verify="gatherMoney" placeholder="" autocomplete="off" class="layui-input">
+							    </div>
+							</div>
+							<div class="layui-form-item">
+							    <label class="layui-form-label"><span class="must-fill">*</span>支付方式</label>
+							    <div class="layui-input-block">
+							      	<select name="" id=""></select>
+							    </div>
+							</div>
+							<div class="layui-form-item">
+							    <label class="layui-form-label"><span class="must-fill">*</span>已付款</label>
+							    <div class="layui-input-block">
+							      	 <input lay-filter="csmState" lay-verify="csmState" name="csmState" title="是" type="radio" value="0" checked>
+									 <input lay-filter="csmState" name="csmState" title="否 " type="radio" value="1">
+							    </div>
+							</div>
+							
+							<div class="layui-form-item">
+							    <label class="layui-form-label">备注</label>
+							    <div class="layui-input-block">
+							      	<textarea name="desc" placeholder="请输入内容" class="layui-textarea"></textarea>
+							    </div>
+							</div>
+							<div class="layui-form-item" style="padding-left:15px">
+							      <button class="layui-btn layui-btn-normal btn-bg" lay-submit lay-filter="formEmployee" id="submit-btn">确定</button>
+							</div>
+						
+					</form>	
+		  		</div>
+			    <div class="layui-tab-item">
+			    	<form class="layui-form" id="defaultForm" th:action="@{/app/projectPartition/save}" th:method="post" lay-filter="employee-form">
+							<div class="layui-form-item">
+							    <label class="layui-form-label"><span class="must-fill">*</span>赠送数量</label>
+							    <div class="layui-input-block">
+							      	<input type="text" name="" id="" required  lay-verify="" placeholder="" autocomplete="off" class="layui-input">
+							    </div>
+							</div>
+							<div class="layui-form-item">
+							    <label class="layui-form-label">备注</label>
+							    <div class="layui-input-block">
+							      	<textarea name="desc" placeholder="请输入内容" class="layui-textarea"></textarea>
+							    </div>
+							</div>
+							<div class="layui-form-item" style="padding-left:15px">
+							      <button class="layui-btn layui-btn-normal btn-bg" lay-submit lay-filter="formEmployee" id="submit-btn">确定</button>
+							</div>
+						
+					</form>	
+
+			    </div>
+			    <div class="layui-tab-item">
+			    	<form class="layui-form" id="defaultForm" th:action="@{/app/projectPartition/save}" th:method="post" lay-filter="employee-form">
+							<div class="layui-form-item">
+							    <label class="layui-form-label"><span class="must-fill">*</span>扣除数量</label>
+							    <div class="layui-input-block">
+							      	<input type="text" name="" id="" required  lay-verify="" placeholder="" autocomplete="off" class="layui-input">
+							    </div>
+							</div>
+							<div class="layui-form-item">
+							    <label class="layui-form-label">备注</label>
+							    <div class="layui-input-block">
+							      	<textarea name="desc" placeholder="请输入内容" class="layui-textarea"></textarea>
+							    </div>
+							</div>
+							<div class="layui-form-item" style="padding-left:15px">
+							      <button class="layui-btn layui-btn-normal btn-bg" lay-submit lay-filter="formEmployee" id="submit-btn">确定</button>
+							</div>	
+					</form>	
+			    </div>
+		  </div>
+		</div>      
+	</div>
+	
+</body>
+<script src='../js/jquery-2.1.1.min.js'></script>
+<script src="../js/plugin/layui-v2.3.0/layui/layui.js"></script>
+<script>
+	$(function(){
+		layui.use(['element','form'] ,function(){
+		  var element = layui.element,form=layui.form;
+			form.verify({
+				integralNum: function(value, item){ //value：表单的值、item：表单的DOM对象
+					var reg="^[0-9]*[1-9][0-9]*$";
+					  if(value==""){
+						  return '请输入充值数量';
+					}else if(!reg.test(value)){
+						  return '请输入正整数';
+					}
+			    },
+			    gatherMoney: function(value, item){
+					if(value==""){
+					  return '请输入充值数量';
+					}
+			    }
+			}); 	
+		  
+		});
+ 		
+	})
+</script>
+</html>

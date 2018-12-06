@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,shrink-to-fit=no">
+	<meta name="theme-color" content="#000000">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="email=no">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="shortcut icon" href="/favicon.ico">
+	<title>酷办</title>
+	<link rel="stylesheet" href="js/plugin/layui-v2.3.0/layui/css/layui.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body class="layui-layout-body">
+	<div class="layui-layout layui-layout-admin">
+		<div class="layui-header my-header layui-tab layui-tab-brief"  lay-filter="headerNav">
+			<div class="layui-logo "><img src="images/logo.svg" alt=""></div>
+			<!-- 头部区域（可配合layui已有的水平导航） -->
+		    <ul class="layui-nav layui-layout-left layui-tab-title " >
+		      <li class="layui-nav-item" lay-id="locations"><a href="#locations">分店管理</a></li>
+		      <li class="layui-nav-item" lay-id="employee"><a href="#employee">员工管理</a></li>
+		      <li class="layui-nav-item" lay-id="crm"><a href="#crm">客户管理</a></li>
+		      <li class="layui-nav-item" lay-id="invoices"><a href="#invoices">财务管理</a></li>
+		      <li class="layui-nav-item" lay-id="memberships"><a href="#memberships">会员管理</a></li>
+		      <li class="layui-nav-item" lay-id="statistic"><a href="#statistic">数据统计</a></li>
+		      <li class="layui-nav-item" lay-id="report"><a href="#report">报表中心</a></li>
+		      <li class="layui-nav-item" lay-id="spaces_setting"><a href="#spaces_setting">空间设置</a></li>
+		    </ul>
+		    <ul class="layui-nav layui-layout-right">
+		      <li class="layui-nav-item">
+		        <a href="javascript:;">
+		          <img src="images/user_head.jpg" class="layui-nav-img">
+		        </a>
+		      </li>
+		    </ul>
+		</div>
+		<div class="subnav-wrap">
+			<div class="sub-nav-bar" style="display:none;">
+				<div style="position: relative;">
+					<div class='sub-nav-list clear-fix' >
+						<div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+							  <ul class="layui-tab-title">
+							    <li class="layui-this">首页</li>
+							    <li>客户</li>
+							    <li>赢单合同</li>
+							    <li>库存</li>
+							    <li>库存时间轴</li>
+							  </ul>  
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="sub-nav-bar" style="display:none;">
+				<div style="position: relative;">
+					<div class='sub-nav-list clear-fix' >
+						<div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+							  <ul class="layui-tab-title">
+							    <li class="layui-this">合同</li>
+							    <li>账单</li>
+							    <li>发票</li>
+							  </ul>  
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="layui-body">
+		    <div class="iframe-wrap">
+		    	<!-- <iframe src="page/employee_detil.html" frameborder="0" width="100%" height="100%"></iframe> -->
+		    	<!-- <iframe src="page/locations_index.html" frameborder="0" width="100%" height="100%"></iframe> -->
+				<!-- <iframe src="page/setting.html" frameborder="0" width="100%" height="100%"></iframe><!-- 设置 --> -->
+				<!-- <iframe src="page/field_setting.html" frameborder="0" width="100%" height="100%"></iframe> -->
+				<!-- <iframe src="page/client.html" frameborder="0" width="100%" height="100%"></iframe> --><!-- 客户首页 -->
+				<!-- <iframe src="page/client_detils.html" frameborder="0" width="100%" height="100%"></iframe>  --><!-- 客户详情 -->
+				<!-- <iframe src="page/workPosition_img.html" frameborder="0" width="100%" height="100%"></iframe>   <!-- 平面图首页设置--> -->
+				<iframe src="page/workPosition_edite.html" frameborder="0" width="100%" height="100%"></iframe>   <!-- 平面图编辑设置  -->
+				<!-- <iframe src="page/space_setting.html" frameborder="0" width="100%" height="100%"></iframe> --> <!-- 空间设置-->
+		    </div>
+		</div>
+	</div>
+</body>
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/plugin/layui-v2.3.0/layui/layui.js"></script>
+<script>
+	var currentRouter="";
+	$(function(){
+		layui.use(['element','layer'], function(){
+		  var element = layui.element;
+		  //获取hash来切换选项卡，假设当前地址的hash为lay-id对应的值
+  		  var layid = location.hash.substr(1);
+  		  subNavshow(layid);
+ 		  element.tabChange('headerNav',layid); //假设当前地址为：http://a.com#test1=222，那么选项卡会自动切换到“发送消息”这一项
+		  element.on('tab(headerNav)', function(data){
+		    var layid = this.getAttribute('lay-id');
+		    location.hash = layid;
+		    subNavshow(layid)
+
+		  });
+
+		  //二级的router
+		  element.on('tab(docDemoTabBrief)', function(data){
+		    console.log(data);
+		  });
+		  
+		});
+
+		 //setLayBody()
+	})
+
+//二级导航的显示
+	function subNavshow(layid){
+		if(layid =='crm'){
+		    	$(".sub-nav-bar").eq(0).show();
+		}else if(layid == 'invoices'){
+		    	$(".sub-nav-bar").eq(1).show();
+		}else{
+		    	$(".sub-nav-bar").hide();
+		}
+
+	}
+
+function setLayBody(){
+	$('.layui-body').css("top","0")
+}
+	/* var layid = location.hash.substr(1),iframeSrc="";
+		console.log(layid,9)
+		$(".sub-nav-bar").hide();
+		switch (layid){
+		case "employee":
+		  iframeSrc='system/org/user/index';
+		  break;
+		case "crm":
+		  $(".sub-nav-bar").eq(0).show();	
+	      iframeSrc='';
+		  break;
+		case "invoices":
+		  $(".sub-nav-bar").eq(0).show();	
+	      iframeSrc='';
+		  break;
+		case "employeeDetials":
+		  layid='employee';
+		  iframeSrc="/system/org/user/details"
+		  break;
+		case "projectIndex":
+		  layid='locations';
+	      iframeSrc='/app/project/index';
+		  break;
+		default:
+		  iframeSrc='/app/project/list';
+		  layid='locations';
+		  location.hash = 'locations';
+		} */
+
+</script>
+</html>

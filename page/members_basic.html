@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>基本设置</title>
+	<link rel="stylesheet" href="../js/plugin/layui-v2.3.0/layui/css/layui.css">
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/index.css">
+	<link rel="stylesheet" href="../css/set.css">
+	<script src="../js/jquery-2.1.1.min.js"></script>
+	<script src="../js/plugin/layui-v2.3.0/layui/layui.js"></script>
+</head>
+<style>
+	body,html{
+		height: auto; 
+	}
+</style>
+<body>
+    <div class="nav-section-content-container" style="padding: 0px">
+		<header class="nav-header">
+			<div class="nav-section-header-title">
+				<span>会员信息</span>
+				<div class='nav-header-btn f-right'>
+					<span class="layui-btn layui-btn-radius layui-btn-normal">修改工位</span>
+					<span class="layui-btn layui-btn-radius layui-btn-normal">编辑员工</span>
+					<span class="layui-btn layui-btn-radius layui-btn-normal">添加门禁权限</span>
+					<span class="layui-btn layui-btn-radius layui-btn-normal">删除员工</span>
+				</div>
+			</div>
+		</header>
+		<div class="nav-section-content-container">
+			<div class="member-message flex">
+				<ul class="message-list">
+					<li><span>姓名</span><span>田茂昌</span></li>
+					<li><span>生日</span><span>暂无</span></li>
+					<li><span>邮箱</span><span>30900434@qq.com</span></li>
+					<li><span>所在公司</span><span><a class="a-hover" href="javasctipt:void(0)">北京燕博园教育科技有限公司</a></span></li>
+					<li><span>门禁卡</span><span>未绑定</span></li><li><span>门禁卡编号</span><span>暂无</span></li>
+				</ul>
+				<ul class="message-list ">
+					<li><span>姓名</span><span>田茂昌</span></li>
+					<li><span>生日</span><span>暂无</span></li>
+					<li><span>邮箱</span><span>30900434@qq.com</span></li>
+					<li><span>门禁卡</span><span>未绑定</span></li><li><span>门禁卡编号</span><span>暂无</span></li>
+				</ul>
+			</div>
+			<div class="member-credits flex-between">
+				<div class="credit-message flex-vcenter ">
+					<span>0</span><span class="color-six">会议室(小时)</span>
+				</div>
+				<div class="credit-message flex-vcenter">
+					<span>0</span><span class="color-six">会议室(小时)</span>
+				</div>
+				<div class="credit-message flex-vcenter">
+					<span>0</span><span class="color-six">会议室(小时)</span>
+				</div>
+				<div class="credit-message flex-vcenter">
+					<a class="credit-message" href="/admin/locations/4/organization/324/members/117/point"><span class="a-hover">0</span></a>
+					<div class="recharge-point"><span class="color-six">积分</span><button class="layui-btn  layui-btn-xs layui-btn-normal layui-btn-radius btn-bg">充值</button></div>
+				</div>
+			</div>
+			<div class="member-user-point">
+				
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+	$(function(){
+		setHeight()
+		function setHeight(){
+	        var h = document.body.clientHeight*1+30;
+	        window.parent.parentHeight(h);
+	    }
+	})
+</script>
+</html>

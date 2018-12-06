@@ -1,0 +1,221 @@
+[{
+	"id": 10,
+	"name": "头等舱 ",
+	"location_id": 4,
+	"lock": null,
+	"area_type": "public_office",
+	"orientation": "north",
+	"desk_serial_numbers": [],
+	"desks": []
+},
+{
+	"id": 194,
+	"name": "A区 智能工位",
+	"location_id": 4,
+	"lock": true,
+	"area_type": "public_office",
+	"orientation": "north",
+	"path":"M129.84 380.00 L129.84 420.84 L209.00 420.84 L209.00 380.00  Z",
+	"desk_serial_numbers": ["A027", "A028", "A029"],
+	"desks": [{
+			"id": 376,
+			"state": "free",
+			"name": "A027",
+			"lock": true,
+			"organization_id": null,
+			"path":"M137.07 403.84 L137.07 413.84 L149.38 413.84 L149.38 403.84  Z"
+		}, {
+			"id": 377,
+			"state": "free",
+			"name": "A028",
+			"lock": true,
+			"organization_id": null,
+			"path":"M136.31 386.93 L136.31 396.93 L150.94 396.93 L150.94 386.93  Z"
+		}, {
+			"id": 379,
+			"state": "free",
+			"name": "A029",
+			"lock": true,
+			"organization_id": null,
+			"path":"M157.07 403.84 L157.07 413.84 L169.38 413.84 L169.38 403.84  Z"
+		}]
+},
+{
+	"id": 15,
+	"name": "A001",
+	"location_id": 4,
+	"lock": true,
+	"area_type": "public_office",
+	"orientation": "north",
+	"path":"M129.14 80.01 L190.84 80.01 L190.84 10.86 L129.14 10.86  Z",
+	"desk_serial_numbers": ["R01-1", "R01-2", "R01-3", "R01-4"],
+	"desks": [{
+			"id": 1,
+			"state": "free",
+			"name": "R01-1",
+			"organization_id": null
+		}, {
+			"id": 2,
+			"state": "free",
+			"name": "R01-2",
+			"organization_id": null
+		}, {
+			"id": 3,
+			"state": "free",
+			"name": "R01-3",
+			"organization_id": null
+		}, {
+			"id": 4,
+			"state": "free",
+			"name": "R01-4",
+			"organization_id": null
+		}]
+},
+{
+	"id": 20,
+	"name": "A002",
+	"location_id": 4,
+	"lock": true,
+	"area_type": "public_office",
+	"orientation": "north",
+	"path":"M70.01 80.01 L128.36 80.01 L128.36 11.67 L70.01 11.67  Z",
+	"desk_serial_numbers": ["哈1-01", "哈1-02", "哈1-03", "哈1-04", "哈1-05", "哈1-06", "哈1-07", "888-7", "888-8"],
+	"desks": [{
+		"id": 5,
+		"state": "free",
+		"name": "哈1-01",
+		"organization_id": null
+	}, {
+		"id": 6,
+		"state": "free",
+		"name": "哈1-02",
+		"organization_id": null
+	}, {
+		"id": 7,
+		"state": "free",
+		"name": "哈1-03",
+		"organization_id": null
+	}, {
+		"id": 8,
+		"state": "free",
+		"name": "哈1-04",
+		"organization_id": null
+	}, {
+		"id": 9,
+		"state": "free",
+		"name": "哈1-05",
+		"organization_id": null
+	}, {
+		"id": 10,
+		"state": "free",
+		"name": "哈1-06",
+		"organization_id": null
+	}, {
+		"id": 11,
+		"state": "free",
+		"name": "哈1-07",
+		"organization_id": null
+	}, {
+		"id": 151,
+		"state": "free",
+		"name": "888-7",
+		"organization_id": null
+	}, {
+		"id": 152,
+		"state": "free",
+		"name": "888-8",
+		"organization_id": null
+	}]
+},
+{
+	"id": 28,
+	"name": "A005",
+	"location_id": 4,
+	"lock": true,
+	"area_type": "public_office",
+	"orientation": "north",
+	"path":"M9.82 106.54 L9.82 151.54 L98.14 151.54 L98.14 106.54  Z",
+	"desk_serial_numbers": ["黄黄-1", "黄黄-2", "黄黄-3", "黄黄-4", "黄黄-5", "黄黄-6", "黄黄-7", "黄黄-8"],
+	"desks": [{
+		"id": 38,
+		"state": "free",
+		"name": "黄黄-1",
+		"organization_id": null
+	}, {
+		"id": 39,
+		"state": "free",
+		"name": "黄黄-2",
+		"organization_id": null
+	}, {
+		"id": 40,
+		"state": "free",
+		"name": "黄黄-3",
+		"organization_id": null
+	}, {
+		"id": 41,
+		"state": "free",
+		"name": "黄黄-4",
+		"organization_id": null
+	}, {
+		"id": 42,
+		"state": "free",
+		"name": "黄黄-5",
+		"organization_id": null
+	}, {
+		"id": 43,
+		"state": "free",
+		"name": "黄黄-6",
+		"organization_id": null
+	}, {
+		"id": 44,
+		"state": "free",
+		"name": "黄黄-7",
+		"organization_id": null
+	}, {
+		"id": 45,
+		"state": "free",
+		"name": "黄黄-8",
+		"organization_id": null
+	}]
+},
+{
+	"id": 204,
+	"name": "一期开放工位",
+	"location_id": 4,
+	"lock": true,
+	"area_type": "public_office",
+	"orientation": "north",
+	"path":"M318.34 251.67 L349.16 253.34 L352.51 243.34 L359.16 230.84 L368.34 222.51 L382.51 218.34 L396.66 216.67 L400.84 218.34 L398.34 200.01 L397.51 185.84 L393.34 165.01 L389.16 157.51 L340.84 155.84 L320.01 155.84 Z",
+	"desk_serial_numbers": ["C001", "C002", "C003", "C005"],
+	"desks": [{
+		"id": 423,
+		"state": "free",
+		"name": "C001",
+		"lock": true,
+		"organization_id": null,
+		"path":"M336.66 212.50 L336.66 219.14 L351.66 219.14 L351.66 212.50  Z"
+	}, {
+		"id": 424,
+		"state": "free",
+		"name": "C002",
+		"lock": true,
+		"organization_id": null,
+		"path":"M321.56 219.14 L335.71 219.14 L335.71 210.84 L321.56 210.84  Z"
+	}, {
+		"id": 425,
+		"state": "free",
+		"name": "C003",
+		"organization_id": null,
+		"lock": true,
+		"path":"M319.16 202.50 L319.16 210.00 L335.00 210.00 L335.00 202.50  Z"
+	}, {
+		"id": 426,
+		"state": "free",
+		"name": "C005",
+		"organization_id": null,
+		"lock": true,
+		"path":"M350.84 203.34 L337.50 203.34 L337.50 210.84 L350.84 210.84  Z"
+	}]
+}
+
+]

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>基本设置</title>
+	<link rel="stylesheet" href="../js/plugin/layui-v2.3.0/layui/css/layui.css">
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/index.css">
+	<link rel="stylesheet" href="../css/set.css">
+	<script src="../js/jquery-2.1.1.min.js"></script>
+	<script src="../js/plugin/layui-v2.3.0/layui/layui.js"></script>
+</head>
+<style>
+	body,html{
+		height: auto; 
+	}
+	.room-form .layui-select-title{/* 修改select样式 */
+	    width: 116px;
+	    height: 30px;
+	}
+	.room-form .layui-input{
+	    height: 30px;
+	}
+</style>
+<body>
+	<div class="nav-section-content-container" style="padding: 0px">
+					<header class="nav-header">
+						<div class="nav-section-header-title">
+							<span>会议室设置</span>
+						</div>
+					</header>
+					<div class="kb-form-container">
+						<form class="layui-form room-form">
+							<div>
+								<div class="layui-form-item mag-bot-20">
+									<div class="f-left">
+										<div>时间限制</div><p class="color-nine">单次预订会议室最长时间数，默认值为4小时</p>
+									</div>
+									<div class="kb-number-input f-right">
+										<div class="counterBox" style="margin-right: 130px;">
+											<span class="subtracter">-</span><input type="number" value="8"><span class="summator">+</span>
+										</div>
+									</div>	
+								</div>
+								<div class="layui-form-item mag-bot-20">
+									<div class="f-left">
+										<div>团队每日预定的时长为</div><p class="color-nine">请输入数字“4”并选择 [小时/工位] 表示团队每日预定的时长为[4] [小时/工位]</p>
+									</div>
+									<div class="kb-number-input f-right flex">
+										<div class="counterBox" style="margin-right: 14px;">
+											<span class="subtracter">-</span><input type="number" value="8"><span class="summator">+</span>
+										</div>
+										<select  style="width: 116px;height: 30px;">
+									       <option value="1">1</option>
+									       <option value="1">2</option>
+									       <option value="1">2</option>
+									       <option value="1">4</option>
+									    </select>
+									</div>	
+								</div>
+								<div class="layui-form-item mag-bot-20">
+									<div class="f-left">
+										<div>团队每月预定的时长为</div><p class="color-nine">请输入数字“4”并选择 [小时/工位] 表示团队每月预定的时长为[4] [小时/工位]</p>
+									</div>
+									<div class="kb-number-input f-right flex">
+										<div class="counterBox" style="margin-right: 14px;">
+											<span class="subtracter">-</span><input type="number" value="8"><span class="summator">+</span>
+										</div>
+										<select  style="width: 116px;height: 30px;">
+									       <option value="1">1</option>
+									       <option value="1">2</option>
+									       <option value="1">2</option>
+									       <option value="1">4</option>
+									    </select>
+									</div>	
+								</div>
+								<div class="layui-form-item mag-bot-20">
+									<div class="f-left">
+										<div>可以提前多久取消预订</div><p class="color-nine">可以提前取消预订的小时数，默认值为0，会议开始后不能取消</p>
+									</div>
+									<div class="kb-number-input f-right">
+										<div class="counterBox" style="margin-right: 130px;">
+											<span class="subtracter">-</span><input type="number" value="8"><span class="summator">+</span>
+										</div>
+									</div>	
+								</div>
+								<div class="layui-form-item mag-bot-20">
+									<div class="f-left">
+										<div>超时容许范围</div><p class="color-nine">超时容许范围，单位：分钟默认5分钟</p>
+									</div>
+									<div class="kb-number-input f-right">
+										<div class="counterBox" style="margin-right: 130px;">
+											<span class="subtracter">-</span><input type="number" value="8"><span class="summator">+</span>
+										</div>
+									</div>	
+								</div>
+								
+								<div class="layui-form-item mag-bot-20">
+									<div class="f-left">
+										<div>使用时间超过容许范围后的使用价格</div><p class="color-nine">使用时间超过容许范围后的使用价格，单位：n 元/分钟默认0</p>
+									</div>
+									<div class="kb-number-input f-right">
+										<div class="counterBox" style="margin-right: 130px;">
+											<span class="subtracter">-</span><input type="number" value="8"><span class="summator">+</span>
+										</div>
+									</div>	
+								</div>
+								<div class="layui-form-item mag-bot-20">
+									<div class="f-left">
+										<div>预定会议室起止时间</div><p class="color-nine">可以设置会议室预定开始时间和结束时间</p>
+									</div>
+									<div class="f-right flex">
+										<select  style="width: 116px;height: 30px;">
+									       <option value="1">1</option>
+									       <option value="1">2</option>
+									       <option value="1">2</option>
+									       <option value="1">4</option>
+									    </select>
+									    &nbsp;-&nbsp;
+										<select  style="width: 116px;height: 30px;">
+									       <option value="1">1</option>
+									       <option value="1">2</option>
+									       <option value="1">2</option>
+									       <option value="1">4</option>
+									    </select>
+									</div>	
+								</div>
+								<div class="layui-form-item mag-bot-20">
+									<div class="f-left">
+										<div>会议结束是否通知运营人员</div><p class="color-nine">可以决定在每个会议结束之后是否告知运营人员该会议状态</p>
+									</div>
+									<div class="f-right">
+										<div class="layui-input-inline" style="width:60px">
+									      <input type="checkbox" name="switch" lay-skin="switch">
+									    </div>
+									</div>	  								  
+							    </div>
+							    <div class="layui-form-item mag-bot-20">
+									<div class="f-left">
+										<div>是否只能使用团队积分预定会议室</div><p class="color-nine">打开后则只能使用团队积分进行会议室的预定</p>
+									</div>
+									<div class="f-right">
+										<div class="layui-input-inline" style="width:60px">
+									      <input type="checkbox" name="switch" lay-skin="switch">
+									    </div>
+									</div>	  								  
+							    </div>
+							    <div class="layui-form-item mag-bot-20">
+									<button class="layui-btn layui-btn-normal btn-bg" id="submit-btn" lay-filter="formEmployee" lay-submit="">保存</button>			  
+							    </div>
+							</div>
+						</form>
+					</div>
+				</div>
+</body>
+<script>
+$(function(){
+	setHeight()
+	
+	layui.use(['element','layer','form'], function(){
+		var form = layui.form;
+	})
+})
+
+function setHeight(){
+    var h = document.body.clientHeight;
+    window.parent.parentHeight(h);
+}
+</script>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+
+		<script src="js/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript">
+			
+			$.ajax({
+				type: "GET",
+				url: "data/door.json",
+				success: function(res) {
+				     var shu=res;
+				     var arr=[{name:"大门",data:[]},{"name":"封闭办公室",data:[]},{"name":"会议室",data:[]}];
+				     
+				     for(var i=0,len=shu.length;i<len;i++){
+				     	  if(!shu[i].hasOwnProperty("area")){
+				     	      arr[0].data.push(shu[i])
+				     	  }else{
+				     	  	   if(shu[i].area.area_type=="private_office"){
+				     	  	   	  arr[1].data.push(shu[i])
+				     	  	   }else if(shu[i].area.area_type=="meeting_room"){
+				     	  	   	 arr[2].data.push(shu[i])
+				     	  	   	 
+				     	  	   }
+				     	  }
+				     }
+				    
+				     
+				     console.log(arr)
+				}
+				
+
+			});
+		</script>
+	</body>
+
+</html>

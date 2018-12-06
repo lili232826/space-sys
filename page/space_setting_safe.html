@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>基本设置</title>
+	<link rel="stylesheet" href="../js/plugin/layui-v2.3.0/layui/css/layui.css">
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/index.css">
+	<link rel="stylesheet" href="../css/set.css">
+	<script src="../js/jquery-2.1.1.min.js"></script>
+	<script src="../js/plugin/layui-v2.3.0/layui/layui.js"></script>
+</head>
+<style>
+	body,html{
+		height: auto; 
+	}
+	.layui-form-radio>i{
+		font-size: 16px;
+	}
+</style>
+<body>
+	<div class="nav-section-content-container" style="padding: 0px">
+					<header class="nav-header">
+						<div class="nav-section-header-title">
+							<span>安全设置</span>
+						</div>
+					</header>
+					<div class="kb-form-container">
+						<p style="margin-bottom:15px">设置后台管理各模块的员工权限</p>
+						<fieldset class="fieldset">
+							<legend>账号设置</legend>
+							<form class="layui-form " action="" lay-filter="">
+								<div>
+									<div class="flex-left ">
+									    <div class="layui-input-inline" style="width:60px">
+									      <input type="checkbox" name="switch" lay-skin="switch">
+									    </div>
+									    <span style="margin-top:8px">限定账号只可以绑定一个手机号码</span>
+									 </div>
+								</div>
+							</form>
+						</fieldset>
+						<fieldset class="fieldset">
+							<legend>空间管理员</legend>
+							<form class="layui-form layui-form-pane" action="" lay-filter="">
+								<div>
+								    <div class="layui-form-item layui-form-text">
+								        <div class="layui-input-block ">
+								            <select name="city" xm-select="bumen" xm-select-skin="normal" lay-filter="aihao">
+	       
+	      									</select>
+	      									<p class="bottom-tip">空间管理员可以修改后台所有信息，可多选</p>
+								        </div>
+
+								    </div>
+								    <div class="layui-form-item">
+										<button class="layui-btn layui-btn-normal btn-bg" >保存</button>
+									</div>
+								</div>
+							</form>
+						</fieldset>
+						<fieldset class="fieldset">
+							<legend>员工管理</legend>
+							<form class="layui-form" action="" lay-filter="">
+								<div>
+									<div class="layui-form-item">
+									    <div class="mag-bot-20">
+									      <input lay-filter="csmState" lay-verify="csmState" name="csmState" title="只有管理员可以阅览和更改" type="radio" value="0" checked><br>
+									      <input lay-filter="csmState" name="csmState" title="全部员工可以阅览和更改 " type="radio" value="1"><br>
+									      <input lay-filter="csmState" name="csmState" title="只有指定员工可以阅览和更改 " type="radio" value="2">
+									    </div>
+									</div>					
+									<div class="layui-form-item">
+								        <div class="">
+								            <select name="city" xm-select="bumen" xm-select-skin="normal" lay-filter="aihao">
+	       
+	      									</select>
+	      									<p class="bottom-tip">指定员工可多选</p>
+								        </div>
+								    </div>
+									<div class="layui-form-item">
+										<button class="layui-btn layui-btn-normal btn-bg" >保存</button>
+									</div>
+								</div>
+							</form>
+						</fieldset>
+						<fieldset class="fieldset">
+							<legend>客户管理</legend>
+							<form class="layui-form" action="" lay-filter="">
+								<div class="layui-form-item">
+								    <div class="mag-bot-20">
+								      <input lay-filter="csmState" lay-verify="csmState" name="csmState" title="只有管理员可以阅览和更改" type="radio" value="0" checked><br>
+								      <input lay-filter="csmState" name="csmState" title="全部员工可以阅览和更改 " type="radio" value="1"><br>
+								      <input lay-filter="csmState" name="csmState" title="只有指定员工可以阅览和更改 " type="radio" value="2">
+								    </div>
+								</div>					
+								<div class="layui-form-item">
+									<button class="layui-btn layui-btn-normal btn-bg" >保存</button>
+								</div>
+							</form>
+						</fieldset>
+						<fieldset class="fieldset">
+							<legend>客户管理员<span style="font-size: 12px; color: rgb(153, 153, 153); margin-left: 5px;">(可以查看空间所有客户数据)</span></legend>
+							<form class="layui-form" action="" lay-filter="">
+								<div class="layui-form-item">
+								    <div class="mag-bot-20">
+								      <input lay-filter="csmState" lay-verify="csmState" name="csmState" title="只有管理员可以阅览和更改" type="radio" value="0" checked><br>
+								      <input lay-filter="csmState" name="csmState" title="全部员工可以阅览和更改 " type="radio" value="1"><br>
+								      <input lay-filter="csmState" name="csmState" title="只有指定员工可以阅览和更改 " type="radio" value="2">
+								    </div>
+								</div>					
+								<div class="layui-form-item">
+									<button class="layui-btn layui-btn-normal btn-bg" >保存</button>
+								</div>
+							</form>
+						</fieldset>
+					</div>
+				</div>
+</body>
+<script>
+$(function(){
+	
+	
+	layui.use(['element','layer','form'], function(){
+		var form = layui.form;
+		setHeight()
+	})
+})
+
+function setHeight(){
+    var h = document.body.clientHeight;
+    window.parent.parentHeight(h);
+}
+</script>
+</html>

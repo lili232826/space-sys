@@ -1,0 +1,327 @@
+[{
+	"id": 5,
+	"space_id": 482,
+	"location_id": 4,
+	"area_id": 15,
+	"name": "A001",
+	"area": {
+		"id": 15,
+		"name": "A001",
+		"area_type": "private_office"
+	}
+}, {
+	"id": 4,
+	"space_id": 482,
+	"location_id": 4,
+	"area_id": 20,
+	"name": "A002",
+	"area": {
+		"id": 20,
+		"name": "A002",
+		"area_type": "private_office"
+	}
+}, {
+	"id": 3,
+	"space_id": 482,
+	"location_id": 4,
+	"area_id": 26,
+	"name": "A003",
+	"area": {
+		"id": 26,
+		"name": "A003",
+		"area_type": "private_office"
+	}
+}, {
+	"id": 6,
+	"space_id": 482,
+	"location_id": 4,
+	"area_id": 28,
+	"name": "A005",
+	"area": {
+		"id": 28,
+		"name": "A005",
+		"area_type": "private_office"
+	}
+}, {
+	"id": 8,
+	"space_id": 482,
+	"location_id": 4,
+	"area_id": 71,
+	"name": "A006",
+	"area": {
+		"id": 71,
+		"name": "A006",
+		"area_type": "private_office"
+	}
+}, {
+	"id": 9,
+	"space_id": 482,
+	"location_id": 4,
+	"area_id": 77,
+	"name": "A007",
+	"area": {
+		"id": 77,
+		"name": "A007",
+		"area_type": "private_office"
+	}
+}, {
+	"id": 10,
+	"space_id": 482,
+	"location_id": 4,
+	"area_id": 87,
+	"name": "A008",
+	"area": {
+		"id": 87,
+		"name": "A008",
+		"area_type": "private_office"
+	}
+}, {
+	"id": 11,
+	"space_id": 482,
+	"location_id": 4,
+	"area_id": 88,
+	"name": "A009",
+	"area": {
+		"id": 88,
+		"name": "A009",
+		"area_type": "private_office"
+	}
+}, {
+	"id": 13,
+	"space_id": 482,
+	"location_id": 4,
+	"area_id": 92,
+	"name": "A010",
+	"area": {
+		"id": 92,
+		"name": "A010",
+		"area_type": "private_office"
+	}
+}, {
+	"id": 15,
+	"space_id": 482,
+	"location_id": 4,
+	"area_id": 96,
+	"name": "A011",
+	"area": {
+		"id": 96,
+		"name": "A011",
+		"area_type": "private_office"
+	}
+}, {
+	"id": 23,
+	"space_id": 482,
+	"location_id": 4,
+	"area_id": 101,
+	"name": "A012",
+	"area": {
+		"id": 101,
+		"name": "A012",
+		"area_type": "private_office"
+	}
+}, {
+	"id": 24,
+	"space_id": 482,
+	"location_id": 4,
+	"area_id": 103,
+	"name": "A015",
+	"area": {
+		"id": 103,
+		"name": "A015",
+		"area_type": "private_office"
+	}
+}, {
+	"id": 25,
+	"space_id": 482,
+	"location_id": 4,
+	"area_id": 110,
+	"name": "A016",
+	"area": {
+		"id": 110,
+		"name": "A016",
+		"area_type": "private_office"
+	}
+}, {
+	"id": 26,
+	"space_id": 482,
+	"location_id": 4,
+	"area_id": 112,
+	"name": "A017",
+	"area": {
+		"id": 112,
+		"name": "A017",
+		"area_type": "private_office"
+	}
+}, {
+	"id": 7,
+	"space_id": 482,
+	"location_id": 4,
+	"area_id": 121,
+	"name": "A018",
+	"area": {
+		"id": 121,
+		"name": "A018",
+		"area_type": "private_office"
+	}
+}, {
+	"id": 22,
+	"space_id": 482,
+	"location_id": 4,
+	"area_id": 127,
+	"name": "A019",
+	"area": {
+		"id": 127,
+		"name": "A019",
+		"area_type": "private_office"
+	}
+}, {
+	"id": 21,
+	"space_id": 482,
+	"location_id": 4,
+	"area_id": 137,
+	"name": "A020",
+	"area": {
+		"id": 137,
+		"name": "A020",
+		"area_type": "private_office"
+	}
+}, {
+	"id": 20,
+	"space_id": 482,
+	"location_id": 4,
+	"area_id": 147,
+	"name": "A021",
+	"area": {
+		"id": 147,
+		"name": "A021",
+		"area_type": "private_office"
+	}
+}, {
+	"id": 19,
+	"space_id": 482,
+	"location_id": 4,
+	"area_id": 150,
+	"name": "A022",
+	"area": {
+		"id": 150,
+		"name": "A022",
+		"area_type": "private_office"
+	}
+}, {
+	"id": 17,
+	"space_id": 482,
+	"location_id": 4,
+	"area_id": 159,
+	"name": "A023",
+	"area": {
+		"id": 159,
+		"name": "A023",
+		"area_type": "private_office"
+	}
+}, {
+	"id": 16,
+	"space_id": 482,
+	"location_id": 4,
+	"area_id": 163,
+	"name": "A025",
+	"area": {
+		"id": 163,
+		"name": "A025",
+		"area_type": "private_office"
+	}
+}, {
+	"id": 18,
+	"space_id": 482,
+	"location_id": 4,
+	"area_id": 171,
+	"name": "A026",
+	"area": {
+		"id": 171,
+		"name": "A026",
+		"area_type": "private_office"
+	}
+}, {
+	"id": 1,
+	"space_id": 482,
+	"location_id": 4,
+	"area_id": null,
+	"name": "办公区门禁"
+}, {
+	"id": 31,
+	"space_id": 482,
+	"location_id": 4,
+	"area_id": 233,
+	"name": "头等舱",
+	"area": {
+		"id": 233,
+		"name": "头等舱",
+		"area_type": "meeting_room"
+	}
+}, {
+	"id": 32,
+	"space_id": 482,
+	"location_id": 4,
+	"area_id": 233,
+	"name": "头等舱侧门",
+	"area": {
+		"id": 233,
+		"name": "头等舱",
+		"area_type": "meeting_room"
+	}
+}, {
+	"id": 29,
+	"space_id": 482,
+	"location_id": 4,
+	"area_id": null,
+	"name": "安全出口1"
+}, {
+	"id": 27,
+	"space_id": 482,
+	"location_id": 4,
+	"area_id": null,
+	"name": "安全出口2"
+}, {
+	"id": 28,
+	"space_id": 482,
+	"location_id": 4,
+	"area_id": null,
+	"name": "客梯右边门"
+}, {
+	"id": 30,
+	"space_id": 482,
+	"location_id": 4,
+	"area_id": null,
+	"name": "客梯左边门"
+}, {
+	"id": 12,
+	"space_id": 482,
+	"location_id": 4,
+	"area_id": 226,
+	"name": "扬帆",
+	"area": {
+		"id": 226,
+		"name": "扬帆",
+		"area_type": "meeting_room"
+	}
+}, {
+	"id": 14,
+	"space_id": 482,
+	"location_id": 4,
+	"area_id": 228,
+	"area": {
+		"id": 228,
+		"name": "远航",
+		"area_type": "meeting_room"
+	}
+}, {
+	"id": 33,
+	"space_id": 482,
+	"location_id": 4,
+	"area_id": 191,
+	"name": "金桥办公间",
+	"area": {
+		"id": 191,
+		"name": "金桥办公空间",
+		"area_type": "private_office"
+	}
+}]

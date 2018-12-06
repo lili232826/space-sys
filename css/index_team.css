@@ -1,0 +1,317 @@
+
+.my-tab .layui-tab-title{
+	height: auto;
+	border-bottom:1px solid #e6e6e6;
+	margin-bottom: 30px;
+}
+.my-tab.layui-tab-brief>.layui-tab-title .layui-this:after{
+	border-bottom: 4px solid #5fa7ec;
+}
+.my-tab .layui-tab-title li{
+	margin-right: 40px;
+}
+.my-tab .layui-tab-title li:last-child{
+	margin-right: 0px;
+}
+/* .my-tab .layui-tab-title li:nth-child(5):hover,.my-tab .layui-tab-title li:last-child:hover{
+    color: #5fa7ec
+}
+.my-tab .layui-tab-title li:nth-child(5).layui-this:after,.my-tab .layui-tab-title li:last-child.layui-this:after{
+    border-color: transparent;
+} */
+.my-tab .layui-tab-content{
+	padding: 0px;
+}
+.type-btn{
+	position: absolute;
+	right: 0px;
+}
+.border-show_status {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 5px 15px;
+    border: 1px solid #e6e6e6;
+    border-left: none;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+.border-show_status .color-show {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.search-topic {
+    margin-top: 20px;
+    text-align: center;
+}
+.search-topic span {
+    color: #666666;
+    font-size: 18px;
+    margin-left: 15px;
+    cursor: pointer;
+    display: inline-block;
+    width: 15px;
+    position: relative;
+}
+.search-topic span:hover {
+    color: #62a8e9;
+}
+.company-logo-all {
+    margin-top: 30px;
+}
+.company-message {
+    width: 246px;
+    height: 124px;
+    float: left;
+    background-color: #fff;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    border: 1px solid #E3ECF4;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    border-radius: 6px;
+    padding: 29px 30px;
+    box-sizing: border-box;
+}
+.company-message:nth-child(4n) {
+    margin-right: 0;
+}
+.company-message .tag-img {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.company-message .company-logo-position {
+    position: relative;
+}
+.company-message .company-logo-position .company-logo {
+    margin-right: 11px;
+}
+.company-message .company-logo-position .company-logo img {
+    -o-object-fit: contain;
+    object-fit: contain;
+    float: left;
+    width: 52px;
+    height: 52px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+}
+.company-message .org_info {
+    text-align: left;
+}
+.company-message .org_info > div {
+    width: 120px;
+}
+.company-message .industry_name {
+    color: #999;
+    font-size: 11px !important;
+    margin-bottom: 8px;
+}
+.company-message .desk_info {
+    font-size: 10px !important;
+}
+
+/* 团队的详情 */
+.org-logo-box {
+    float: left;
+    cursor: pointer;
+    margin-right: 20px;
+    position: relative;
+}
+.org-logo-box .mask {
+    display: none;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.3);
+    line-height: 60px;
+    text-align: center;
+    font-size: 26px;
+    color: rgba(235, 237, 238, 0.8);
+}
+.org-logo-box:hover .mask {
+    display: block;
+}
+.org-logo-box .org-txt{
+    width: 60px;
+    height: 60px;
+    background-color: rgb(160, 212, 104);
+    font-size: 13px;
+    line-height: 66px;
+    font-family: "Lantinghei SC";
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    border-radius: 50px;
+    float: left;
+}
+.d-iblock .layui-icon{
+    font-size: 14px;
+}
+.team-located {
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 14px;
+    color: #ffffff;
+    padding: 2px 5px;
+    background-color: #999999;
+}
+.action-bar-status, .action-bar-type {
+    display: inline-block;
+    color: #999999;
+    font-size: 14px;
+}
+.action-bar-status {
+    margin-left: 20px;
+}
+.action-bar-status span, .action-bar-type span {
+    margin-left: 5px;
+}
+.action-bar-type>span{
+    margin-left: 0px; font-size: 16px;
+}
+/* chart-list */
+.kb-chart{
+
+}
+.tip-in{
+    width: 100%; position: absolute;
+    left: 0px; padding: 10px 50px;
+    background-color: rgb(252, 235, 235);
+    overflow: hidden;
+    box-sizing: border-box;
+    display: block;
+}
+/* 切换的内容 */
+.my-locations-list .nav-content-1{
+    width: 800px
+}
+.org_summary_header {
+    font-size: 20px;
+    color: #333333;
+}
+/* 分区 */
+.areas_new {
+    width: 232px;
+    height: 88px;
+    background: #87a8ff;
+    color: #fff;
+    float: left;
+    margin-left: 30px;
+    border-radius: 2.2px;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+.areas_new:hover {
+    background: #5F8BFF;
+}
+.areas_new:nth-last-child(1) {
+    margin-bottom: 60px !important;
+}
+.areas_new:nth-child(3n-2) {
+    margin-left: 25px;
+}
+.areas_new .area_names {
+    font-size: 17px;
+    color: #ffffff;
+    padding: 15px 0 15px 15px;
+}
+.areas_new .area_details {
+    font-size: 12px;
+    padding: 0 0 10px 15px;
+}
+/* 团队负责人 */
+.org_summary_pad .content-table .table_td {
+    width: 50%;
+    padding-bottom: 0 !important;
+}
+.content-table{
+    width: 100%;
+}
+.content-table td {
+    color: #333333;
+    padding: 15px 10px 15px 0;
+    font-size: 14px;
+    position: relative;
+}
+
+.content-table td:first-child, .content-table th:first-child {
+    padding-left: 15px !important;
+}
+.org_summary_title {
+    font-size: 14px;
+    color: #666666;
+    font-weight: 600;
+}
+.org_summary_content {
+    font-size: 14px;
+    color: #666666;
+}
+/* 合同添加流程 */
+.sub-step-header {
+    padding: 60px 0;
+    text-align: center;
+}
+.sub-step-header .step-content{
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 84px;
+    margin-right: 78px;
+    position: relative;
+}
+.sub-step-header .step-content .step-num {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background-color: #F1F6FB;
+    border-radius: 50%;
+    -o-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    margin: 20px auto 0px;
+    box-sizing: border-box;
+}
+.sub-step-header .step-content .active {
+    width: 50px;
+    height: 50px;
+    background-color: #5fa7ec;
+    border: 5px solid #B9DDFB;
+    color: #ffffff;
+    margin: 18px auto 0px;
+}
+.sub-step-header .parting-line {
+    background: url(../images/spot.png) repeat-x;
+    position: absolute;
+    width: 116px;
+    height: 50px;
+    left: 66px;
+    top: 16px;
+}
+.sub-step-header .step-content:last-of-type{
+    margin-right: 0px;
+}
+.sub-step-header .step-content:last-of-type .parting-line{
+    display: none;
+}
+

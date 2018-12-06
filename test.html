@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="js/plugin/layui-v2.3.0/layui/css/layui.css">
+</head>
+<body>
+	<fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;">
+  <legend>垂直导航菜单</legend>
+</fieldset>
+ 
+<ul class="layui-nav layui-nav-tree layui-inline" lay-filter="demo" style="margin-right: 10px;">
+  <li class="layui-nav-item layui-nav-itemed">
+    <a href="javascript:;">默认展开</a>
+    <dl class="layui-nav-child">
+      <dd><a href="javascript:;">选项一</a></dd>
+      <dd><a href="javascript:;">选项二</a></dd>
+      <dd><a href="javascript:;">选项三</a></dd>
+      <dd><a href="">跳转项</a></dd>
+    </dl>
+  </li>
+  <li class="layui-nav-item">
+    <a href="javascript:;">解决方案</a>
+    <dl class="layui-nav-child">
+      <dd><a href="">移动模块</a></dd>
+      <dd><a href="">后台模版</a></dd>
+      <dd><a href="">电商平台</a></dd>
+    </dl>
+  </li>
+  <li class="layui-nav-item"><a href="">云市场</a></li>
+  <li class="layui-nav-item"><a href="">社区</a></li>
+</ul>
+
+<div id="div">
+    <div class="k">
+        <ul>
+          <li>11111</li>
+
+        </ul>
+    </div>
+    <div class='k-b'>
+        <ul>
+          <li>22222222222</li>
+          <li>22244444444444444222</li>
+        </ul>
+        <ul>
+          <li>32322</li>
+          <li>33333333333333333333333333</li>
+        </ul>
+    </div>
+    <div>
+      
+    </div>
+     <div class="k">
+        <ul>
+          <li>11111</li>
+
+        </ul>
+    </div>
+</div>
+</body>
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/plugin/layui-v2.3.0/layui/layui.js"></script>
+<!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
+<script>
+  $("#div li").on("click",function(){
+    console.log(666)
+    console.log($(this).parents('.k').index(),"hhhh")
+  })
+layui.use('element', function(){
+  var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块
+  
+  //监听导航点击
+  element.on('nav(demo)', function(elem){
+    //console.log(elem)
+    layer.msg(elem.text());
+  });
+});
+
+var teamData=[
+    {
+      id: 432, 
+      name: "王晓晋的测试团队",
+      users:[
+          {id: 88, name: "test", name_pinyin: "test", phone_num: "13301319823"},
+          {id: 89, name: "梦娇", name_pinyin: "meng jiao", phone_num: "13301319823"},
+          {id: 90, name: "传龙", name_pinyin: "chuan long", phone_num: "13301319823"},
+        ]
+    },
+    {
+      id: 431, 
+      name: "周洋",
+      users:[
+          {id: 100, name: "马乐", name_pinyin: "ma le", phone_num: "13301319823"},
+          {id: 101, name: "李佩珊", name_pinyin: "li pei shan", phone_num: "13301319823"},
+          {id: 109, name: "李晓舒", name_pinyin: "li xiao shu", phone_num: "13301319823"},
+          {id: 110, name: "蒋媛媛", name_pinyin: "jiang yuan yuan", phone_num: "13301319823"},
+        ]
+    },
+    {
+      id: 43, 
+      name: "韶九影视",
+      users:[
+          {id: 1, name: "田佳玉", name_pinyin: "tian jia yu", phone_num: "13301319823"},
+          {id: 2, name: "孟斯静", name_pinyin: "meng si jing", phone_num: "13301319823"},
+          {id: 3, name: "郑博雅", name_pinyin: "zheng bo ya", phone_num: "13301319823"},
+          {id: 4, name: "赵莹", name_pinyin: "zhao ying", phone_num: "13301319823"},
+        ]
+    }
+  ];
+
+var arr = [
+    {"id":"hhhhhhhhh","name":"值1","value":"111"},
+    {"id":"1001","name":"值1","value":"11111"},
+    {"id":"1002","name":"值2","value":"25462"},
+    {"id":"1002","name":"值2","value":"23131"},
+    {"id":"1002","name":"值2","value":"2315432"},
+    {"id":"1003","name":"值3","value":"333333"}
+];
+ 
+/*var map = {},
+    dest = [];
+    console.log(map,dest,'3');
+for(var i = 0; i < arr.length; i++){
+    var ai = arr[i];
+    if(!map[ai.id]){
+        dest.push({
+            id: ai.id,
+            name: ai.name,
+            data: [ai]
+        });
+        console.log(map,dest,'0')
+        map[ai.id] = ai;
+    }else{
+        for(var j = 0; j < dest.length; j++){
+            var dj = dest[j];
+            if(dj.id == ai.id){
+                dj.data.push(ai);
+                 console.log(map,dest,'1')
+                break;
+            }
+        }
+    }
+}*/
+ function fn(arr){
+  arr=JSON.parse(JSON.stringify(arr));
+  arr.splice(0,1);
+  console.log(arr,'llll')
+ }
+var a= fn(arr);
+//console.log(arr,'llll2');
+//console.log(teamData[0]['jjj']);
+/*{
+      id: 431, 
+      name: "周洋",
+      users:[
+          {id: 100, name: "马乐", name_pinyin: "ma le", phone_num: "13301319823"},
+          {id: 101, name: "李佩珊", name_pinyin: "li pei shan", phone_num: "13301319823"},
+          {id: 109, name: "李晓舒", name_pinyin: "li xiao shu", phone_num: "13301319823"},
+          {id: 110, name: "蒋媛媛", name_pinyin: "jiang yuan yuan", phone_num: "13301319823"},
+        ]
+    },*/
+
+/*function setDate(year,month,day){
+  var future=new Date(year,month-1,day),
+  year=future.getFullYear(),//获取年
+  month=future.getMonth()+1,//获取月
+  date=future.getDate();//获取日
+  return {
+    year:year,
+    month: month,
+    date: date
+  }
+}
+console.log(setDate(2018,13,14))
+function uniqueArr(id,arr){
+
+}*/
+</script>
+</html>

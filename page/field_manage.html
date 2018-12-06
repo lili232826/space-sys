@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>场地管理</title>
+	<link rel="stylesheet" href="../js/plugin/layui-v2.3.0/layui/css/layui.css">
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/index.css">
+	<link rel="stylesheet" href="../css/set.css">
+	<script src="../js/jquery-2.1.1.min.js"></script>
+	<script src="../js/plugin/layui-v2.3.0/layui/layui.js"></script>
+</head>
+<style>
+	body,html{
+		height: auto; 
+	}
+	.pos-room .layui-form-label{
+		width: 120px;
+	}
+	.pos-room .layui-input-block {
+	    margin-left: 150px;
+	}
+</style>
+<body>
+	<div class="nav-section-content-container" style="padding: 0px">
+		<header class="nav-header">
+			<div class="nav-section-header-title">
+				<span>场地管理</span>
+				<div class="f-right">
+				    <button class="layui-btn layui-btn-radius layui-btn-normal " id=""><i class="layui-icon">&#xe654;</i>添加场地</button>
+				    <button class="layui-btn layui-btn-radius layui-btn-normal " id=""><i class="layui-icon">&#xe654;</i>添加新预约</button>
+				</div>
+			</div>
+		</header>
+		<div class="layui-tab layui-tab-brief my-tab" lay-filter="docDemoTabBrief">
+			  <ul class="layui-tab-title" style="margin: 20px 30px 0px;">
+			    <li class="layui-this">会议室</li>
+			    <li>其他活动场地</li>
+			  </ul>
+			  <div class="layui-tab-content " style="padding: 0px">
+					<div style='width: 100%; height: 100%; position: relative;'>
+						<div class="nav-section-content-container clearfix">
+							<div class="meeting-room">
+									<img src="../images/field_list1.jpg" alt="loading" height="150">
+									<div class="meeting-content">
+										<div class="flex" style="margin-top: 10px;">
+											<span style="color: rgb(122, 81, 55); margin-right: 5px;">会议室</span>
+											<div>
+												<div class="color-nine">
+													<span ><i class="layui-icon layui-icon-layer"></i></span>
+													<span><i class="layui-icon layui-icon-chart-screen "></i></span>
+													<span><i class="layui-icon layui-icon-carousel"></i></span>
+												</div>
+										</div>
+									</div>
+									<h4 class="meeting-room-name">科研室</h4>
+									<div class="meeting-people-num">容纳12人</div>
+								</div>
+							</div>
+							<div class="meeting-room">
+									<img src="../images/field_list1.jpg" alt="loading" height="150">
+									<div class="meeting-content">
+										<div class="d-iblock" style="margin-top: 10px;">
+											<span style="color: rgb(122, 81, 55); margin-right: 5px;">会议室</span>
+											<div style="display: inline-flex; align-items: center;">
+												<div class="color-nine">
+													<span><i class=" layui-icon layui-icon-password"></i></span><i></i>
+												</div>
+										</div>
+									</div>
+									<h4 class="meeting-room-name">科研室</h4>
+									<div class="meeting-people-num">容纳12人</div>
+								</div>
+							</div>
+							<div class="meeting-room">
+									<img src="../images/field_list1.jpg" alt="loading" height="150">
+									<div class="meeting-content">
+										<div class="d-iblock" style="margin-top: 10px;">
+											<span style="color: rgb(122, 81, 55); margin-right: 5px;">会议室</span>
+											<div style="display: inline-flex; align-items: center;">
+												<div class="color-nine">
+													<span ><i class="layui-icon layui-icon-layer"></i></span>
+													<span><i class="layui-icon layui-icon-chart-screen "></i></span>
+													<span><i class="layui-icon layui-icon-carousel"></i></span>
+												</div>
+										</div>
+									</div>
+									<h4 class="meeting-room-name">科研室</h4>
+									<div class="meeting-people-num">容纳12人</div>
+								</div>
+							</div>
+							<div class="meeting-room">
+									<img src="../images/field_list1.jpg" alt="loading" height="150">
+									<div class="meeting-content">
+										<div class="d-iblock" style="margin-top: 10px;">
+											<span style="color: rgb(122, 81, 55); margin-right: 5px;">会议室</span>
+											<div style="display: inline-flex; align-items: center;">
+												<div class="color-nine">
+													<span ><i class="layui-icon layui-icon-layer"></i></span>
+													<span><i class="layui-icon layui-icon-chart-screen "></i></span>
+													<span><i class="layui-icon layui-icon-carousel"></i></span>
+												</div>
+										</div>
+									</div>
+									<h4 class="meeting-room-name">科研室</h4>
+									<div class="meeting-people-num">容纳12人</div>
+								</div>
+							</div>
+						</div>
+					</div>
+			  </div>
+		</div>
+	</div>
+</body>
+<script>
+$(function(){
+	setHeight()
+	
+	layui.use(['element','layer','form'], function(){
+		var form = layui.form;
+	})
+})
+
+function setHeight(){
+    var h = document.body.clientHeight;
+    window.parent.parentHeight(h);
+}
+</script>
+</html>
